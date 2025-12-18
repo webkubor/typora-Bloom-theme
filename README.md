@@ -73,7 +73,32 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
 
 4. 回到 Typora：**主题 → 选择 `Bloom Light` / `Bloom Dark`**
 
+### 从 Releases 下载（推荐）
+
+1. 进入本仓库的 **Releases** 页面
+2. 下载最新的 `Bloom-theme.zip`
+3. 解压后，将以下内容复制到 Typora 主题文件夹：
+
+   - `bloom-light.css`
+   - `bloom-dark.css`
+   - `assets/`（如存在）
+
 ---
+
+## 发布 Release（维护者）
+
+本仓库配置了 GitHub Actions：当你推送 `v*` 格式的 tag 时，会自动生成 Release，并上传 `Bloom-theme.zip`。
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+本地手动打包：
+
+```bash
+bash scripts/build-release-zip.sh
+```
 
 ## 自定义主题色
 
