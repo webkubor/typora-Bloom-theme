@@ -195,6 +195,36 @@
       animation: fadeIn 0.4s ease;
     }
 
+    /* Simulation of syntax highlighting */
+    .token.keyword {
+      color: #ff79c6;
+    }
+
+    .token.function {
+      color: #50fa7b;
+    }
+
+    .token.string {
+      color: #f1fa8c;
+    }
+
+    .token.comment {
+      color: #6272a4;
+      font-style: italic;
+    }
+
+    .token.operator {
+      color: #ff79c6;
+    }
+
+    .token.class-name {
+      color: #8be9fd;
+    }
+
+    .token.property {
+      color: #bd93f9;
+    }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -241,93 +271,32 @@ tags: [Typora, Theme, Premium]
 ---</pre>
         </div>
 
-        <h1>Bloom · 现代排版艺术 🌸</h1>
+        <h1>Bloom · 程序员的终极 Typora 主题 💻</h1>
         <p>
-          Bloom 是一套为<strong>沉浸式写作</strong>而生的小众主题。它通过极简的线条与柔和的色彩平衡，将文字的权重提升到最高。不再有花哨的装饰，只有纯粹的阅读体验。
+          我们深知开发者对**极致排版**的追求。这次升级重点优化了代码块的视觉表现，加入了 Mac 系统级的窗口动效，并重排了代码字号与行高。
         </p>
 
-        <p>
-          <mark>这是一段被高亮的文字</mark>，用来测试 <code>mark</code> 标签的效果。
-        </p>
+        <h2>代码引擎升级</h2>
+        <p>现在的代码块不仅支持语法渲染，更在交互与布局上向主流 IDE 靠拢。</p>
 
-        <h2>多层级标题展示</h2>
-        <p>从 H1 到 H6，每一个层级都经过了字号与边距的微调。</p>
-        <h3>三级标题示例</h3>
-        <p>这里的行高与字间距专为 SF Pro 与 微软雅黑 优化。</p>
-        <h4>四级标题示例</h4>
-        <p>适合更细分的段落说明。</p>
-
-        <h2>语义化元素</h2>
-        <blockquote>
-          陪伴，是最好的告白。文字，是认知的绽放。<br />
-          —— <cite>Bloom 设计哲学</cite>
-        </blockquote>
-
-        <p>
-          你可以通过 <kbd>Ctrl</kbd> + <kbd>S</kbd> 快速保存你的灵感，或是使用 <kbd>Ctrl</kbd> + <kbd>/</kbd> 切换拼写检查。
-        </p>
-
-        <hr />
-
-        <h2>任务与列表</h2>
-        <ul class="task-list">
-          <li class="task-list-item"><input type="checkbox" checked /> 实现全面的 CSS 变量系统</li>
-          <li class="task-list-item"><input type="checkbox" checked /> 优化夜间模式的对比度</li>
-          <li class="task-list-item"><input type="checkbox" /> 增加 Mermaid 图表支持</li>
-          <li class="task-list-item"><input type="checkbox" /> 完善数学公式样式</li>
-        </ul>
-
-        <p>普通列表：</p>
-        <ul>
-          <li>安静的项目 A</li>
-          <li>克制的项目 B
-            <ul>
-              <li>嵌套的子元素</li>
-            </ul>
-          </li>
-        </ul>
-
-        <h2>表格设计</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>状态</th>
-              <th>功能模块</th>
-              <th>优先级</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><span style="color: var(--success);">●</span> 运行中</td>
-              <td>核心变量系统</td>
-              <td>P0</td>
-            </tr>
-            <tr>
-              <td><span style="color: var(--warning);">●</span> 优化中</td>
-              <td>数学公式 (MathJax)</td>
-              <td>P1</td>
-            </tr>
-            <tr>
-              <td><span style="color: var(--error);">●</span> 待修复</td>
-              <td>旧版兼容性问题</td>
-              <td>P2</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2>代码与技术</h2>
-        <p>行内代码 <code>const theme = 'bloom'</code> 采用了柔和的背景。</p>
-
-        <pre><code class="language-javascript">// 切换主题的核心逻辑
-function switchTheme(name) {
-  const root = document.documentElement;
-  const isDark = name === 'dark';
+        <pre><code class="language-javascript"><span class="token comment">// Bloom v2.0 异步加载引擎</span>
+<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">initBloomTheme</span>(config) {
+  <span class="token keyword">const</span> { primary, secondary } = config;
   
-  root.style.setProperty('--bg', isDark ? '#0b101b' : '#fbfbfd');
-  console.log(`Switched to ${name} mode`);
+  <span class="token keyword">try</span> {
+    <span class="token keyword">await</span> <span class="token function">loadVariables</span>(primary);
+    <span class="token keyword">await</span> <span class="token function">renderUI</span>(secondary);
+    <span class="token function">console</span>.<span class="token function">log</span>(<span class="token string">"Bloom Theme initialized successfully! ✨"</span>);
+  } <span class="token keyword">catch</span> (err) {
+    <span class="token function">console</span>.<span class="token function">error</span>(<span class="token string">"Initialization failed:"</span>, err);
+  }
 }
 
-switchTheme('bloom');</code></pre>
+<span class="token comment">// 激发无限创作灵感</span>
+<span class="token function">initBloomTheme</span>({
+  primary: <span class="token string">"#ff4d8d"</span>,
+  secondary: <span class="token string">"transparent"</span>
+});</code></pre>
 
         <h2>数学公式 (LaTeX)</h2>
         <div class="md-math-block">

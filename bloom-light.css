@@ -105,8 +105,13 @@ body {
   padding-bottom: 0.25em;
 }
 
-#write h3 { font-size: 1.4em; }
-#write h4 { font-size: 1.2em; }
+#write h3 {
+  font-size: 1.4em;
+}
+
+#write h4 {
+  font-size: 1.2em;
+}
 
 #write hr {
   border: 0;
@@ -139,8 +144,8 @@ body {
   margin: 0.5em 0;
 }
 
-#write li > ul,
-#write li > ol {
+#write li>ul,
+#write li>ol {
   margin: 0.4em 0;
 }
 
@@ -192,8 +197,8 @@ body {
 /* Code */
 #write code {
   font-family: var(--font-mono);
-  font-size: 0.9em;
-  padding: 0.2em 0.4em;
+  font-size: 0.88em;
+  padding: 0.15em 0.4em;
   border-radius: 6px;
   background: var(--accent-2);
   color: var(--accent);
@@ -206,11 +211,29 @@ body {
   color: var(--code-text);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 1.25em;
-  margin: 1.5em 0;
+  padding: 3.2em 1.4em 1.4em;
+  /* Increased top padding for dots */
+  margin: 2em 0;
   overflow: auto;
   box-shadow: var(--shadow-lg);
   font-family: var(--font-mono);
+  font-size: 14.5px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Mac-style Window Controls */
+#write pre::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #27c93f;
+  z-index: 2;
 }
 
 #write pre code {
