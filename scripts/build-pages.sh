@@ -11,13 +11,8 @@ cp "$ROOT_DIR/index.html" "$OUT_DIR/index.html"
 cp "$ROOT_DIR/bloom-light.css" "$OUT_DIR/bloom-light.css"
 cp "$ROOT_DIR/bloom-dark.css" "$OUT_DIR/bloom-dark.css"
 
-if [[ -f "$ROOT_DIR/favicon.svg" ]]; then
-  cp "$ROOT_DIR/favicon.svg" "$OUT_DIR/favicon.svg"
-fi
-
-if [[ -f "$ROOT_DIR/logo.svg" ]]; then
-  cp "$ROOT_DIR/logo.svg" "$OUT_DIR/logo.svg"
-fi
+# Copy all root SVG assets (logo, favicon, etc.)
+cp "$ROOT_DIR"/*.svg "$OUT_DIR/" 2>/dev/null || true
 
 touch "$OUT_DIR/.nojekyll"
 
