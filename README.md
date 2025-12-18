@@ -187,14 +187,9 @@ python3 -m http.server 5173 --bind 127.0.0.1
 
 访问：`http://127.0.0.1:5173/`
 
-### 在线预览（GitHub Pages）
-
-仓库内已提供 GitHub Pages 工作流，推送到 `main` 后会自动部署。
-
-需要你在 GitHub 仓库设置中启用：
-
-1. Settings → Pages
-2. Build and deployment → Source 选择 **GitHub Actions**
+### 在线预览
+- **官方演示：** [https://typora-bloom-theme.netlify.app](https://typora-bloom-theme.netlify.app)
+- **GitHub Pages：** 推送到 `main` 后会自动部署。
 
 ### 部署到 Netlify
 
