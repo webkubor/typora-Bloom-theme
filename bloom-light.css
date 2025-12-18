@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+:root {
+  --accent: #ff4d8d;
+  --accent-2: rgba(255, 77, 141, 0.14);
+
+  --bg: #fbfbfd;
+  --surface: #f2f3f7;
+
+  --text: #171a22;
+  --muted: rgba(23, 26, 34, 0.64);
+
+  --border: rgba(23, 26, 34, 0.12);
+
+  --shadow: 0 10px 30px rgba(23, 26, 34, 0.08);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --selection: rgba(255, 77, 141, 0.22);
+
+  --code-bg: #0c1020;
+  --code-text: #e5e7eb;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--selection);
+}
+
+#write {
+  max-width: 860px;
+  line-height: 1.78;
+  font-size: 16px;
+  color: var(--text);
+}
+
+#write p {
+  margin: 0.85em 0;
+}
+
+#write a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#write a:hover {
+  text-decoration: underline;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: var(--text);
+  font-weight: 650;
+  line-height: 1.25;
+  margin: 1.35em 0 0.6em;
+}
+
+#write h1 {
+  font-size: 2.0em;
+  letter-spacing: -0.02em;
+}
+
+#write h2 {
+  font-size: 1.55em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+#write h3 {
+  font-size: 1.25em;
+}
+
+#write hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 1.2em 0;
+}
+
+#write blockquote {
+  margin: 1em 0;
+  padding: 0.75em 1em;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+#write ul,
+#write ol {
+  padding-left: 1.35em;
+  margin: 0.7em 0;
+}
+
+#write li {
+  margin: 0.35em 0;
+}
+
+#write img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+#write table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 1em 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#write th,
+#write td {
+  padding: 0.65em 0.85em;
+  border-bottom: 1px solid var(--border);
+}
+
+#write th {
+  text-align: left;
+  background: var(--surface);
+  font-weight: 650;
+}
+
+#write tr:last-child td {
+  border-bottom: 0;
+}
+
+#write tr:nth-child(even) td {
+  background: rgba(23, 26, 34, 0.03);
+}
+
+#write code {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  padding: 0.12em 0.35em;
+  border-radius: 8px;
+  background: var(--accent-2);
+  color: var(--text);
+}
+
+#write pre,
+#write pre.md-fences {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid rgba(229, 231, 235, 0.12);
+  border-radius: 14px;
+  padding: 1em 1.05em;
+  overflow: auto;
+  box-shadow: 0 16px 40px rgba(12, 16, 32, 0.18);
+}
+
+#write pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+#write .md-fences .CodeMirror,
+#write .md-fences .CodeMirror-scroll {
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-mono);
+}
+
+#write .task-list-item input {
+  accent-color: var(--accent);
+}
+
+#write mark {
+  background: rgba(255, 77, 141, 0.18);
+  color: var(--text);
+  padding: 0.05em 0.15em;
+  border-radius: 6px;
+}
+
+#write kbd {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.12em 0.4em;
+  border: 1px solid var(--border);
+  border-bottom-width: 2px;
+  border-radius: 8px;
+  background: var(--surface);
+}
