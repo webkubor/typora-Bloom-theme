@@ -7,7 +7,6 @@
   </defs>
 
   <g transform="translate(10,10)">
-    <rect x="0" y="0" width="60" height="60" rx="18" fill="#0b0f19"/>
     <g fill="url(#a)">
       <path d="M30 12c7 0 12 6 12 12 0 7-6 14-12 14S18 31 18 24c0-6 5-12 12-12Z"/>
       <path d="M16 28c6-4 14-3 18 2 5 6 2 16-6 20-8 4-17 1-20-7-2-6 2-12 8-15Z" opacity="0.92"/>
