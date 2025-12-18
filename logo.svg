@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7cab"/>
+      <stop offset="1" stop-color="#ff4d8d"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(12,10)">
+    <rect x="0" y="0" width="60" height="60" rx="18" fill="#0b0f19"/>
+    <g fill="url(#a)">
+      <path d="M30 12c7 0 12 6 12 12 0 7-6 14-12 14S18 31 18 24c0-6 5-12 12-12Z"/>
+      <path d="M16 28c6-4 14-3 18 2 5 6 2 16-6 20-8 4-17 1-20-7-2-6 2-12 8-15Z" opacity="0.92"/>
+      <path d="M44 28c6 3 10 9 8 15-3 8-12 11-20 7-8-4-11-14-6-20 4-5 12-6 18-2Z" opacity="0.92"/>
+    </g>
+    <circle cx="30" cy="32" r="5" fill="#ffe6f0" opacity="0.92"/>
+  </g>
+
+  <g transform="translate(88,20)" fill="#171a22">
+    <text x="0" y="26" font-size="28" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Text','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Segoe UI',Roboto,Helvetica,Arial" font-weight="720" letter-spacing="-0.5">Bloom</text>
+    <text x="0" y="48" font-size="14" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Text','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Segoe UI',Roboto,Helvetica,Arial" fill="rgba(23,26,34,0.64)">Typora Theme</text>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 # Bloom · Typora Theme
 
+
 Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题。
 
 它追求安静、克制与温柔的表达——  
@@ -7,6 +8,13 @@ Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题
 让文字始终成为视线的中心。
 
 Bloom 适合那些需要**长时间阅读、记录、思考**的人。
+
+这个主题诞生的时间，正好是我成为父亲之后。  
+我开始更加在意时间、陪伴，以及那些会被反复翻阅的文字。
+
+希望 Bloom 能像它的名字一样，  
+在合适的光线里，慢慢生长。
+
 
 ---
 
@@ -36,6 +44,38 @@ Bloom 的设计灵感来自「一天的光」。
 - 标题、引用、代码块均采用层级递进，而非跳色区分  
 
 你只需要修改一个变量，即可让整套主题呈现新的气质。
+
+🌤 Bloom Light（清晨）
+
+```
+--bg-main: #FAFBF9;
+--bg-secondary: #F1F3F0;
+
+--text-main: #2E2F2E;
+--text-secondary: #6B6F6B;
+
+--border-subtle: #E3E6E1;
+```
+特点：
+	•	不是纯白，有纸感
+	•	对比不强，但清晰
+	•	很适合白天整理、阅读
+
+  
+🌙 Bloom Dark（夜晚）
+```
+--bg-main: #1E1F1E;
+--bg-secondary: #262826;
+
+--text-main: #E6E8E6;
+--text-secondary: #A9ADAA;
+
+--border-subtle: #343734;
+```
+特点：
+	•	非纯黑，护眼
+	•	文本偏暖灰，不刺眼
+	•	Accent 会“发光但不跳”
 
 ---
 
@@ -84,6 +124,51 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
    - `assets/`（如存在）
 
 ---
+
+## 预览（开发/展示）
+
+### 本地预览
+
+直接打开仓库根目录的 `index.html` 即可预览；切换 `Bloom Light / Bloom Dark` 按钮可以查看两套主题。
+
+如果你希望以“本地服务”的方式运行（更接近线上、资源路径更稳定），可以使用任意静态服务器。例如：
+
+```bash
+bash scripts/preview.sh
+```
+
+它会使用 `127.0.0.1` 启动服务并自动打开浏览器。
+
+如果你想手动执行：
+
+```bash
+python3 -m http.server 5173 --bind 127.0.0.1
+```
+
+访问：`http://127.0.0.1:5173/`
+
+### 在线预览（GitHub Pages）
+
+仓库内已提供 GitHub Pages 工作流，推送到 `main` 后会自动部署。
+
+需要你在 GitHub 仓库设置中启用：
+
+1. Settings → Pages
+2. Build and deployment → Source 选择 **GitHub Actions**
+
+### 部署到 Netlify
+
+仓库已提供 `netlify.toml`：
+
+- Build command：`bash scripts/build-pages.sh`
+- Publish directory：`_pages`
+
+## 图标与品牌素材
+
+- `favicon.svg`：官网/预览页浏览器标签图标
+- `logo.svg`：官网侧栏与品牌展示图
+
+说明：Typora 主题主要通过 `css` 影响编辑器样式，通常无法控制操作系统层面的“文件图标”。如果你想让项目更完整，建议在 Releases/README/官网中统一使用上述图标资源。
 
 ## 发布 Release（维护者）
 

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom · Typora Theme</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <link id="theme-css" rel="stylesheet" href="bloom-light.css" />
+
+    <style>
+      :root {
+        color-scheme: light;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        background: color-mix(in oklab, var(--bg) 78%, transparent);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .topbar-inner {
+        max-width: 1020px;
+        margin: 0 auto;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        min-width: 0;
+      }
+
+      .brand-title {
+        font-weight: 720;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .brand-sub {
+        color: var(--muted);
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .toolbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: color-mix(in oklab, var(--surface) 72%, transparent);
+        color: var(--text);
+        padding: 8px 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        line-height: 1;
+        cursor: pointer;
+        transition: transform 0.12s ease, border-color 0.12s ease;
+      }
+
+      .btn:hover {
+        border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+        transform: translateY(-1px);
+      }
+
+      .btn[aria-pressed="true"] {
+        border-color: color-mix(in oklab, var(--accent) 58%, var(--border));
+        box-shadow: 0 0 0 4px var(--accent-2);
+      }
+
+      .pill {
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 12px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+
+      .accent-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--accent);
+        vertical-align: middle;
+        margin-right: 8px;
+        box-shadow: 0 0 0 4px var(--accent-2);
+      }
+
+      .page {
+        max-width: 1020px;
+        margin: 0 auto;
+        padding: 28px 18px 54px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: 22px;
+        align-items: start;
+        margin-bottom: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: color-mix(in oklab, var(--surface) 78%, transparent);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 16px 16px;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.55;
+      }
+
+      .kbd {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: color-mix(in oklab, var(--surface) 72%, transparent);
+        color: var(--text);
+      }
+
+      .footer {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 26px;
+      }
+
+      .footer a {
+        color: var(--accent);
+      }
+
+      #write {
+        max-width: 860px;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand" title="Bloom · Typora Theme">
+          <div class="brand-title">Bloom</div>
+          <div class="brand-sub">Typora Theme Preview</div>
+        </div>
+
+        <div class="toolbar">
+          <div class="pill"><span class="accent-dot"></span><span id="accent-value">--accent</span></div>
+          <button class="btn" type="button" id="btn-light" aria-pressed="true">Bloom Light</button>
+          <button class="btn" type="button" id="btn-dark" aria-pressed="false">Bloom Dark</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page">
+      <section class="hero">
+        <div class="card">
+          <main id="write">
+            <h1>Bloom · 预览页</h1>
+            <p>
+              这是一个用来快速查看 <strong>Bloom Light / Bloom Dark</strong> 主题效果的静态页面。
+              你可以通过顶部按钮切换主题，所有颜色来自 CSS 变量。
+            </p>
+
+            <h2>排版示例</h2>
+            <p>
+              一段普通正文，包含一个 <a href="#">链接</a>。
+              也可以在这里放一些长文本，观察行距、字重、段落间距。
+            </p>
+
+            <blockquote>
+              <p>
+                这是一段引用。它应该有柔和的背景、清晰的强调色边线，并且适合长时间阅读。
+              </p>
+            </blockquote>
+
+            <h3>列表</h3>
+            <ul>
+              <li>无序列表项目 A</li>
+              <li>无序列表项目 B</li>
+              <li>无序列表项目 C</li>
+            </ul>
+
+            <ol>
+              <li>有序列表 1</li>
+              <li>有序列表 2</li>
+              <li>有序列表 3</li>
+            </ol>
+
+            <h3>代码块</h3>
+            <pre><code>/* Accent color */
+:root {
+  --accent: #ff4d8d;
+  --accent-2: rgba(255, 77, 141, 0.14);
+}</code></pre>
+
+            <h3>表格</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>项目</th>
+                  <th>说明</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>标题</td>
+                  <td>层级清晰、不过度夸张</td>
+                  <td>OK</td>
+                </tr>
+                <tr>
+                  <td>引用</td>
+                  <td>温和对比、强调色控制</td>
+                  <td>OK</td>
+                </tr>
+                <tr>
+                  <td>代码块</td>
+                  <td>夜间专注、字体清晰</td>
+                  <td>OK</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <hr />
+            <p class="footer">
+              本页仅用于预览主题。仓库地址：
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            </p>
+          </main>
+        </div>
+
+        <aside class="card">
+          <div class="meta">
+            <p><img src="logo.svg" alt="Bloom" style="max-width: 100%; height: auto;" /></p>
+            <p><strong>使用方式</strong></p>
+            <p>
+              1. 直接双击打开本仓库根目录的 <span class="kbd">index.html</span>
+            </p>
+            <p>
+              2. 修改 <span class="kbd">bloom-light.css</span> / <span class="kbd">bloom-dark.css</span>
+              后刷新页面即可看到变化
+            </p>
+            <p>
+              3. 若你将本仓库启用 GitHub Pages，可得到一个在线预览地址
+            </p>
+          </div>
+        </aside>
+      </section>
+    </div>
+
+    <script>
+      const themeLink = document.getElementById('theme-css');
+      const btnLight = document.getElementById('btn-light');
+      const btnDark = document.getElementById('btn-dark');
+      const accentValue = document.getElementById('accent-value');
+
+      function setPressed(light) {
+        btnLight.setAttribute('aria-pressed', String(light));
+        btnDark.setAttribute('aria-pressed', String(!light));
+        document.documentElement.style.colorScheme = light ? 'light' : 'dark';
+      }
+
+      function updateAccentLabel() {
+        const v = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+        accentValue.textContent = v || '--accent';
+      }
+
+      function setTheme(light) {
+        themeLink.setAttribute('href', light ? 'bloom-light.css' : 'bloom-dark.css');
+        setPressed(light);
+      }
+
+      btnLight.addEventListener('click', () => setTheme(true));
+      btnDark.addEventListener('click', () => setTheme(false));
+
+      themeLink.addEventListener('load', updateAccentLabel);
+      window.addEventListener('load', updateAccentLabel);
+    </script>
+  </body>
+</html>

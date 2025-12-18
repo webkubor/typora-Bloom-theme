@@ -1,0 +1,6 @@
+[build]
+  command = "bash scripts/build-pages.sh"
+  publish = "_pages"
+
+[build.environment]
+  BASH_ENV = ""
