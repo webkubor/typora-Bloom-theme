@@ -254,6 +254,175 @@
         transform: translateY(0);
       }
     }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg,
+          var(--accent-2) 0%,
+          transparent 50%,
+          rgba(var(--accent-rgb), 0.05) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-2) 0%, transparent 70%);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      animation: heroFadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .hero-title {
+      font-size: 3.5em;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 0 0.5em;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25em;
+      color: var(--text-semi);
+      max-width: 700px;
+      margin: 0 auto 2em;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 20px var(--accent-2);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px var(--accent-2);
+    }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-2);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 8px 20px var(--accent-2);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 999;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px var(--accent-2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 24px;
+      }
+
+      .hero-title {
+        font-size: 2.5em;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1em;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 
@@ -265,6 +434,8 @@
       </a>
 
       <div class="toolbar">
+        <a href="#features" class="nav-link">功能特性</a>
+        <a href="#showcase" class="nav-link">完整展示</a>
         <a href="https://github.com/webkubor/typora-Bloom-theme" target="_blank" class="nav-link github">
           <svg viewBox="0 0 24 24">
             <path
@@ -274,10 +445,10 @@
           GitHub
         </a>
         <div class="theme-toggle-group">
-          <button class="btn-toggle" type="button" id="btn-light" aria-pressed="true" title="Morning Mode">
+          <button class="btn-toggle" type="button" id="btn-light" aria-pressed="true" title="清晨模式">
             ☀️
           </button>
-          <button class="btn-toggle" type="button" id="btn-dark" aria-pressed="false" title="Night Mode">
+          <button class="btn-toggle" type="button" id="btn-dark" aria-pressed="false" title="夜晚模式">
             🌙
           </button>
         </div>
@@ -285,23 +456,31 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Bloom · 文字的绽放与成长 🌸</h1>
+      <p class="hero-subtitle">
+        为长期写作而设计的 Typora 主题。追求安静、克制与温柔的表达——让文字始终成为视线的中心。
+      </p>
+      <div class="hero-actions">
+        <a href="Bloom-theme.zip" download class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-right: 8px;">
+            <path d="M8 11L4 7h2.5V2h3v5H12L8 11z" fill="currentColor" />
+            <path d="M14 13v1H2v-1h12z" fill="currentColor" />
+          </svg>
+          一键下载主题
+        </a>
+        <a href="#showcase" class="btn btn-secondary">快速开始</a>
+      </div>
+    </div>
+  </section>
+
   <div class="layout">
     <main class="preview-container">
       <article id="write">
-        <!-- YAML Frontmatter -->
-        <div class="md-frontmatter" style="margin-bottom: 24px;">
-          <pre>---
-title: Bloom · Typora Theme
-author: Webkubor
-philosophy: Quiet, Restrained, Gentle
-site: typora-bloom-theme.netlify.app
----</pre>
-        </div>
 
-        <h1>Bloom · 文字的绽放与成长 🌸</h1>
-        <p>
-          Bloom 是一套为<strong>长期写作</strong>而设计的 Typora 主题。它追求安静、克制与温柔的表达——不过度展示设计，不喧宾夺主，让文字始终成为视线的中心。
-        </p>
+
 
         <div class="md-hero-box">
           <p style="margin-top: 0; font-weight: 700; font-size: 1.15em;">关于初心：在合适的光线里，慢慢生长</p>
@@ -319,7 +498,7 @@ site: typora-bloom-theme.netlify.app
 
         <hr />
 
-        <h2>设计原则 (The Principles)</h2>
+        <h2 id="features">设计原则</h2>
         <div class="md-principle-grid">
           <div class="md-principle-card">
             <h4><span style="font-size: 1.2em;">⌨️</span> 文字优先</h4>
@@ -341,7 +520,7 @@ site: typora-bloom-theme.netlify.app
 
         <hr />
 
-        <h2>全元素展示 (Full Showcase)</h2>
+        <h2 id="showcase">全元素展示</h2>
         <p>从大标题到小注脚，每一处细节都经过了微调，以适应不同的写作场景。</p>
 
         <h3>多层级标题</h3>
@@ -439,50 +618,49 @@ site: typora-bloom-theme.netlify.app
 
     <aside class="sidebar">
       <div class="sidebar-card">
-        <div class="sidebar-title">Design Tokens</div>
+        <div class="sidebar-title">主色规范</div>
         <div class="palette">
           <div class="color-item">
             <div class="color-swatch" style="background: var(--accent);"></div>
-            <span class="color-name">Accent</span>
+            <span class="color-name">强调色</span>
             <span class="color-hex">#FF4D8D</span>
           </div>
           <div class="color-item">
             <div class="color-swatch" style="background: var(--bg);"></div>
-            <span class="color-name">Canvas</span>
+            <span class="color-name">背景色</span>
             <span class="color-hex">Variable</span>
           </div>
           <div class="color-item">
             <div class="color-swatch" style="background: var(--success);"></div>
-            <span class="color-name">Success</span>
+            <span class="color-name">成功色</span>
             <span class="color-hex">#10B981</span>
           </div>
           <div class="color-item">
             <div class="color-swatch" style="background: var(--warning);"></div>
-            <span class="color-name">Ongoing</span>
+            <span class="color-name">进行中</span>
             <span class="color-hex">#F59E0B</span>
           </div>
         </div>
       </div>
 
       <div class="sidebar-card">
-        <div class="sidebar-title">Theme Features</div>
+        <div class="sidebar-title">功能特性</div>
         <ul class="feat-list">
-          <li class="feat-item"><span class="feat-icon">✓</span> 100% Core Variable System</li>
-          <li class="feat-item"><span class="feat-icon">✓</span> Mac-Style Window UI</li>
-          <li class="feat-item"><span class="feat-icon">✓</span> Premium Typography Flow</li>
-          <li class="feat-item"><span class="feat-icon">✓</span> Glassmorphism Detail</li>
-          <li class="feat-item"><span class="feat-icon">✓</span> Ultra Thin Border Design</li>
+          <li class="feat-item"><span class="feat-icon">✓</span> 100% 核心变量系统</li>
+          <li class="feat-item"><span class="feat-icon">✓</span> Mac 风格窗口设计</li>
+          <li class="feat-item"><span class="feat-icon">✓</span> 高级排版韵律</li>
+          <li class="feat-item"><span class="feat-icon">✓</span> 毛玻璃质感细节</li>
+          <li class="feat-item"><span class="feat-icon">✓</span> 极细边框设计</li>
         </ul>
       </div>
 
       <div class="sidebar-card" style="text-align: center;">
         <img src="logo-pure.svg" alt="Logo"
           style="width: 52px; margin-bottom: 16px; filter: drop-shadow(0 8px 16px var(--accent-2));" />
-        <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Bloom Typora Theme<br />Explore the art of
-          writing.</p>
+        <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Bloom Typora 主题<br />探索写作的艺术。</p>
         <a href="https://github.com/webkubor/typora-Bloom-theme" target="_blank"
           style="display: inline-block; width: 100%; background: var(--accent); color: #fff; padding: 12px; border-radius: 100px; text-decoration: none; font-size: 14px; font-weight: 700; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-sizing: border-box;">
-          View on GitHub
+          前往 GitHub
         </a>
       </div>
     </aside>
