@@ -1,6 +1,3 @@
 [build]
-  command = "bash scripts/build-pages.sh"
+  command = "node scripts/pages.js"
   publish = "_pages"
-
-[build.environment]
-  BASH_ENV = ""

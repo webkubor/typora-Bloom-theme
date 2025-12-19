@@ -206,7 +206,7 @@ node scripts/preview.js 5173
 
 仓库已提供 `netlify.toml`：
 
-- Build command：`bash scripts/build-pages.sh`
+- Build command：`node scripts/pages.js`
 - Publish directory：`_pages`
 
 ## 致谢
