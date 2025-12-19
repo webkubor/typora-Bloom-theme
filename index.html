@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bloom · Premium Typora Theme</title>
 
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link id="theme-css" rel="stylesheet" href="bloom-light.css" />
 
   <style>
@@ -288,6 +288,32 @@
       animation: heroFadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--surface) 75%, transparent);
+      border: 1px solid var(--border);
+      color: var(--text-semi);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin: 0 0 18px;
+      box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.08);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px var(--accent-2);
+    }
+
     .hero-title {
       font-size: 3.5em;
       font-weight: 800;
@@ -295,6 +321,14 @@
       margin: 0 0 0.5em;
       letter-spacing: -0.02em;
       line-height: 1.2;
+    }
+
+    .hero-title-accent {
+      background: linear-gradient(135deg, var(--accent) 0%, color-mix(in oklab, var(--accent) 65%, #ffffff) 55%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 16px 40px rgba(var(--accent-rgb), 0.22);
     }
 
     .hero-subtitle {
@@ -310,6 +344,37 @@
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
+    }
+
+    .hero-highlights {
+      margin: 26px auto 0;
+      max-width: 860px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-highlight {
+      background: color-mix(in oklab, var(--surface) 70%, transparent);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 14px;
+      text-align: left;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
+    }
+
+    .hero-highlight-title {
+      margin: 0 0 6px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .hero-highlight-desc {
+      margin: 0;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
     }
 
     .btn {
@@ -407,7 +472,7 @@
       }
 
       .hero-title {
-        font-size: 2.5em;
+        font-size: 2.6em;
       }
 
       .hero-subtitle {
@@ -416,6 +481,10 @@
 
       .hero-actions {
         flex-direction: column;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
       }
 
       .btn {
@@ -430,7 +499,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a href="#" class="brand" title="Bloom">
-        <img src="logo-pure.svg" alt="Bloom" class="brand-logo" />
+        <img src="assets/logo-pure.svg" alt="Bloom" class="brand-logo" />
       </a>
 
       <div class="toolbar">
@@ -459,12 +528,13 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-inner">
-      <h1 class="hero-title">Bloom · 文字的绽放与成长 🌸</h1>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Premium Typora Theme · Light & Dark</div>
+      <h1 class="hero-title"><span class="hero-title-accent">Bloom</span> · 文字的绽放与成长</h1>
       <p class="hero-subtitle">
         为长期写作而设计的 Typora 主题。追求安静、克制与温柔的表达——让文字始终成为视线的中心。
       </p>
       <div class="hero-actions">
-        <a href="Bloom-theme.zip" download class="btn btn-primary">
+        <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest/download/Bloom-theme.zip" class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-right: 8px;">
             <path d="M8 11L4 7h2.5V2h3v5H12L8 11z" fill="currentColor" />
             <path d="M14 13v1H2v-1h12z" fill="currentColor" />
@@ -472,6 +542,21 @@
           一键下载主题
         </a>
         <a href="#showcase" class="btn btn-secondary">快速开始</a>
+      </div>
+
+      <div class="hero-highlights">
+        <div class="hero-highlight">
+          <p class="hero-highlight-title">长期写作友好</p>
+          <p class="hero-highlight-desc">低对比、稳定节奏，让你写得久也不累。</p>
+        </div>
+        <div class="hero-highlight">
+          <p class="hero-highlight-title">Mac 风格代码块</p>
+          <p class="hero-highlight-desc">清晰分层与窗口细节，代码阅读更舒服。</p>
+        </div>
+        <div class="hero-highlight">
+          <p class="hero-highlight-title">一键换主题色</p>
+          <p class="hero-highlight-desc">全局变量系统，改一个 Accent 就有新气质。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -655,7 +740,7 @@
       </div>
 
       <div class="sidebar-card" style="text-align: center;">
-        <img src="logo-pure.svg" alt="Logo"
+        <img src="assets/logo-pure.svg" alt="Logo"
           style="width: 52px; margin-bottom: 16px; filter: drop-shadow(0 8px 16px var(--accent-2));" />
         <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Bloom Typora 主题<br />探索写作的艺术。</p>
         <a href="https://github.com/webkubor/typora-Bloom-theme" target="_blank"
@@ -702,6 +787,83 @@
         btn.style.boxShadow = 'none';
       };
     });
+
+    function getCodeLanguage(codeEl, preEl) {
+      const preLang = preEl?.getAttribute('lang') || preEl?.getAttribute('data-lang');
+      if (preLang) return preLang;
+
+      const m = (codeEl.className || '').match(/language-([a-z0-9_-]+)/i);
+      if (m && m[1]) return m[1];
+      return '';
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+    }
+
+    function enhanceCodeBlocks() {
+      const pres = document.querySelectorAll('#write pre');
+      pres.forEach(pre => {
+        if (pre.dataset.enhanced === 'true') return;
+        const code = pre.querySelector('code');
+        if (!code) return;
+
+        const lang = getCodeLanguage(code, pre);
+        pre.dataset.lang = lang;
+        pre.classList.add('has-toolbar');
+
+        const toolbar = document.createElement('div');
+        toolbar.className = 'code-toolbar';
+
+        const langEl = document.createElement('span');
+        langEl.className = 'code-lang';
+        langEl.textContent = lang ? lang.toUpperCase() : 'CODE';
+
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'code-copy-btn';
+        copyBtn.type = 'button';
+        copyBtn.textContent = '复制';
+
+        copyBtn.addEventListener('click', async () => {
+          const raw = code.textContent || '';
+          try {
+            await copyText(raw);
+            copyBtn.textContent = '已复制';
+            copyBtn.dataset.state = 'copied';
+            window.setTimeout(() => {
+              copyBtn.textContent = '复制';
+              delete copyBtn.dataset.state;
+            }, 1400);
+          } catch {
+            copyBtn.textContent = '失败';
+            window.setTimeout(() => {
+              copyBtn.textContent = '复制';
+            }, 1400);
+          }
+        });
+
+        toolbar.appendChild(langEl);
+        toolbar.appendChild(copyBtn);
+        pre.insertBefore(toolbar, pre.firstChild);
+        pre.dataset.enhanced = 'true';
+      });
+    }
+
+    enhanceCodeBlocks();
   </script>
 </body>
 

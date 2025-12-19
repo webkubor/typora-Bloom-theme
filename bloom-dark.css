@@ -244,6 +244,76 @@ body {
   font-weight: normal;
 }
 
+#write pre.has-toolbar .code-toolbar {
+  position: absolute;
+  top: 10px;
+  left: 84px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#write pre.has-toolbar .code-lang {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#write pre.has-toolbar .code-copy-btn {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+#write pre.has-toolbar .code-copy-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#write pre.has-toolbar .code-copy-btn[data-state="copied"] {
+  border-color: rgba(var(--accent-rgb), 0.6);
+  background: rgba(var(--accent-rgb), 0.28);
+}
+
+#write pre.md-fences[lang]::after,
+#write pre.md-fences[data-lang]::after {
+  content: attr(lang);
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 3;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.72);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#write pre.md-fences[data-lang]::after {
+  content: attr(data-lang);
+}
+
 /* YAML Frontmatter */
 #write .md-frontmatter {
   background: var(--surface);
