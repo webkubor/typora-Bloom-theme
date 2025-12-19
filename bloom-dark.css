@@ -268,8 +268,9 @@ body {
   border: 1px solid rgba(var(--accent-rgb), 0.32);
 }
 
-#write pre,
-#write pre.md-fences {
+#write pre.md-fences,
+#write pre[mdtype="fences"],
+#write .md-fences {
   background: #0f1626;
   color: #f2f5ff;
   border: 1px solid rgba(var(--accent-rgb), 0.14);
@@ -285,7 +286,9 @@ body {
 }
 
 /* Mac-style Window Controls */
-#write pre::before {
+#write pre.md-fences::before,
+#write pre[mdtype="fences"]::before,
+#write .md-fences::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -299,36 +302,84 @@ body {
   opacity: 0.9;
 }
 
-#write pre code {
+#write pre.md-fences code,
+#write pre[mdtype="fences"] code,
+#write .md-fences code {
   background: transparent;
   padding: 0;
   color: #f2f5ff;
   font-weight: normal;
 }
 
-#write pre .CodeMirror,
-#write pre .CodeMirror-scroll,
-#write pre .CodeMirror-gutters,
-#write pre .cm-s-inner {
+#write pre.md-fences .CodeMirror,
+#write pre.md-fences .CodeMirror-scroll,
+#write pre.md-fences .CodeMirror-gutters,
+#write pre.md-fences .cm-s-inner,
+#write pre[mdtype="fences"] .CodeMirror,
+#write pre[mdtype="fences"] .CodeMirror-scroll,
+#write pre[mdtype="fences"] .CodeMirror-gutters,
+#write pre[mdtype="fences"] .cm-s-inner,
+#write .md-fences .CodeMirror,
+#write .md-fences .CodeMirror-scroll,
+#write .md-fences .CodeMirror-gutters,
+#write .md-fences .cm-s-inner {
   background: transparent !important;
   color: #f2f5ff;
 }
 
-#write pre .CodeMirror-linenumber {
+#write pre.md-fences .CodeMirror-linenumber,
+#write pre[mdtype="fences"] .CodeMirror-linenumber,
+#write .md-fences .CodeMirror-linenumber {
   color: rgba(232, 237, 247, 0.55);
 }
 
-#write pre .CodeMirror-cursor {
+#write pre.md-fences .CodeMirror-cursor,
+#write pre[mdtype="fences"] .CodeMirror-cursor,
+#write .md-fences .CodeMirror-cursor {
   border-left: 2px solid rgba(var(--accent-rgb), 0.8);
 }
 
-#write pre .CodeMirror-gutters {
+#write pre.md-fences .CodeMirror-gutters,
+#write pre[mdtype="fences"] .CodeMirror-gutters,
+#write .md-fences .CodeMirror-gutters {
   border-right: 1px solid rgba(var(--accent-rgb), 0.12);
 }
 
-#write pre .CodeMirror-line,
-#write pre .CodeMirror-code {
+#write pre.md-fences .CodeMirror-line,
+#write pre.md-fences .CodeMirror-code,
+#write pre[mdtype="fences"] .CodeMirror-line,
+#write pre[mdtype="fences"] .CodeMirror-code,
+#write .md-fences .CodeMirror-line,
+#write .md-fences .CodeMirror-code {
   color: #f2f5ff;
+}
+
+/* 防止嵌套多层 pre/code 造成重复背景 */
+#write pre.md-fences pre,
+#write pre.md-fences pre code,
+#write pre.md-fences .cm-s-inner .CodeMirror-lines,
+#write pre[mdtype="fences"] pre,
+#write pre[mdtype="fences"] pre code,
+#write pre[mdtype="fences"] .cm-s-inner .CodeMirror-lines,
+#write .md-fences pre,
+#write .md-fences pre code,
+#write .md-fences .cm-s-inner .CodeMirror-lines {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#write pre.md-fences pre,
+#write pre[mdtype="fences"] pre,
+#write .md-fences pre {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#write pre.md-fences .CodeMirror-scroll,
+#write pre[mdtype="fences"] .CodeMirror-scroll,
+#write .md-fences .CodeMirror-scroll {
+  overflow: visible !important;
 }
 
 #write pre.has-toolbar .code-toolbar {
