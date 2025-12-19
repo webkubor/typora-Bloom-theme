@@ -527,6 +527,7 @@ body {
 }
 
 /* Typora fences language label (scoped to writing area only) */
+/* Language label handled by Typora code-tooltip (right top) */
 #write pre.md-fences[lang]::after,
 #write pre.md-fences[data-lang]::after,
 #write .md-fences[lang]::after,
@@ -535,26 +536,7 @@ body {
 #write pre[mdtype="fences"][data-lang]::after,
 #write [mdtype="fences"][lang]::after,
 #write [mdtype="fences"][data-lang]::after {
-  content: attr(lang);
-  position: absolute;
-  top: 10px;
-  left: 84px;
-  z-index: 3;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.76);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-#write pre.md-fences[data-lang]::after,
-#write .md-fences[data-lang]::after,
-#write pre[mdtype="fences"][data-lang]::after,
-#write [mdtype="fences"][data-lang]::after {
-  content: attr(data-lang);
+  content: "";
 }
 
 /* Typora built-in code toolbar (compat: .md-fences / pre.md-fences / #write pre.md-fences) */
@@ -565,6 +547,8 @@ body {
   position: absolute;
   top: 10px;
   right: 12px;
+  bottom: auto;
+  left: auto;
   z-index: 4;
   display: inline-flex;
   align-items: center;
@@ -573,6 +557,12 @@ body {
   transform: translateY(-2px);
   transition: opacity 0.15s ease, transform 0.15s ease;
   pointer-events: none;
+  float: none !important;
+  padding: 0;
+  min-width: 0;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
 }
 
 #write pre.md-fences:hover .code-tooltip,
@@ -581,6 +571,21 @@ body {
 #write [mdtype="fences"]:hover .code-tooltip {
   opacity: 1;
   transform: translateY(0);
+}
+
+#write pre.md-fences .code-tooltip-content,
+#write pre[mdtype="fences"] .code-tooltip-content,
+#write .md-fences .code-tooltip-content,
+#write [mdtype="fences"] .code-tooltip-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1;
 }
 
 #write pre.md-fences .code-tooltip a,
