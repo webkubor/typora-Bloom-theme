@@ -44,7 +44,10 @@
 
 html,
 body {
-  background: var(--bg);
+  background: radial-gradient(1400px circle at 16% 10%, rgba(var(--accent-rgb), 0.08), transparent 36%),
+    linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), transparent 340px),
+    var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -60,7 +63,12 @@ body {
   font-size: 16px;
   color: var(--text);
   margin: 0 auto;
-  padding: 40px;
+  padding: 48px 40px 84px;
+  background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05), transparent 460px),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.7), transparent 70%);
+  border: 1px solid rgba(23, 26, 34, 0.06);
+  border-radius: 22px;
+  box-shadow: 0 26px 80px rgba(23, 26, 34, 0.12);
 }
 
 #write p {
@@ -86,22 +94,23 @@ body {
 #write h5,
 #write h6 {
   color: var(--text);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.3;
   margin: 1.6em 0 0.8em;
   letter-spacing: -0.01em;
+  position: relative;
 }
 
 #write h1 {
   font-size: 2.25em;
   letter-spacing: -0.02em;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
   padding-bottom: 0.3em;
 }
 
 #write h2 {
   font-size: 1.75em;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
   padding-bottom: 0.25em;
 }
 
@@ -111,6 +120,18 @@ body {
 
 #write h4 {
   font-size: 1.2em;
+}
+
+#write h1::after,
+#write h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+  width: 76px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.45), transparent);
+  border-radius: 999px;
 }
 
 #write hr {
@@ -198,18 +219,20 @@ body {
 #write code {
   font-family: var(--font-mono);
   font-size: 0.88em;
-  padding: 0.15em 0.4em;
-  border-radius: 6px;
-  background: var(--accent-2);
+  padding: 0.2em 0.45em;
+  border-radius: 7px;
+  background: rgba(var(--accent-rgb), 0.14);
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
+  border: 1px solid rgba(var(--accent-rgb), 0.32);
 }
 
 #write pre,
 #write pre.md-fences {
-  background: var(--code-bg);
+  background: linear-gradient(150deg, rgba(var(--accent-rgb), 0.06), transparent 40%),
+    var(--code-bg);
   color: var(--code-text);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.22);
   border-radius: 16px;
   padding: 3.2em 1.4em 1.4em;
   /* Increased top padding for dots */
@@ -292,12 +315,19 @@ body {
   background: rgba(var(--accent-rgb), 0.25);
 }
 
+/* Typora fences language label (scoped to writing area only) */
 #write pre.md-fences[lang]::after,
-#write pre.md-fences[data-lang]::after {
+#write pre.md-fences[data-lang]::after,
+#write .md-fences[lang]::after,
+#write .md-fences[data-lang]::after,
+#write pre[mdtype="fences"][lang]::after,
+#write pre[mdtype="fences"][data-lang]::after,
+#write [mdtype="fences"][lang]::after,
+#write [mdtype="fences"][data-lang]::after {
   content: attr(lang);
   position: absolute;
   top: 10px;
-  right: 12px;
+  left: 84px;
   z-index: 3;
   font-size: 12px;
   font-weight: 700;
@@ -309,8 +339,72 @@ body {
   background: rgba(255, 255, 255, 0.06);
 }
 
-#write pre.md-fences[data-lang]::after {
+#write pre.md-fences[data-lang]::after,
+#write .md-fences[data-lang]::after,
+#write pre[mdtype="fences"][data-lang]::after,
+#write [mdtype="fences"][data-lang]::after {
   content: attr(data-lang);
+}
+
+/* Typora built-in code toolbar (compat: .md-fences / pre.md-fences / #write pre.md-fences) */
+#write pre.md-fences .code-tooltip,
+#write pre[mdtype="fences"] .code-tooltip,
+#write .md-fences .code-tooltip,
+#write [mdtype="fences"] .code-tooltip {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+}
+
+#write pre.md-fences:hover .code-tooltip,
+#write pre[mdtype="fences"]:hover .code-tooltip,
+#write .md-fences:hover .code-tooltip,
+#write [mdtype="fences"]:hover .code-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#write pre.md-fences .code-tooltip a,
+#write pre.md-fences .code-tooltip button,
+#write pre[mdtype="fences"] .code-tooltip a,
+#write pre[mdtype="fences"] .code-tooltip button,
+#write .md-fences .code-tooltip a,
+#write .md-fences .code-tooltip button,
+#write [mdtype="fences"] .code-tooltip a,
+#write [mdtype="fences"] .code-tooltip button {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+#write pre.md-fences .code-tooltip a:hover,
+#write pre.md-fences .code-tooltip button:hover,
+#write pre[mdtype="fences"] .code-tooltip a:hover,
+#write pre[mdtype="fences"] .code-tooltip button:hover,
+#write .md-fences .code-tooltip a:hover,
+#write .md-fences .code-tooltip button:hover,
+#write [mdtype="fences"] .code-tooltip a:hover,
+#write [mdtype="fences"] .code-tooltip button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* YAML Frontmatter */
