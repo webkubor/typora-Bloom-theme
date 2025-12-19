@@ -4,6 +4,7 @@
   "version": "1.0.1",
   "scripts": {
     "preview": "node scripts/preview.js",
+    "pages": "node scripts/pages.js",
     "package": "node scripts/package.js",
     "release": "node scripts/release.js"
   }
