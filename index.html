@@ -197,6 +197,40 @@
       color: var(--text-semi);
     }
 
+    .showcase-grid {
+      display: grid;
+      gap: 22px;
+      margin: 24px 0 10px;
+    }
+
+    .showcase-item {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.08), transparent);
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .showcase-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .showcase-item:hover {
+      transform: translateY(-4px);
+      border-color: rgba(var(--accent-rgb), 0.45);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25), 0 12px 30px rgba(var(--accent-rgb), 0.18);
+    }
+
+    .showcase-item:hover img {
+      transform: scale(1.02);
+      filter: saturate(1.05);
+    }
+
     /* Sidebar Content */
     .sidebar-card {
       background: var(--surface);
@@ -606,10 +640,16 @@
         <hr />
 
         <h2 id="showcase">全元素展示</h2>
-        <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/截屏2025-12-19 16.36.49.png"
-          alt="浅色" />
-        <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/截屏2025-12-19 16.38.47.png"
-          alt="深色" />
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/截屏2025-12-19 16.36.49.png"
+              alt="浅色" />
+          </div>
+          <div class="showcase-item">
+            <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/截屏2025-12-19 16.38.47.png"
+              alt="深色" />
+          </div>
+        </div>
       </article>
     </main>
 
@@ -652,7 +692,7 @@
       </div>
 
       <div class="sidebar-card" style="text-align: center;">
-        <img src="typora-bloom-theme/logo.svg" alt="Logo"
+        <img src="typora-bloom-theme/favicon.svg" alt="Logo"
           style="width: 52px; margin-bottom: 16px; filter: drop-shadow(0 8px 16px var(--accent-2));" />
         <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Bloom Typora 主题<br />探索写作的艺术。</p>
         <a href="https://github.com/webkubor/typora-Bloom-theme" target="_blank"
