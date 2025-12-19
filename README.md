@@ -11,6 +11,11 @@
 Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题。
 它包含两套风格：**Bloom Light（浅色）**与**Bloom Dark（深色）**。
 
+![浅色](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.36.49.png)
+
+![深色](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.38.47.png)
+
+
 它追求安静、克制与温柔的表达——  
 不过度装饰，不喧宾夺主，  
 让文字始终成为视线的中心。
