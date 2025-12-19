@@ -1,5 +1,12 @@
 # Bloom · Typora Theme
 
+<p align="center">
+  <a href="https://typora-bloom-theme.webkubor.online/">
+    <img src="typora-bloom-theme/logo.svg" alt="Bloom" width="120" />
+  </a>
+</p>
+
+官网预览：<https://typora-bloom-theme.webkubor.online/>
 
 Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题。
 
