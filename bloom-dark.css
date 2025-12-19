@@ -270,14 +270,14 @@ body {
 
 #write pre,
 #write pre.md-fences {
-  background: #0d1322;
-  color: var(--code-text);
-  border: 1px solid rgba(var(--accent-rgb), 0.16);
+  background: #0f1626;
+  color: #f2f5ff;
+  border: 1px solid rgba(var(--accent-rgb), 0.14);
   border-radius: 18px;
   padding: 3.3em 1.5em 1.5em;
   margin: 2.2em 0;
   overflow: auto;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 58px rgba(0, 0, 0, 0.48);
   font-family: var(--font-mono);
   font-size: 14.5px;
   line-height: 1.65;
@@ -302,23 +302,33 @@ body {
 #write pre code {
   background: transparent;
   padding: 0;
-  color: #e9ecf5;
+  color: #f2f5ff;
   font-weight: normal;
 }
 
 #write pre .CodeMirror,
 #write pre .CodeMirror-scroll,
-#write pre .CodeMirror-gutters {
-  background: transparent;
-  color: #e9ecf5;
+#write pre .CodeMirror-gutters,
+#write pre .cm-s-inner {
+  background: transparent !important;
+  color: #f2f5ff;
 }
 
 #write pre .CodeMirror-linenumber {
-  color: rgba(232, 237, 247, 0.45);
+  color: rgba(232, 237, 247, 0.55);
 }
 
 #write pre .CodeMirror-cursor {
   border-left: 2px solid rgba(var(--accent-rgb), 0.8);
+}
+
+#write pre .CodeMirror-gutters {
+  border-right: 1px solid rgba(var(--accent-rgb), 0.12);
+}
+
+#write pre .CodeMirror-line,
+#write pre .CodeMirror-code {
+  color: #f2f5ff;
 }
 
 #write pre.has-toolbar .code-toolbar {

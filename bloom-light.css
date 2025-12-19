@@ -229,16 +229,15 @@ body {
 
 #write pre,
 #write pre.md-fences {
-  background: linear-gradient(150deg, rgba(var(--accent-rgb), 0.06), transparent 40%),
-    var(--code-bg);
-  color: var(--code-text);
-  border: 1px solid rgba(var(--accent-rgb), 0.22);
+  background: #f7f8fc;
+  color: #1f2937;
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
   border-radius: 16px;
   padding: 3.2em 1.4em 1.4em;
   /* Increased top padding for dots */
   margin: 2em 0;
   overflow: auto;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 18px 50px rgba(23, 26, 34, 0.12);
   font-family: var(--font-mono);
   font-size: 14.5px;
   line-height: 1.6;
@@ -262,8 +261,23 @@ body {
 #write pre code {
   background: transparent;
   padding: 0;
-  color: inherit;
+  color: #111827;
   font-weight: normal;
+}
+
+#write pre .CodeMirror,
+#write pre .CodeMirror-scroll,
+#write pre .CodeMirror-gutters {
+  background: transparent;
+  color: #111827;
+}
+
+#write pre .CodeMirror-linenumber {
+  color: rgba(23, 26, 34, 0.45);
+}
+
+#write pre .CodeMirror-cursor {
+  border-left: 2px solid rgba(var(--accent-rgb), 0.7);
 }
 
 #write pre.has-toolbar .code-toolbar {
