@@ -538,9 +538,54 @@ body {
 #write .md-footnotes {
   border-top: 1px solid var(--border);
   margin-top: 3em;
-  padding-top: 1em;
+  padding: 1.2em 1.4em;
   font-size: 0.9em;
+  color: rgba(23, 26, 34, 0.75);
+  background: rgba(var(--accent-rgb), 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(23, 26, 34, 0.08);
+}
+
+#write .md-footnotes a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+#write .md-footnotes a:hover {
+  border-bottom-color: rgba(var(--accent-rgb), 0.6);
+}
+
+sup.md-footnote {
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+#write .md-def-name {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+#write .md-def-url {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.5);
+}
+
+#write .md-def-title,
+#write .md-def-content {
+  color: var(--text-semi);
+}
+
+#write .md-def-url:empty:before,
+#write .md-def-title:empty:before,
+#write .md-def-content:empty:after {
   color: var(--muted);
+  opacity: 0.85;
 }
 
 /* Images */
