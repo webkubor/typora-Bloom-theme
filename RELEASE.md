@@ -7,11 +7,10 @@
 ## 发布步骤
 1) 修改 `VERSION.txt` 为本次版本号（例如 `v0.1.1`）
 2) 更新 `release.yml` 作为发布说明
-3) 打 tag 并推送：
+3) 执行一键发布：
 
 ```bash
-git tag "$(cat VERSION.txt)"
-git push origin "$(cat VERSION.txt)"
+npm run release
 ```
 
-GitHub Action 会读取 `release.yml` 生成 Release 内容。
+脚本会自动打包、提交、推送、打 tag，并触发 GitHub Release。

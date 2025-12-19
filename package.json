@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.0.1",
   "scripts": {
-    "preview": "bash scripts/preview.sh",
-    "pack": "node scripts/pack.js",
+    "preview": "node scripts/preview.js",
+    "package": "node scripts/package.js",
     "release": "node scripts/release.js"
   }
 }

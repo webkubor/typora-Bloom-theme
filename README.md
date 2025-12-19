@@ -184,21 +184,19 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
 
 直接打开仓库根目录的 `index.html` 即可预览；切换 `Bloom Light / Bloom Dark` 按钮可以查看两套主题。
 
-如果你希望以“本地服务”的方式运行（更接近线上、资源路径更稳定），可以使用任意静态服务器。例如：
+如果你希望以“本地服务”的方式运行（更接近线上、资源路径更稳定），可以直接执行：
 
 ```bash
-bash scripts/preview.sh
+npm run preview
 ```
 
-它会使用 `127.0.0.1` 启动服务并自动打开浏览器。
+它会使用 `127.0.0.1:5173` 启动服务并自动打开浏览器。
 
-如果你想手动执行：
+如果你想指定端口：
 
 ```bash
-python3 -m http.server 5173 --bind 127.0.0.1
+node scripts/preview.js 5173
 ```
-
-访问：`http://127.0.0.1:5173/`
 
 ### 在线预览
 - **官方演示：** [https://typora-bloom-theme.netlify.app](https://typora-bloom-theme.netlify.app)

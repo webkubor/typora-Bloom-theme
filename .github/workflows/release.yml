@@ -17,10 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build release zip
-        shell: bash
-        run: |
-          chmod +x scripts/build-release-zip.sh
-          scripts/build-release-zip.sh
+        run: node scripts/package.js
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
