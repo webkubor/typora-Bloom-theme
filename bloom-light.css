@@ -53,6 +53,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+content,
+.typora-node {
+  background: radial-gradient(900px circle at 0% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
+    radial-gradient(900px circle at 100% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
+    var(--bg);
+}
+
 ::selection {
   background: var(--selection);
 }
