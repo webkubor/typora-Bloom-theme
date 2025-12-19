@@ -144,10 +144,22 @@ body {
 #write blockquote {
   margin: 1.5em 0;
   padding: 1em 1.5em;
-  background: var(--surface);
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.12), rgba(255, 255, 255, 0.8));
   border-left: 4px solid var(--accent);
   border-radius: 12px;
   color: var(--text-semi);
+  position: relative;
+}
+
+#write blockquote::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: 76px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.5), transparent);
+  border-radius: 999px;
 }
 
 #write blockquote p:last-child {
@@ -500,10 +512,23 @@ body {
 
 /* Mark */
 #write mark {
-  background: rgba(255, 225, 0, 0.3);
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.25), rgba(var(--accent-rgb), 0.12));
   color: inherit;
-  padding: 0.1em 0.2em;
+  padding: 0.12em 0.26em;
+  border-radius: 9px;
+  border: 1px solid rgba(var(--accent-rgb), 0.32);
+  box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.18);
+}
+
+/* Underline */
+#write u {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, rgba(var(--accent-rgb), 0.5), rgba(var(--accent-rgb), 0.18));
+  background-repeat: no-repeat;
+  background-size: 100% 0.16em;
+  background-position: 0 90%;
   border-radius: 4px;
+  padding-bottom: 2px;
 }
 
 /* KBD */

@@ -169,12 +169,24 @@ body {
 #write blockquote {
   margin: 1.6em 0;
   padding: 1.1em 1.6em;
-  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.08), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.1), rgba(255, 255, 255, 0.03));
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
   border-radius: 14px;
   color: var(--text-semi);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+#write blockquote::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.5), transparent);
+  border-radius: 999px;
 }
 
 #write blockquote p:last-child {
@@ -559,11 +571,23 @@ body {
 
 /* Mark */
 #write mark {
-  background: rgba(var(--accent-rgb), 0.26);
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.34), rgba(var(--accent-rgb), 0.18));
   color: var(--text);
-  padding: 0.1em 0.24em;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(var(--accent-rgb), 0.28);
+  padding: 0.12em 0.28em;
+  border-radius: 9px;
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.32);
+  border: 1px solid rgba(var(--accent-rgb), 0.42);
+}
+
+/* Underline */
+#write u {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, rgba(var(--accent-rgb), 0.55), rgba(var(--accent-rgb), 0.2));
+  background-repeat: no-repeat;
+  background-size: 100% 0.18em;
+  background-position: 0 90%;
+  border-radius: 4px;
+  padding-bottom: 2px;
 }
 
 /* KBD */
