@@ -109,17 +109,20 @@ body {
 }
 
 #write h2 {
-  font-size: 1.75em;
+  font-size: 1.68em;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
-  padding-bottom: 0.25em;
+  padding-bottom: 0.24em;
+  color: rgba(23, 26, 34, 0.9);
 }
 
 #write h3 {
-  font-size: 1.4em;
+  font-size: 1.32em;
+  color: rgba(23, 26, 34, 0.86);
 }
 
 #write h4 {
-  font-size: 1.2em;
+  font-size: 1.15em;
+  color: rgba(23, 26, 34, 0.8);
 }
 
 #write h1::after,
@@ -134,9 +137,32 @@ body {
   border-radius: 999px;
 }
 
+#write h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.38em;
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.32), transparent);
+  border-radius: 999px;
+}
+
+#write h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.34em;
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.22), transparent);
+  border-radius: 999px;
+}
+
 #write hr {
   border: 0;
-  border-top: 2px solid var(--border);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.38), transparent);
   margin: 2.5em 0;
 }
 
@@ -182,6 +208,18 @@ body {
   margin: 0.4em 0;
 }
 
+#write ul li::marker {
+  color: rgba(var(--accent-rgb), 0.72);
+  font-size: 0.98em;
+  font-weight: 700;
+}
+
+#write ol li::marker {
+  color: rgba(var(--accent-rgb), 0.72);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
 /* Task Lists */
 .task-list-item {
   list-style-type: none;
@@ -189,9 +227,36 @@ body {
 }
 
 .task-list-item input {
+  appearance: none;
+  width: 18px;
+  height: 18px;
   margin-right: 0.6em;
-  accent-color: var(--accent);
-  transform: translateY(1px);
+  border-radius: 6px;
+  border: 2px solid rgba(var(--accent-rgb), 0.6);
+  background: rgba(var(--accent-rgb), 0.12);
+  box-shadow: inset 0 2px 6px rgba(23, 26, 34, 0.08), 0 4px 10px rgba(var(--accent-rgb), 0.18);
+  transition: all 0.15s ease;
+  transform: translateY(2px);
+  cursor: pointer;
+  position: relative;
+}
+
+.task-list-item input:checked {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)),
+    var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.9);
+  box-shadow: inset 0 2px 6px rgba(23, 26, 34, 0.05), 0 6px 14px rgba(var(--accent-rgb), 0.25);
+}
+
+.task-list-item input:checked::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #0b0f19;
+  font-size: 12px;
+  font-weight: 800;
 }
 
 /* Tables */
