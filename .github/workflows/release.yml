@@ -27,4 +27,4 @@ jobs:
         with:
           files: |
             Bloom-theme.zip
-          generate_release_notes: true
+          body_path: release.yml
