@@ -202,7 +202,6 @@ python3 -m http.server 5173 --bind 127.0.0.1
 
 - `assets/favicon.svg`：官网/预览页浏览器标签图标
 - `assets/logo.svg`：官网侧栏与品牌展示图
-- `assets/logo-pure.svg`：官网头部/侧栏的纯 Logo 图形
 
 说明：Typora 主题主要通过 `css` 影响编辑器样式，通常无法控制操作系统层面的“文件图标”。如果你想让项目更完整，建议在 Releases/README/官网中统一使用上述图标资源。
 
