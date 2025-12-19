@@ -13,8 +13,8 @@ cp "$ROOT_DIR/bloom-dark.css" "$OUT_DIR/bloom-dark.css"
 
 touch "$OUT_DIR/.nojekyll"
 
-if [[ -d "$ROOT_DIR/assets" ]]; then
-  cp -R "$ROOT_DIR/assets" "$OUT_DIR/assets"
+if [[ -d "$ROOT_DIR/typora-bloom-theme" ]]; then
+  cp -R "$ROOT_DIR/typora-bloom-theme" "$OUT_DIR/typora-bloom-theme"
 fi
 
 echo "Built Pages site at $OUT_DIR"

@@ -13,8 +13,8 @@ FILES=(
   "bloom-dark.css"
 )
 
-if [[ -d "assets" ]]; then
-  FILES+=("assets")
+if [[ -d "typora-bloom-theme" ]]; then
+  FILES+=("typora-bloom-theme")
 fi
 
 zip -r "$ZIP_NAME" "${FILES[@]}" -x "**/.DS_Store" "**/Thumbs.db" >/dev/null

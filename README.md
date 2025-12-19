@@ -161,7 +161,7 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
 
    - `bloom-light.css`
    - `bloom-dark.css`
-   - `assets/`（如存在）
+   - `typora-bloom-theme/`（如存在）
 
 ---
 
@@ -198,32 +198,10 @@ python3 -m http.server 5173 --bind 127.0.0.1
 - Build command：`bash scripts/build-pages.sh`
 - Publish directory：`_pages`
 
-## 图标与品牌素材
+## 致谢
 
-- `assets/favicon.svg`：官网/预览页浏览器标签图标
-- `assets/logo.svg`：官网侧栏与品牌展示图
+感谢所有使用、反馈与分享 Bloom 的人。
 
-说明：Typora 主题主要通过 `css` 影响编辑器样式，通常无法控制操作系统层面的“文件图标”。如果你想让项目更完整，建议在 Releases/README/官网中统一使用上述图标资源。
-
-## 发布 Release（维护者）
-
-本仓库配置了 GitHub Actions：当你推送 `v*` 格式的 tag 时，会自动生成 Release，并上传 `Bloom-theme.zip`。
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-本地手动打包：
-
-```bash
-bash scripts/build-release-zip.sh
-```
-
-## 自定义主题色
-
-在 `bloom-light.css` 与 `bloom-dark.css` 顶部，你可以找到：
-
-```css
---accent
---accent-2
+如果这个主题在某个清晨或夜晚  
+让你愿意多写几行字，  
+那它的意义就已经成立了。
