@@ -18,18 +18,18 @@
   --info-bg: rgba(59, 130, 246, 0.15);
 
   /* Neutrals */
-  --bg: #0c111d;
-  --surface: #121a2b;
-  --surface-2: #182235;
-  --text: #e8edf7;
-  --text-semi: #cfd7e8;
-  --muted: rgba(232, 237, 247, 0.7);
-  --border: rgba(232, 237, 247, 0.12);
-  --border-semi: rgba(232, 237, 247, 0.22);
+  --bg: #111214;
+  --surface: #17181c;
+  --surface-2: #1f2026;
+  --text: #eceff5;
+  --text-semi: #d4d8e3;
+  --muted: rgba(236, 239, 245, 0.7);
+  --border: rgba(236, 239, 245, 0.12);
+  --border-semi: rgba(236, 239, 245, 0.22);
 
   /* Effects */
-  --shadow: 0 16px 48px rgba(5, 8, 15, 0.55);
-  --shadow-lg: 0 30px 80px rgba(5, 8, 15, 0.65);
+  --shadow: 0 16px 48px rgba(4, 5, 8, 0.55);
+  --shadow-lg: 0 30px 80px rgba(4, 5, 8, 0.65);
 
   /* Typography */
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -38,12 +38,12 @@
   --selection: rgba(var(--accent-rgb), 0.32);
 
   /* Code */
-  --code-bg: #0a0f1c;
+  --code-bg: #14161b;
   --code-text: #e5e7eb;
 
   /* Typora chrome */
   --bg-color: var(--bg);
-  --side-bar-bg-color: #0f1524;
+  --side-bar-bg-color: #141418;
   --text-color: var(--text);
   --select-text-bg-color: var(--selection);
   --item-hover-bg-color: rgba(var(--accent-rgb), 0.08);
@@ -62,8 +62,8 @@
 html,
 body {
   background: radial-gradient(1200px circle at 18% 8%, rgba(var(--accent-rgb), 0.08), transparent 34%),
-    linear-gradient(140deg, rgba(var(--accent-rgb), 0.04), transparent 46%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 360px),
+    linear-gradient(140deg, rgba(255, 255, 255, 0.02), transparent 50%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 360px),
     var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -258,36 +258,9 @@ body {
 }
 
 .task-list-item input {
-  appearance: none;
-  width: 18px;
-  height: 18px;
   margin-right: 0.6em;
-  border-radius: 6px;
-  border: 2px solid rgba(var(--accent-rgb), 0.6);
-  background: rgba(var(--accent-rgb), 0.1);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(var(--accent-rgb), 0.2);
-  transition: all 0.15s ease;
-  transform: translateY(2px);
-  cursor: pointer;
-  position: relative;
-}
-
-.task-list-item input:checked {
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)),
-    var(--accent);
-  border-color: rgba(var(--accent-rgb), 0.9);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.25), 0 6px 14px rgba(var(--accent-rgb), 0.35);
-}
-
-.task-list-item input:checked::after {
-  content: "✓";
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: #0b0f19;
-  font-size: 12px;
-  font-weight: 800;
+  accent-color: var(--accent);
+  transform: translateY(1px);
 }
 
 /* Tables */
@@ -343,7 +316,7 @@ body {
 #write pre.md-fences,
 #write pre[mdtype="fences"],
 #write .md-fences {
-  background: #0f1626;
+  background: #16181f;
   color: #f2f5ff;
   border: 1px solid rgba(var(--accent-rgb), 0.14);
   border-radius: 18px;
@@ -396,7 +369,7 @@ body {
 #write .md-fences .CodeMirror-gutters,
 #write .md-fences .cm-s-inner {
   background: transparent !important;
-  color: #f2f5ff;
+  color: #f7f9ff;
 }
 
 #write pre.md-fences .CodeMirror-linenumber,
@@ -423,7 +396,57 @@ body {
 #write pre[mdtype="fences"] .CodeMirror-code,
 #write .md-fences .CodeMirror-line,
 #write .md-fences .CodeMirror-code {
-  color: #f2f5ff;
+  color: #f7f9ff;
+}
+
+/* Code token colors for readability */
+#write pre.md-fences .cm-s-inner .cm-comment,
+#write pre[mdtype="fences"] .cm-s-inner .cm-comment,
+#write .md-fences .cm-s-inner .cm-comment {
+  color: rgba(236, 239, 245, 0.55);
+}
+
+#write pre.md-fences .cm-s-inner .cm-keyword,
+#write pre[mdtype="fences"] .cm-s-inner .cm-keyword,
+#write .md-fences .cm-s-inner .cm-keyword {
+  color: #ff9bd1;
+  font-weight: 700;
+}
+
+#write pre.md-fences .cm-s-inner .cm-string,
+#write pre[mdtype="fences"] .cm-s-inner .cm-string,
+#write .md-fences .cm-s-inner .cm-string {
+  color: #ffc38f;
+}
+
+#write pre.md-fences .cm-s-inner .cm-number,
+#write pre[mdtype="fences"] .cm-s-inner .cm-number,
+#write .md-fences .cm-s-inner .cm-number {
+  color: #ffd166;
+}
+
+#write pre.md-fences .cm-s-inner .cm-def,
+#write pre[mdtype="fences"] .cm-s-inner .cm-def,
+#write .md-fences .cm-s-inner .cm-def {
+  color: #9bd5ff;
+}
+
+#write pre.md-fences .cm-s-inner .cm-variable,
+#write pre[mdtype="fences"] .cm-s-inner .cm-variable,
+#write .md-fences .cm-s-inner .cm-variable {
+  color: #f7f9ff;
+}
+
+#write pre.md-fences .cm-s-inner .cm-property,
+#write pre[mdtype="fences"] .cm-s-inner .cm-property,
+#write .md-fences .cm-s-inner .cm-property {
+  color: #9bd5ff;
+}
+
+#write pre.md-fences .cm-s-inner .cm-operator,
+#write pre[mdtype="fences"] .cm-s-inner .cm-operator,
+#write .md-fences .cm-s-inner .cm-operator {
+  color: #f7f9ff;
 }
 
 /* 防止嵌套多层 pre/code 造成重复背景 */
