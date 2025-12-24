@@ -163,8 +163,10 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
 
    - `bloom-light.css`  
    - `bloom-dark.css`  
+   - `bloom-forest.css`  
+   - `bloom-sea.css`  
 
-4. 回到 Typora：**主题 → 选择 `Bloom Light` / `Bloom Dark`**
+4. 回到 Typora：**主题 → 选择 `Bloom Light` / `Bloom Dark` / `Bloom Forest` / `Bloom Sea`**
 
 ### 从 Releases 下载（推荐）
 
@@ -174,40 +176,15 @@ Bloom 希望你在使用时，**几乎感受不到主题本身的存在**。
 
    - `bloom-light.css`
    - `bloom-dark.css`
+   - `bloom-forest.css`
+   - `bloom-sea.css`
    - `typora-bloom-theme/`（如存在）
 
 ---
 
-## 预览（开发/展示）
-
-### 本地预览
-
-直接打开仓库根目录的 `index.html` 即可预览；切换 `Bloom Light / Bloom Dark` 按钮可以查看两套主题。
-
-如果你希望以“本地服务”的方式运行（更接近线上、资源路径更稳定），可以直接执行：
-
-```bash
-npm run preview
-```
-
-它会使用 `127.0.0.1:5173` 启动服务并自动打开浏览器。
-
-如果你想指定端口：
-
-```bash
-node scripts/preview.js 5173
-```
-
-### 在线预览
+## 在线预览
 - **官方演示：** [https://typora-bloom-theme.netlify.app](https://typora-bloom-theme.netlify.app)
 - **GitHub Pages：** 推送到 `main` 后会自动部署。
-
-### 部署到 Netlify
-
-仓库已提供 `netlify.toml`：
-
-- Build command：`node scripts/pages.js`
-- Publish directory：`_pages`
 
 ## 致谢
 

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+:root {
+  /* Accent & Brand */
+  --accent: #ff4d8d;
+  --accent-rgb: 255, 77, 141;
+  --accent-2: rgba(var(--accent-rgb), 0.14);
+  --accent-hover: #ff337a;
+
+  /* Semantic Colors */
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.1);
+  --info: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Neutrals */
+  --bg: #fbfbfd;
+  --surface: #f2f3f7;
+  --surface-2: #e5e7eb;
+  --text: #171a22;
+  --text-semi: #374151;
+  --muted: rgba(23, 26, 34, 0.64);
+  --border: rgba(23, 26, 34, 0.12);
+  --border-semi: rgba(23, 26, 34, 0.24);
+
+  /* Effects */
+  --shadow: 0 10px 30px rgba(23, 26, 34, 0.08);
+  --shadow-lg: 0 20px 50px rgba(23, 26, 34, 0.12);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --selection: rgba(var(--accent-rgb), 0.22);
+
+  /* Code */
+  --code-bg: #0c1020;
+  --code-text: #e5e7eb;
+}

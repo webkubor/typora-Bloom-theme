@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.1",
   "scripts": {
-    "preview": "node scripts/preview.js",
+    "build": "node scripts/build-themes.js",
+    "preview": "npm run build && node scripts/preview.js",
     "package": "node scripts/package.js",
     "release": "node scripts/release.js"
   }

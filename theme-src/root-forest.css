@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+:root {
+  /* Accent & Brand - Forest */
+  --accent: #2dde8f;
+  --accent-rgb: 45, 222, 143;
+  --accent-2: rgba(var(--accent-rgb), 0.22);
+  --accent-hover: #18b46f;
+
+  /* Semantic Colors */
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.15);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.15);
+  --info: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.15);
+
+  /* Neutrals */
+  --bg: #141414;
+  --surface: #1b1b1f;
+  --surface-2: #232327;
+  --text: #e7e7ea;
+  --text-semi: #c9c9cf;
+  --muted: rgba(231, 231, 234, 0.7);
+  --border: rgba(231, 231, 234, 0.12);
+  --border-semi: rgba(231, 231, 234, 0.22);
+
+  /* Effects */
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 30px 80px rgba(0, 0, 0, 0.65);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --selection: rgba(var(--accent-rgb), 0.36);
+
+  /* Code */
+  --code-bg: #1a1a1f;
+  --code-text: #e5e7eb;
+
+  /* Typora chrome */
+  --bg-color: var(--bg);
+  --side-bar-bg-color: #17171a;
+  --text-color: var(--text);
+  --select-text-bg-color: var(--selection);
+  --item-hover-bg-color: rgba(var(--accent-rgb), 0.08);
+  --item-hover-text-color: var(--text);
+  --control-text-color: var(--muted);
+  --control-text-hover-color: var(--text);
+  --window-border: 1px solid var(--border);
+  --active-file-bg-color: rgba(var(--accent-rgb), 0.16);
+  --active-file-border-color: rgba(var(--accent-rgb), 0.6);
+  --active-file-text-color: var(--text);
+  --primary-color: var(--accent);
+  --rawblock-edit-panel-bd: var(--surface-2);
+  --search-select-bg-color: rgba(var(--accent-rgb), 0.28);
+}

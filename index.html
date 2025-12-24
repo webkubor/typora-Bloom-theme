@@ -7,7 +7,7 @@
   <title>Bloom · Premium Typora Theme</title>
 
   <link rel="icon" href="typora-bloom-theme/favicon.svg" type="image/svg+xml" />
-  <link id="theme-css" rel="stylesheet" href="bloom-light.css" />
+  <link id="theme-css" rel="stylesheet" href="dist/bloom-light.css" />
 
   <style>
     :root {
@@ -684,9 +684,9 @@
         <ol>
           <li>打开 Typora。</li>
           <li>进入：偏好设置 → 外观 → 打开主题文件夹。</li>
-          <li>复制主题文件：<code>bloom-light.css</code>、<code>bloom-dark.css</code>（如有 <code>typora-bloom-theme/</code> 一并复制）。
+          <li>复制主题文件：<code>bloom-light.css</code>、<code>bloom-dark.css</code>、<code>bloom-forest.css</code>、<code>bloom-sea.css</code>（如有 <code>typora-bloom-theme/</code> 一并复制）。
           </li>
-          <li>回到 Typora：主题 → 选择 <strong>Bloom Light</strong> 或 <strong>Bloom Dark</strong>。</li>
+          <li>回到 Typora：主题 → 选择 <strong>Bloom Light</strong> / <strong>Bloom Dark</strong> / <strong>Bloom Forest</strong> / <strong>Bloom Sea</strong>。</li>
         </ol>
 
         <h3>从 Releases 下载（推荐）</h3>
@@ -773,7 +773,7 @@
 
       // 根据主题名动态加载对应的 CSS 文件
       if (themeLink) {
-        themeLink.setAttribute('href', `bloom-${themeName}.css`);
+        themeLink.setAttribute('href', `dist/bloom-${themeName}.css`);
       }
       
       // 更新按钮的按下状态
