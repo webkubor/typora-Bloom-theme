@@ -346,6 +346,27 @@
       border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 0 5px var(--accent-2);
+      animation: badgePulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 5px var(--accent-2), 0 0 8px rgba(var(--accent-rgb), 0.12);
+        opacity: 0.65;
+      }
+      50% {
+        transform: scale(1.18);
+        box-shadow: 0 0 0 10px rgba(var(--accent-rgb), 0.22), 0 0 16px rgba(var(--accent-rgb), 0.55);
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-badge-dot {
+        animation: none;
+      }
     }
 
     .hero-title {
@@ -734,16 +755,26 @@
   </div>
 
   <script>
-// 修改后的设置函数
+    const themeLink = document.getElementById('theme-css');
+    const btnLight = document.getElementById('btn-light');
+    const btnDark = document.getElementById('btn-dark');
+    const btnForest = document.getElementById('btn-forest');
+    const btnSea = document.getElementById('btn-sea');
+
+    // 修改后的设置函数
     function setTheme(themeName) {
       const write = document.getElementById('write');
       // 触发重新渲染动画
-      write.style.animation = 'none';
-      void write.offsetWidth;
-      write.style.animation = null;
+      if (write) {
+        write.style.animation = 'none';
+        void write.offsetWidth;
+        write.style.animation = null;
+      }
 
       // 根据主题名动态加载对应的 CSS 文件
-      themeLink.setAttribute('href', `bloom-${themeName}.css`);
+      if (themeLink) {
+        themeLink.setAttribute('href', `bloom-${themeName}.css`);
+      }
       
       // 更新按钮的按下状态
       updateButtonStates(themeName);
@@ -769,13 +800,12 @@
       });
     }
 
+    updateButtonStates('light');
 
-
-
-    btnLight.addEventListener('click', () => setTheme('light'));
-    btnDark.addEventListener('click', () => setTheme('dark'));
-    btnForest.addEventListener('click', () => setTheme('forest'));
-    btnSea.addEventListener('click', () => setTheme('sea'));
+    if (btnLight) btnLight.addEventListener('click', () => setTheme('light'));
+    if (btnDark) btnDark.addEventListener('click', () => setTheme('dark'));
+    if (btnForest) btnForest.addEventListener('click', () => setTheme('forest'));
+    if (btnSea) btnSea.addEventListener('click', () => setTheme('sea'));
 
 
     

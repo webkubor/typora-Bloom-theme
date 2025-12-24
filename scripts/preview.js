@@ -39,8 +39,13 @@ function openBrowser(url) {
 
 function safePath(urlPath) {
   const clean = decodeURIComponent(urlPath.split("?")[0]);
-  const normalized = path.normalize(clean).replace(/^(\.\.(\/|\\|$))+/, "");
-  return path.join(root, normalized);
+  const normalized = path.normalize(clean).replace(/^([/\\])+/, "");
+  const resolved = path.resolve(root, normalized);
+  const relative = path.relative(root, resolved);
+  if (relative.startsWith("..") || path.isAbsolute(relative)) {
+    return null;
+  }
+  return resolved;
 }
 
 const server = http.createServer((req, res) => {
@@ -51,6 +56,11 @@ const server = http.createServer((req, res) => {
   }
 
   let filePath = safePath(req.url);
+  if (!filePath) {
+    res.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
+    res.end("访问被拒绝");
+    return;
+  }
 
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
     filePath = path.join(filePath, "index.html");
