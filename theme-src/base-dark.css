@@ -1,8 +1,8 @@
 html,
 body {
   background: radial-gradient(1200px circle at 18% 8%, rgba(var(--accent-rgb), 0.06), transparent 36%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 300px),
-    linear-gradient(180deg, #151515 0%, #121212 100%),
+    linear-gradient(180deg, rgba(var(--white-rgb), 0.02), transparent 300px),
+    linear-gradient(180deg, var(--page-depth-1) 0%, var(--page-depth-2) 100%),
     var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -28,10 +28,10 @@ content,
   margin: 0 auto;
   padding: 52px 44px 96px;
   background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.03), transparent 460px),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.02), transparent 70%);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+    linear-gradient(120deg, rgba(var(--white-rgb), 0.02), transparent 70%);
+  border: 1px solid rgba(var(--white-rgb), 0.04);
   border-radius: 22px;
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 30px 90px rgba(var(--black-rgb), 0.38);
 }
 
 #write > :first-child {
@@ -75,24 +75,24 @@ content,
   font-size: 2.35em;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.32);
   padding-bottom: 0.35em;
-  text-shadow: 0 10px 36px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 10px 36px rgba(var(--black-rgb), 0.35);
 }
 
 #write h2 {
   font-size: 1.82em;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.24);
   padding-bottom: 0.3em;
-  color: rgba(232, 237, 247, 0.92);
+  color: rgba(var(--ink-rgb), 0.92);
 }
 
 #write h3 {
   font-size: 1.36em;
-  color: rgba(232, 237, 247, 0.88);
+  color: rgba(var(--ink-rgb), 0.88);
 }
 
 #write h4 {
   font-size: 1.18em;
-  color: rgba(232, 237, 247, 0.82);
+  color: rgba(var(--ink-rgb), 0.82);
 }
 
 #write h1::after,
@@ -140,12 +140,12 @@ content,
 #write blockquote {
   margin: 1.6em 0;
   padding: 1.1em 1.6em;
-  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.1), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.1), rgba(var(--white-rgb), 0.03));
   border: 1px solid var(--border);
   border-left: 4px solid var(--accent);
   border-radius: 14px;
   color: var(--text-semi);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 40px rgba(var(--black-rgb), 0.25);
   position: relative;
 }
 
@@ -219,7 +219,7 @@ content,
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 36px rgba(var(--black-rgb), 0.25);
 }
 
 #write th,
@@ -230,7 +230,7 @@ content,
 
 #write th {
   text-align: left;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent);
+  background: linear-gradient(180deg, rgba(var(--white-rgb), 0.04), transparent);
   font-weight: 700;
   color: var(--text);
 }
@@ -254,7 +254,7 @@ content,
   padding: 0.2em 0.45em;
   border-radius: 7px;
   background: rgba(var(--accent-rgb), 0.14);
-  color: #ffe7f2;
+  color: var(--code-inline-text);
   font-weight: 600;
   border: 1px solid rgba(var(--accent-rgb), 0.32);
 }
@@ -262,14 +262,14 @@ content,
 #write pre.md-fences,
 #write pre[mdtype="fences"],
 #write .md-fences {
-  background: #16181f;
-  color: #f2f5ff;
+  background: var(--code-bg);
+  color: var(--code-text);
   border: 1px solid rgba(var(--accent-rgb), 0.14);
   border-radius: 18px;
   padding: 3.3em 1.5em 1.5em;
   margin: 2.2em 0;
   overflow: auto;
-  box-shadow: 0 20px 58px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 20px 58px rgba(var(--black-rgb), 0.48);
   font-family: var(--font-mono);
   font-size: 14.5px;
   line-height: 1.65;
@@ -287,8 +287,8 @@ content,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ff5f56;
-  box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #1fcf7c;
+  background: var(--code-dot-red);
+  box-shadow: 18px 0 0 var(--code-dot-yellow), 36px 0 0 var(--code-dot-green);
   z-index: 2;
   opacity: 0.9;
 }
@@ -298,7 +298,7 @@ content,
 #write .md-fences code {
   background: transparent;
   padding: 0;
-  color: #f2f5ff;
+  color: var(--code-text);
   font-weight: normal;
 }
 
@@ -315,13 +315,13 @@ content,
 #write .md-fences .CodeMirror-gutters,
 #write .md-fences .cm-s-inner {
   background: transparent !important;
-  color: #f7f9ff;
+  color: var(--code-ink);
 }
 
 #write pre.md-fences .CodeMirror-linenumber,
 #write pre[mdtype="fences"] .CodeMirror-linenumber,
 #write .md-fences .CodeMirror-linenumber {
-  color: rgba(232, 237, 247, 0.55);
+  color: rgba(var(--ink-rgb), 0.55);
 }
 
 #write pre.md-fences .CodeMirror-cursor,
@@ -342,57 +342,57 @@ content,
 #write pre[mdtype="fences"] .CodeMirror-code,
 #write .md-fences .CodeMirror-line,
 #write .md-fences .CodeMirror-code {
-  color: #f7f9ff;
+  color: var(--code-ink);
 }
 
 /* Code token colors for readability */
 #write pre.md-fences .cm-s-inner .cm-comment,
 #write pre[mdtype="fences"] .cm-s-inner .cm-comment,
 #write .md-fences .cm-s-inner .cm-comment {
-  color: rgba(236, 239, 245, 0.55);
+  color: rgba(var(--code-muted-rgb), 0.55);
 }
 
 #write pre.md-fences .cm-s-inner .cm-keyword,
 #write pre[mdtype="fences"] .cm-s-inner .cm-keyword,
 #write .md-fences .cm-s-inner .cm-keyword {
-  color: #ff9bd1;
+  color: var(--code-token-keyword);
   font-weight: 700;
 }
 
 #write pre.md-fences .cm-s-inner .cm-string,
 #write pre[mdtype="fences"] .cm-s-inner .cm-string,
 #write .md-fences .cm-s-inner .cm-string {
-  color: #ffc38f;
+  color: var(--code-token-string);
 }
 
 #write pre.md-fences .cm-s-inner .cm-number,
 #write pre[mdtype="fences"] .cm-s-inner .cm-number,
 #write .md-fences .cm-s-inner .cm-number {
-  color: #ffd166;
+  color: var(--code-token-number);
 }
 
 #write pre.md-fences .cm-s-inner .cm-def,
 #write pre[mdtype="fences"] .cm-s-inner .cm-def,
 #write .md-fences .cm-s-inner .cm-def {
-  color: #9bd5ff;
+  color: var(--code-token-blue);
 }
 
 #write pre.md-fences .cm-s-inner .cm-variable,
 #write pre[mdtype="fences"] .cm-s-inner .cm-variable,
 #write .md-fences .cm-s-inner .cm-variable {
-  color: #f7f9ff;
+  color: var(--code-ink);
 }
 
 #write pre.md-fences .cm-s-inner .cm-property,
 #write pre[mdtype="fences"] .cm-s-inner .cm-property,
 #write .md-fences .cm-s-inner .cm-property {
-  color: #9bd5ff;
+  color: var(--code-token-blue);
 }
 
 #write pre.md-fences .cm-s-inner .cm-operator,
 #write pre[mdtype="fences"] .cm-s-inner .cm-operator,
 #write .md-fences .cm-s-inner .cm-operator {
-  color: #f7f9ff;
+  color: var(--code-ink);
 }
 
 /* 防止嵌套多层 pre/code 造成重复背景 */
@@ -440,19 +440,19 @@ content,
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.76);
+  color: rgba(var(--white-rgb), 0.76);
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(var(--white-rgb), 0.14);
+  background: rgba(var(--white-rgb), 0.08);
 }
 
 #write pre.has-toolbar .code-copy-btn {
   pointer-events: auto;
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(var(--white-rgb), 0.16);
+  background: rgba(var(--white-rgb), 0.08);
+  color: rgba(var(--white-rgb), 0.9);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -463,8 +463,8 @@ content,
 
 #write pre.has-toolbar .code-copy-btn:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.26);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(var(--white-rgb), 0.26);
+  background: rgba(var(--white-rgb), 0.12);
 }
 
 #write pre.has-toolbar .code-copy-btn[data-state="copied"] {
@@ -528,9 +528,9 @@ content,
   gap: 6px;
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(var(--white-rgb), 0.16);
+  background: rgba(var(--white-rgb), 0.08);
+  color: rgba(var(--white-rgb), 0.8);
   line-height: 1;
 }
 
@@ -544,9 +544,9 @@ content,
 #write [mdtype="fences"] .code-tooltip button {
   pointer-events: auto;
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(var(--white-rgb), 0.16);
+  background: rgba(var(--white-rgb), 0.08);
+  color: rgba(var(--white-rgb), 0.9);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -565,8 +565,8 @@ content,
 #write [mdtype="fences"] .code-tooltip a:hover,
 #write [mdtype="fences"] .code-tooltip button:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(var(--white-rgb), 0.28);
+  background: rgba(var(--white-rgb), 0.12);
 }
 
 /* YAML Frontmatter */
@@ -590,11 +590,11 @@ content,
   margin-top: 3em;
   padding: 1.2em 1.4em;
   font-size: 0.9em;
-  color: rgba(231, 231, 234, 0.75);
+  color: rgba(var(--text-rgb), 0.75);
   background: rgba(var(--accent-rgb), 0.08);
   border: 1px solid rgba(var(--accent-rgb), 0.2);
   border-radius: 12px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 14px 40px rgba(var(--black-rgb), 0.35);
 }
 
 #write .md-footnotes a {
@@ -643,7 +643,7 @@ sup.md-footnote {
   max-width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 70px rgba(var(--black-rgb), 0.35);
   display: block;
   margin: 1.6em auto;
 }
@@ -698,7 +698,7 @@ sup.md-footnote {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(var(--white-rgb), 0.12);
   border-radius: 999px;
   border: 2px solid transparent;
   background-clip: padding-box;
@@ -726,7 +726,7 @@ sup.md-footnote {
 
 .sidebar-tab:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(var(--white-rgb), 0.04);
   border-radius: 10px;
 }
 
@@ -752,7 +752,7 @@ sup.md-footnote {
 }
 
 .file-node-content:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(var(--white-rgb), 0.04);
   color: var(--text);
 }
 
@@ -760,7 +760,7 @@ sup.md-footnote {
 .file-list-item.active {
   background: rgba(var(--accent-rgb), 0.16);
   color: var(--text);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 28px rgba(var(--black-rgb), 0.35);
 }
 
 .file-library-node.active > .file-node-background,
@@ -777,7 +777,7 @@ sup.md-footnote {
 }
 
 .typora-node::-webkit-scrollbar-thumb:vertical {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(var(--white-rgb), 0.16);
 }
 
 .typora-node::-webkit-scrollbar-thumb:vertical:active {

@@ -2,7 +2,7 @@ html,
 body {
   background: radial-gradient(1400px circle at 16% 10%, rgba(var(--accent-rgb), 0.08), transparent 36%),
     linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.7), transparent 340px),
+    linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
     var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
@@ -28,10 +28,10 @@ content,
   margin: 0 auto;
   padding: 48px 40px 84px;
   background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05), transparent 460px),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.7), transparent 70%);
-  border: 1px solid rgba(23, 26, 34, 0.06);
+    linear-gradient(120deg, rgba(var(--white-rgb), 0.7), transparent 70%);
+  border: 1px solid rgba(var(--text-rgb), 0.06);
   border-radius: 22px;
-  box-shadow: 0 26px 80px rgba(23, 26, 34, 0.12);
+  box-shadow: 0 26px 80px rgba(var(--text-rgb), 0.12);
 }
 
 #write p {
@@ -75,17 +75,17 @@ content,
   font-size: 1.68em;
   border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
   padding-bottom: 0.24em;
-  color: rgba(23, 26, 34, 0.9);
+  color: rgba(var(--text-rgb), 0.9);
 }
 
 #write h3 {
   font-size: 1.32em;
-  color: rgba(23, 26, 34, 0.86);
+  color: rgba(var(--text-rgb), 0.86);
 }
 
 #write h4 {
   font-size: 1.15em;
-  color: rgba(23, 26, 34, 0.8);
+  color: rgba(var(--text-rgb), 0.8);
 }
 
 #write h1::after,
@@ -133,7 +133,7 @@ content,
 #write blockquote {
   margin: 1.5em 0;
   padding: 1em 1.5em;
-  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.12), rgba(255, 255, 255, 0.8));
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.12), rgba(var(--white-rgb), 0.8));
   border-left: 4px solid var(--accent);
   border-radius: 12px;
   color: var(--text-semi);
@@ -204,7 +204,7 @@ content,
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 12px rgba(var(--black-rgb), 0.02);
 }
 
 #write th,
@@ -243,15 +243,15 @@ content,
 #write pre.md-fences,
 #write pre[mdtype="fences"],
 #write .md-fences {
-  background: #f7f8fc;
-  color: #1f2937;
+  background: var(--code-bg);
+  color: var(--code-text);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
   border-radius: 16px;
   padding: 3.2em 1.4em 1.4em;
   /* Increased top padding for dots */
   margin: 2em 0;
   overflow: auto;
-  box-shadow: 0 18px 50px rgba(23, 26, 34, 0.12);
+  box-shadow: 0 18px 50px rgba(var(--text-rgb), 0.12);
   font-family: var(--font-mono);
   font-size: 14.5px;
   line-height: 1.6;
@@ -269,8 +269,8 @@ content,
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ff5f56;
-  box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #27c93f;
+  background: var(--code-dot-red);
+  box-shadow: 18px 0 0 var(--code-dot-yellow), 36px 0 0 var(--code-dot-green);
   z-index: 2;
 }
 
@@ -279,7 +279,7 @@ content,
 #write .md-fences code {
   background: transparent;
   padding: 0;
-  color: #111827;
+  color: var(--code-ink);
   font-weight: normal;
 }
 
@@ -293,13 +293,13 @@ content,
 #write .md-fences .CodeMirror-scroll,
 #write .md-fences .CodeMirror-gutters {
   background: transparent;
-  color: #111827;
+  color: var(--code-ink);
 }
 
 #write pre.md-fences .CodeMirror-linenumber,
 #write pre[mdtype="fences"] .CodeMirror-linenumber,
 #write .md-fences .CodeMirror-linenumber {
-  color: rgba(23, 26, 34, 0.45);
+  color: rgba(var(--text-rgb), 0.45);
 }
 
 #write pre.md-fences .CodeMirror-cursor,
@@ -353,19 +353,19 @@ content,
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(var(--white-rgb), 0.7);
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
 }
 
 #write pre.has-toolbar .code-copy-btn {
   pointer-events: auto;
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
+  color: rgba(var(--white-rgb), 0.86);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -376,8 +376,8 @@ content,
 
 #write pre.has-toolbar .code-copy-btn:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(var(--white-rgb), 0.22);
+  background: rgba(var(--white-rgb), 0.1);
 }
 
 #write pre.has-toolbar .code-copy-btn[data-state="copied"] {
@@ -442,8 +442,8 @@ content,
   padding: 4px 10px;
   border-radius: 999px;
   border: 1px solid rgba(var(--accent-rgb), 0.2);
-  background: rgba(255, 255, 255, 0.7);
-  color: rgba(23, 26, 34, 0.8);
+  background: rgba(var(--white-rgb), 0.7);
+  color: rgba(var(--text-rgb), 0.8);
   line-height: 1;
 }
 
@@ -457,9 +457,9 @@ content,
 #write [mdtype="fences"] .code-tooltip button {
   pointer-events: auto;
   appearance: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
+  color: rgba(var(--white-rgb), 0.86);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -478,8 +478,8 @@ content,
 #write [mdtype="fences"] .code-tooltip a:hover,
 #write [mdtype="fences"] .code-tooltip button:hover {
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(var(--white-rgb), 0.22);
+  background: rgba(var(--white-rgb), 0.1);
 }
 
 /* YAML Frontmatter */
@@ -503,11 +503,11 @@ content,
   margin-top: 3em;
   padding: 1.2em 1.4em;
   font-size: 0.9em;
-  color: rgba(23, 26, 34, 0.75);
+  color: rgba(var(--text-rgb), 0.75);
   background: rgba(var(--accent-rgb), 0.06);
   border: 1px solid rgba(var(--accent-rgb), 0.18);
   border-radius: 12px;
-  box-shadow: 0 14px 40px rgba(23, 26, 34, 0.08);
+  box-shadow: 0 14px 40px rgba(var(--text-rgb), 0.08);
 }
 
 #write .md-footnotes a {

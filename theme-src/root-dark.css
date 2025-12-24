@@ -22,6 +22,8 @@
   --surface: #1b1b1f;
   --surface-2: #232327;
   --text: #e7e7ea;
+  --text-rgb: 231, 231, 234;
+  --ink-rgb: 232, 237, 247;
   --text-semi: #c9c9cf;
   --muted: rgba(231, 231, 234, 0.7);
   --border: rgba(231, 231, 234, 0.12);
@@ -37,9 +39,28 @@
 
   --selection: rgba(var(--accent-rgb), 0.32);
 
+  /* Depth */
+  --page-depth-1: #151515;
+  --page-depth-2: #121212;
+
   /* Code */
-  --code-bg: #1a1a1f;
-  --code-text: #e5e7eb;
+  --code-inline-text: #ffe7f2;
+  --code-bg: #111316;
+  --code-text: #f2f5ff;
+  --code-ink: #f7f9ff;
+  --code-muted-rgb: 236, 239, 245;
+  --code-dot-red: #ff5f56;
+  --code-dot-yellow: #ffbd2e;
+  --code-dot-green: #1fcf7c;
+  --code-token-keyword: #ff9bd1;
+  --code-token-string: #ffc38f;
+  --code-token-number: #ffd166;
+  --code-token-blue: #9bd5ff;
+
+  /* RGB Helpers */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+
 
   /* Typora chrome */
   --bg-color: var(--bg);

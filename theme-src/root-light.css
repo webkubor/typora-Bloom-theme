@@ -22,6 +22,7 @@
   --surface: #f2f3f7;
   --surface-2: #e5e7eb;
   --text: #171a22;
+  --text-rgb: 23, 26, 34;
   --text-semi: #374151;
   --muted: rgba(23, 26, 34, 0.64);
   --border: rgba(23, 26, 34, 0.12);
@@ -38,6 +39,14 @@
   --selection: rgba(var(--accent-rgb), 0.22);
 
   /* Code */
-  --code-bg: #0c1020;
-  --code-text: #e5e7eb;
+  --code-bg: #f7f8fc;
+  --code-text: #1f2937;
+  --code-ink: #111827;
+  --code-dot-red: #ff5f56;
+  --code-dot-yellow: #ffbd2e;
+  --code-dot-green: #27c93f;
+
+  /* RGB Helpers */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
 }
