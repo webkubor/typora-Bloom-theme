@@ -554,6 +554,8 @@
           <button class="btn-toggle" type="button" id="btn-dark" aria-pressed="false" title="夜晚模式">
             🌙
           </button>
+          <button class="btn-toggle" type="button" id="btn-forest" title="森林绿">🌲</button>
+          <button class="btn-toggle" type="button" id="btn-sea" title="深海蓝">🌊</button>
         </div>
       </div>
     </div>
@@ -568,7 +570,8 @@
         为长期写作而设计的 Typora 主题。追求安静、克制与温柔的表达——让文字始终成为视线的中心。
       </p>
       <div class="hero-actions">
-        <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest/download/Bloom-theme.zip" class="btn btn-primary">
+        <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest/download/Bloom-theme.zip"
+          class="btn btn-primary">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="margin-right: 8px;">
             <path d="M8 11L4 7h2.5V2h3v5H12L8 11z" fill="currentColor" />
             <path d="M14 13v1H2v-1h12z" fill="currentColor" />
@@ -643,11 +646,13 @@
         <p>以下为浅色与深色主题的真实截图。</p>
         <div class="showcase-grid">
           <div class="showcase-item">
-            <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.36.49.png"
+            <img
+              src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.36.49.png"
               alt="浅色" />
           </div>
           <div class="showcase-item">
-            <img src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.38.47.png"
+            <img
+              src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.38.47.png"
               alt="深色" />
           </div>
         </div>
@@ -658,7 +663,8 @@
         <ol>
           <li>打开 Typora。</li>
           <li>进入：偏好设置 → 外观 → 打开主题文件夹。</li>
-          <li>复制主题文件：<code>bloom-light.css</code>、<code>bloom-dark.css</code>（如有 <code>typora-bloom-theme/</code> 一并复制）。</li>
+          <li>复制主题文件：<code>bloom-light.css</code>、<code>bloom-dark.css</code>（如有 <code>typora-bloom-theme/</code> 一并复制）。
+          </li>
           <li>回到 Typora：主题 → 选择 <strong>Bloom Light</strong> 或 <strong>Bloom Dark</strong>。</li>
         </ol>
 
@@ -668,7 +674,8 @@
           <li>下载最新的 <code>Bloom-theme.zip</code>。</li>
           <li>解压后将文件复制到 Typora 主题文件夹。</li>
         </ol>
-        <p><a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest" target="_blank">前往 Releases 下载</a></p>
+        <p><a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest" target="_blank">前往 Releases 下载</a>
+        </p>
 
         <h2 id="thanks">致谢</h2>
         <p>感谢所有使用、反馈与分享 Bloom 的人。</p>
@@ -727,29 +734,51 @@
   </div>
 
   <script>
-    const themeLink = document.getElementById('theme-css');
-    const btnLight = document.getElementById('btn-light');
-    const btnDark = document.getElementById('btn-dark');
-
-    function setPressed(light) {
-      btnLight.setAttribute('aria-pressed', String(light));
-      btnDark.setAttribute('aria-pressed', String(!light));
-      document.documentElement.style.colorScheme = light ? 'light' : 'dark';
-    }
-
-    function setTheme(light) {
+// 修改后的设置函数
+    function setTheme(themeName) {
       const write = document.getElementById('write');
+      // 触发重新渲染动画
       write.style.animation = 'none';
       void write.offsetWidth;
       write.style.animation = null;
 
-      themeLink.setAttribute('href', light ? 'bloom-light.css' : 'bloom-dark.css');
-      setPressed(light);
+      // 根据主题名动态加载对应的 CSS 文件
+      themeLink.setAttribute('href', `bloom-${themeName}.css`);
+      
+      // 更新按钮的按下状态
+      updateButtonStates(themeName);
+      
+      // 设置系统的 color-scheme
+      // 只有 light 是浅色，其他变体（dark, forest, sea）通常建议设为 dark 以适配系统 UI
+      document.documentElement.style.colorScheme = (themeName === 'light') ? 'light' : 'dark';
     }
 
-    btnLight.addEventListener('click', () => setTheme(true));
-    btnDark.addEventListener('click', () => setTheme(false));
+    // 抽离一个函数来统一管理所有按钮的 aria-pressed 状态
+    function updateButtonStates(activeTheme) {
+      const buttons = {
+        'light': btnLight,
+        'dark': btnDark,
+        'forest': btnForest,
+        'sea': btnSea
+      };
 
+      Object.keys(buttons).forEach(theme => {
+        if (buttons[theme]) {
+          buttons[theme].setAttribute('aria-pressed', String(theme === activeTheme));
+        }
+      });
+    }
+
+
+
+
+    btnLight.addEventListener('click', () => setTheme('light'));
+    btnDark.addEventListener('click', () => setTheme('dark'));
+    btnForest.addEventListener('click', () => setTheme('forest'));
+    btnSea.addEventListener('click', () => setTheme('sea'));
+
+
+    
     // Button hover effects
     const cards = document.querySelectorAll('.sidebar-card a');
     cards.forEach(btn => {

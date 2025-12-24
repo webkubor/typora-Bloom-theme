@@ -5,8 +5,7 @@ const path = require("path");
 const root = path.resolve(__dirname, "..");
 const zipName = "Bloom-theme.zip";
 const zipPath = path.join(root, zipName);
-
-const files = ["bloom-light.css", "bloom-dark.css"];
+const files = ["bloom-light.css", "bloom-dark.css", "bloom-forest.css", "bloom-sea.css"];
 if (fs.existsSync(path.join(root, "typora-bloom-theme"))) {
   files.push("typora-bloom-theme");
 }
