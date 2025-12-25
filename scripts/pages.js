@@ -28,9 +28,12 @@ if (fs.existsSync(outDir)) {
 fs.mkdirSync(outDir, { recursive: true });
 
 copy(path.join(root, "index.html"), path.join(outDir, "index.html"));
-copy(path.join(root, "bloom-light.css"), path.join(outDir, "bloom-light.css"));
-copy(path.join(root, "bloom-dark.css"), path.join(outDir, "bloom-dark.css"));
 copy(path.join(root, "netlify.toml"), path.join(outDir, "netlify.toml"));
+
+const distDir = path.join(root, "dist");
+if (fs.existsSync(distDir)) {
+  copyDir(distDir, path.join(outDir, "dist"));
+}
 
 const assetsDir = path.join(root, "typora-bloom-theme");
 if (fs.existsSync(assetsDir)) {
