@@ -17,7 +17,7 @@ Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题
 
 ![森林](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/2yD1J7.png)
 
-![深海](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.40.40.png)
+![深蓝](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-26%2000.13.48.png)
 
 
 它追求安静、克制与温柔的表达——  
