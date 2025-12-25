@@ -1,0 +1,659 @@
+@charset "UTF-8";
+
+:root {
+  /* Accent & Brand */
+  --accent: #ff4d8d;
+  --accent-rgb: 255, 77, 141;
+  --accent-2: rgba(var(--accent-rgb), 0.14);
+  --accent-hover: #ff337a;
+
+  /* Semantic Colors */
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.1);
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.1);
+  --error: #ef4444;
+  --error-bg: rgba(239, 68, 68, 0.1);
+  --info: #3b82f6;
+  --info-bg: rgba(59, 130, 246, 0.1);
+
+  /* Neutrals */
+  --bg: #fbfbfd;
+  --surface: #f2f3f7;
+  --surface-2: #e5e7eb;
+  --text: #171a22;
+  --text-rgb: 23, 26, 34;
+  --text-semi: #374151;
+  --muted: rgba(23, 26, 34, 0.64);
+  --border: rgba(23, 26, 34, 0.12);
+  --border-semi: rgba(23, 26, 34, 0.24);
+
+  /* Effects */
+  --shadow: 0 10px 30px rgba(23, 26, 34, 0.08);
+  --shadow-lg: 0 20px 50px rgba(23, 26, 34, 0.12);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --selection: rgba(var(--accent-rgb), 0.22);
+
+  /* Code */
+  --code-bg: #f7f8fc;
+  --code-text: #1f2937;
+  --code-ink: #111827;
+  --code-dot-red: #ff5f56;
+  --code-dot-yellow: #ffbd2e;
+  --code-dot-green: #27c93f;
+
+  /* RGB Helpers */
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+}
+
+html,
+body {
+  background: radial-gradient(1400px circle at 16% 10%, rgba(var(--accent-rgb), 0.08), transparent 36%),
+    linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
+    linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+content,
+.typora-node {
+  background: radial-gradient(900px circle at 0% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
+    radial-gradient(900px circle at 100% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
+    var(--bg);
+}
+
+::selection {
+  background: var(--selection);
+}
+
+#write {
+  max-width: 860px;
+  line-height: 1.78;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0 auto;
+  padding: 48px 40px 84px;
+  background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.05), transparent 460px),
+    linear-gradient(120deg, rgba(var(--white-rgb), 0.7), transparent 70%);
+  border: 1px solid rgba(var(--text-rgb), 0.06);
+  border-radius: 22px;
+  box-shadow: 0 26px 80px rgba(var(--text-rgb), 0.12);
+}
+
+#write p {
+  margin: 1.1em 0;
+}
+
+#write a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+#write a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Headings */
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: var(--text);
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 1.6em 0 0.8em;
+  letter-spacing: -0.01em;
+  position: relative;
+}
+
+#write h1 {
+  font-size: 2.25em;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+  padding-bottom: 0.3em;
+}
+
+#write h2 {
+  font-size: 1.68em;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
+  padding-bottom: 0.24em;
+  color: rgba(var(--text-rgb), 0.9);
+}
+
+#write h3 {
+  font-size: 1.32em;
+  color: rgba(var(--text-rgb), 0.86);
+}
+
+#write h4 {
+  font-size: 1.15em;
+  color: rgba(var(--text-rgb), 0.8);
+}
+
+#write h1::after,
+#write h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.5em;
+  width: 76px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.45), transparent);
+  border-radius: 999px;
+}
+
+#write h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.38em;
+  width: 44px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.32), transparent);
+  border-radius: 999px;
+}
+
+#write h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.34em;
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.22), transparent);
+  border-radius: 999px;
+}
+
+#write hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.38), transparent);
+  margin: 2.5em 0;
+}
+
+/* Blockquote */
+#write blockquote {
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.12), rgba(var(--white-rgb), 0.8));
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  color: var(--text-semi);
+  position: relative;
+}
+
+#write blockquote::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: 76px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.5), transparent);
+  border-radius: 999px;
+}
+
+#write blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lists */
+#write ul,
+#write ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+#write li {
+  margin: 0.5em 0;
+}
+
+#write li>ul,
+#write li>ol {
+  margin: 0.4em 0;
+}
+
+#write ul li::marker {
+  color: rgba(var(--accent-rgb), 0.72);
+  font-size: 0.98em;
+  font-weight: 700;
+}
+
+#write ol li::marker {
+  color: rgba(var(--accent-rgb), 0.72);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Task Lists */
+.task-list-item {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task-list-item input {
+  margin-right: 0.6em;
+  accent-color: var(--accent);
+  transform: translateY(1px);
+}
+
+/* Tables */
+#write table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 2em 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(var(--black-rgb), 0.02);
+}
+
+#write th,
+#write td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid var(--border);
+}
+
+#write th {
+  text-align: left;
+  background: var(--surface);
+  font-weight: 600;
+  color: var(--text);
+}
+
+#write tr:last-child td {
+  border-bottom: 0;
+}
+
+#write tr:nth-child(even) td {
+  background: rgba(var(--accent-rgb), 0.02);
+}
+
+/* Code */
+#write code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  padding: 0.2em 0.45em;
+  border-radius: 7px;
+  background: rgba(var(--accent-rgb), 0.14);
+  color: var(--accent);
+  font-weight: 600;
+  border: 1px solid rgba(var(--accent-rgb), 0.32);
+}
+
+#write pre.md-fences,
+#write pre[mdtype="fences"],
+#write .md-fences {
+  background: var(--code-bg);
+  color: var(--code-text);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  border-radius: 16px;
+  padding: 3.2em 1.4em 1.4em;
+  /* Increased top padding for dots */
+  margin: 2em 0;
+  overflow: auto;
+  box-shadow: 0 18px 50px rgba(var(--text-rgb), 0.12);
+  font-family: var(--font-mono);
+  font-size: 14.5px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Mac-style Window Controls */
+#write pre.md-fences::before,
+#write pre[mdtype="fences"]::before,
+#write .md-fences::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--code-dot-red);
+  box-shadow: 18px 0 0 var(--code-dot-yellow), 36px 0 0 var(--code-dot-green);
+  z-index: 2;
+}
+
+#write pre.md-fences code,
+#write pre[mdtype="fences"] code,
+#write .md-fences code {
+  background: transparent;
+  padding: 0;
+  color: var(--code-ink);
+  font-weight: normal;
+}
+
+#write pre.md-fences .CodeMirror,
+#write pre.md-fences .CodeMirror-scroll,
+#write pre.md-fences .CodeMirror-gutters,
+#write pre[mdtype="fences"] .CodeMirror,
+#write pre[mdtype="fences"] .CodeMirror-scroll,
+#write pre[mdtype="fences"] .CodeMirror-gutters,
+#write .md-fences .CodeMirror,
+#write .md-fences .CodeMirror-scroll,
+#write .md-fences .CodeMirror-gutters {
+  background: transparent;
+  color: var(--code-ink);
+}
+
+#write pre.md-fences .CodeMirror-linenumber,
+#write pre[mdtype="fences"] .CodeMirror-linenumber,
+#write .md-fences .CodeMirror-linenumber {
+  color: rgba(var(--text-rgb), 0.45);
+}
+
+#write pre.md-fences .CodeMirror-cursor,
+#write pre[mdtype="fences"] .CodeMirror-cursor,
+#write .md-fences .CodeMirror-cursor {
+  border-left: 2px solid rgba(var(--accent-rgb), 0.7);
+}
+
+/* 防止嵌套多层 pre/code 造成重复背景 */
+#write pre.md-fences pre,
+#write pre.md-fences pre code,
+#write pre.md-fences .cm-s-inner .CodeMirror-lines,
+#write pre[mdtype="fences"] pre,
+#write pre[mdtype="fences"] pre code,
+#write pre[mdtype="fences"] .cm-s-inner .CodeMirror-lines,
+#write .md-fences pre,
+#write .md-fences pre code,
+#write .md-fences .cm-s-inner .CodeMirror-lines {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+#write pre.md-fences pre,
+#write pre[mdtype="fences"] pre,
+#write .md-fences pre {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#write pre.md-fences .CodeMirror-scroll,
+#write pre[mdtype="fences"] .CodeMirror-scroll,
+#write .md-fences .CodeMirror-scroll {
+  overflow: visible !important;
+}
+
+#write pre.has-toolbar .code-toolbar {
+  position: absolute;
+  top: 10px;
+  left: 84px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+#write pre.has-toolbar .code-lang {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(var(--white-rgb), 0.7);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
+}
+
+#write pre.has-toolbar .code-copy-btn {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
+  color: rgba(var(--white-rgb), 0.86);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+#write pre.has-toolbar .code-copy-btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--white-rgb), 0.22);
+  background: rgba(var(--white-rgb), 0.1);
+}
+
+#write pre.has-toolbar .code-copy-btn[data-state="copied"] {
+  border-color: rgba(var(--accent-rgb), 0.55);
+  background: rgba(var(--accent-rgb), 0.25);
+}
+
+/* Typora fences language label (scoped to writing area only) */
+/* Language label handled by Typora code-tooltip (right top) */
+#write pre.md-fences[lang]::after,
+#write pre.md-fences[data-lang]::after,
+#write .md-fences[lang]::after,
+#write .md-fences[data-lang]::after,
+#write pre[mdtype="fences"][lang]::after,
+#write pre[mdtype="fences"][data-lang]::after,
+#write [mdtype="fences"][lang]::after,
+#write [mdtype="fences"][data-lang]::after {
+  content: "";
+}
+
+/* Typora built-in code toolbar (compat: .md-fences / pre.md-fences / #write pre.md-fences) */
+#write pre.md-fences .code-tooltip,
+#write pre[mdtype="fences"] .code-tooltip,
+#write .md-fences .code-tooltip,
+#write [mdtype="fences"] .code-tooltip {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  bottom: auto;
+  left: auto;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+  float: none !important;
+  padding: 0;
+  min-width: 0;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+}
+
+#write pre.md-fences:hover .code-tooltip,
+#write pre[mdtype="fences"]:hover .code-tooltip,
+#write .md-fences:hover .code-tooltip,
+#write [mdtype="fences"]:hover .code-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#write pre.md-fences .code-tooltip-content,
+#write pre[mdtype="fences"] .code-tooltip-content,
+#write .md-fences .code-tooltip-content,
+#write [mdtype="fences"] .code-tooltip-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  background: rgba(var(--white-rgb), 0.7);
+  color: rgba(var(--text-rgb), 0.8);
+  line-height: 1;
+}
+
+#write pre.md-fences .code-tooltip a,
+#write pre.md-fences .code-tooltip button,
+#write pre[mdtype="fences"] .code-tooltip a,
+#write pre[mdtype="fences"] .code-tooltip button,
+#write .md-fences .code-tooltip a,
+#write .md-fences .code-tooltip button,
+#write [mdtype="fences"] .code-tooltip a,
+#write [mdtype="fences"] .code-tooltip button {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(var(--white-rgb), 0.12);
+  background: rgba(var(--white-rgb), 0.06);
+  color: rgba(var(--white-rgb), 0.86);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+#write pre.md-fences .code-tooltip a:hover,
+#write pre.md-fences .code-tooltip button:hover,
+#write pre[mdtype="fences"] .code-tooltip a:hover,
+#write pre[mdtype="fences"] .code-tooltip button:hover,
+#write .md-fences .code-tooltip a:hover,
+#write .md-fences .code-tooltip button:hover,
+#write [mdtype="fences"] .code-tooltip a:hover,
+#write [mdtype="fences"] .code-tooltip button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(var(--white-rgb), 0.22);
+  background: rgba(var(--white-rgb), 0.1);
+}
+
+/* YAML Frontmatter */
+#write .md-frontmatter {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1em;
+  margin-bottom: 2em;
+  font-size: 0.9em;
+  color: var(--muted);
+}
+
+/* Footnotes */
+#write .md-footnote {
+  color: var(--accent);
+}
+
+#write .md-footnotes {
+  border-top: 1px solid var(--border);
+  margin-top: 3em;
+  padding: 1.2em 1.4em;
+  font-size: 0.9em;
+  color: rgba(var(--text-rgb), 0.75);
+  background: rgba(var(--accent-rgb), 0.06);
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  border-radius: 12px;
+  box-shadow: 0 14px 40px rgba(var(--text-rgb), 0.08);
+}
+
+#write .md-footnotes a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+}
+
+#write .md-footnotes a:hover {
+  border-bottom-color: rgba(var(--accent-rgb), 0.6);
+}
+
+sup.md-footnote {
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+#write .md-def-name {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+#write .md-def-url {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.5);
+}
+
+#write .md-def-title,
+#write .md-def-content {
+  color: var(--text-semi);
+}
+
+#write .md-def-url:empty:before,
+#write .md-def-title:empty:before,
+#write .md-def-content:empty:after {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+/* Images */
+#write img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  display: block;
+  margin: 1.5em auto;
+}
+
+/* Mark */
+#write mark {
+  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.25), rgba(var(--accent-rgb), 0.12));
+  color: inherit;
+  padding: 0.12em 0.26em;
+  border-radius: 9px;
+  border: 1px solid rgba(var(--accent-rgb), 0.32);
+  box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.18);
+}
+
+/* Underline */
+#write u {
+  text-decoration: none;
+  background-image: linear-gradient(120deg, rgba(var(--accent-rgb), 0.5), rgba(var(--accent-rgb), 0.18));
+  background-repeat: no-repeat;
+  background-size: 100% 0.16em;
+  background-position: 0 90%;
+  border-radius: 4px;
+  padding-bottom: 2px;
+}
+
+/* KBD */
+#write kbd {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--border-semi);
+  border-bottom-width: 3px;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0 0.2em;
+}
+
+/* Math */
+.md-math-block {
+  margin: 1.5em 0;
+  padding: 1em;
+  background: var(--surface);
+  border-radius: 12px;
+  overflow-x: auto;
+}
+

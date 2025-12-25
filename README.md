@@ -9,11 +9,15 @@
 官网预览：<https://typora-bloom-theme.webkubor.online/>
 
 Bloom（绽放 / 成长）是一套为**长期写作**而设计的 Typora 主题。
-它包含两套风格：**Bloom Light（浅色）**与**Bloom Dark（深色）**。
+它包含四套主题：**Bloom Light（浅色）**、**Bloom Dark（深色）**、**Bloom Forest（森林绿）**与**Bloom Sea（深海蓝）**。
 
 ![浅色](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.36.49.png)
 
 ![深色](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.38.47.png)
+
+![森林](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/2yD1J7.png)
+
+![深海](https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.40.40.png)
 
 
 它追求安静、克制与温柔的表达——  
@@ -38,7 +42,7 @@ Bloom 的设计灵感来自「一天的光」。
 - 清晨的自然明亮  
 - 夜晚的安静专注  
 
-因此，它包含两套主题：
+因此，它包含两套基础主题，并提供两种深色变体：
 
 - **Bloom Light** —— 清晨  
   清晰、柔和、低对比，适合白天阅读与整理思路  
@@ -46,7 +50,13 @@ Bloom 的设计灵感来自「一天的光」。
 - **Bloom Dark** —— 夜晚  
   克制、沉稳、护眼，适合夜间长时间写作  
 
-两套主题在排版、比例、节奏上保持一致，只改变光感与色彩氛围。
+- **Bloom Forest** —— 森林  
+  深色基底，强调色偏绿，氛围更沉静  
+
+- **Bloom Sea** —— 深海  
+  深色基底，强调色偏蓝，观感更清爽  
+
+四套主题在排版、比例、节奏上保持一致，只改变光感与色彩氛围。
 
 ---
 
