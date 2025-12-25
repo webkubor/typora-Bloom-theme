@@ -8,7 +8,7 @@
 
   <link rel="icon" href="typora-bloom-theme/favicon.svg" type="image/svg+xml" />
   <link id="theme-css" rel="stylesheet" href="dist/bloom-light.css" />
-
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="27809ba1-2fa2-4d3c-9568-894ab511cf52"></script>
   <style>
     :root {
       color-scheme: light;
@@ -257,6 +257,24 @@
       color: var(--muted);
       margin-bottom: 20px;
       font-weight: 800;
+    }
+
+    .sidebar-author {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--accent) 16%, transparent);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
+    }
+
+    .sidebar-author span {
+      color: var(--accent);
     }
 
     /* Syntax Highlighting Simulation */
@@ -672,8 +690,8 @@
 
         <hr />
 
-        <h2 id="showcase">主题预览（Light & Dark）</h2>
-        <p>以下为浅色与深色主题的真实截图。</p>
+        <h2 id="showcase">主题预览（Light / Dark / Forest / Sea）</h2>
+        <p>以下为四套主题的真实截图。</p>
         <div class="showcase-grid">
           <div class="showcase-item">
             <img
@@ -684,6 +702,16 @@
             <img
               src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-19%2016.38.47.png"
               alt="深色" />
+          </div>
+          <div class="showcase-item">
+            <img
+              src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/2yD1J7.png"
+              alt="森林" />
+          </div>
+          <div class="showcase-item">
+            <img
+              src="https://raw.githubusercontent.com/webkubor/upic-images/main/uPic/2025/12/%E6%88%AA%E5%B1%8F2025-12-26%2000.13.48.png"
+              alt="深蓝" />
           </div>
         </div>
 
@@ -755,6 +783,7 @@
         <img src="typora-bloom-theme/favicon.svg" alt="Logo"
           style="width: 52px; margin-bottom: 16px; filter: drop-shadow(0 8px 16px var(--accent-2));" />
         <p style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Bloom Typora 主题<br />探索写作的艺术。</p>
+        <div class="sidebar-author">作者：<span>webkubor</span></div>
         <a href="https://github.com/webkubor/typora-Bloom-theme" target="_blank"
           style="display: inline-block; width: 100%; background: var(--accent); color: #fff; padding: 12px; border-radius: 100px; text-decoration: none; font-size: 14px; font-weight: 700; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-sizing: border-box;">
           前往 GitHub
