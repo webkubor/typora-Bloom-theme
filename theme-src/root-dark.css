@@ -18,7 +18,7 @@
   --info-bg: rgba(59, 130, 246, 0.15);
 
   /* Neutrals */
-  --bg: #141414;
+  --bg: #181a1f;
   --surface: #1b1b1f;
   --surface-2: #232327;
   --text: #e7e7ea;
@@ -40,8 +40,8 @@
   --selection: rgba(var(--accent-rgb), 0.32);
 
   /* Depth */
-  --page-depth-1: #151515;
-  --page-depth-2: #121212;
+  --page-depth-1: #20232a;
+  --page-depth-2: #111216;
 
   /* Code */
   --code-inline-text: #ffe7f2;
