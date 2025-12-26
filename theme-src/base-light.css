@@ -427,9 +427,14 @@ content,
 #write pre.md-fences:hover .code-tooltip,
 #write pre[mdtype="fences"]:hover .code-tooltip,
 #write .md-fences:hover .code-tooltip,
-#write [mdtype="fences"]:hover .code-tooltip {
+#write [mdtype="fences"]:hover .code-tooltip,
+#write pre.md-fences:focus-within .code-tooltip,
+#write pre[mdtype="fences"]:focus-within .code-tooltip,
+#write .md-fences:focus-within .code-tooltip,
+#write [mdtype="fences"]:focus-within .code-tooltip {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 #write pre.md-fences .code-tooltip-content,
