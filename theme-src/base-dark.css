@@ -375,9 +375,15 @@ content,
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  overflow: hidden;
+  /* overflow:hidden removed — it clips Typora's column-resize drag UI (#13) */
   box-shadow: 0 10px 36px rgba(var(--black-rgb), 0.25);
 }
+
+/* Corner cells carry the border-radius instead of the table container */
+#write th:first-child { border-radius: 15px 0 0 0; }
+#write th:last-child  { border-radius: 0 15px 0 0; }
+#write tr:last-child td:first-child { border-radius: 0 0 0 15px; }
+#write tr:last-child td:last-child  { border-radius: 0 0 15px 0; }
 
 #write th,
 #write td {
@@ -924,6 +930,19 @@ header,
   background: transparent;
 }
 
+/* === Quick Open dialog selected item contrast fix (#12) ===
+   Windows Typora falls back to system highlight color (light gray),
+   causing white text to become unreadable. Force our own selection color. */
+#typora-quick-open .file-list-item.active,
+#typora-quick-open .active {
+  background: rgba(var(--accent-rgb), 0.28) !important;
+  color: var(--text) !important;
+}
+#typora-quick-open .file-list-item:hover {
+  background: rgba(var(--accent-rgb), 0.14) !important;
+  color: var(--text) !important;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -1125,4 +1144,121 @@ a:hover {
 #write .mermaid .edgePath .path {
   stroke: var(--text-semi) !important;
   stroke-width: 1.5px !important;
+}
+
+/* === Source Mode (Markdown raw editing) contrast fix (#9) ===
+   .cm-s-typora-default is the CodeMirror theme Typora uses for source/hybrid mode.
+   Without explicit overrides, text inherits browser defaults and becomes unreadable
+   on a dark background. */
+.cm-s-typora-default {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.cm-s-typora-default .CodeMirror-line,
+.cm-s-typora-default .CodeMirror-lines {
+  color: var(--text) !important;
+}
+
+.cm-s-typora-default .cm-header {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+.cm-s-typora-default .cm-link,
+.cm-s-typora-default .cm-url {
+  color: var(--accent) !important;
+}
+
+.cm-s-typora-default .cm-em {
+  color: var(--text-semi) !important;
+  font-style: italic;
+}
+
+.cm-s-typora-default .cm-strong {
+  color: var(--text) !important;
+  font-weight: 700;
+}
+
+.cm-s-typora-default .cm-comment,
+.cm-s-typora-default .cm-quote {
+  color: var(--muted) !important;
+}
+
+.cm-s-typora-default .cm-hr {
+  color: var(--border-semi) !important;
+}
+
+.cm-s-typora-default .CodeMirror-cursor {
+  border-left-color: var(--accent) !important;
+}
+
+/* === PDF / Print export fix (#7) ===
+   Dark theme gradients bleed into PDF pages because Typora renders via WebKit.
+   Reset to a clean white page layout for print output. */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+
+  #write {
+    background: #ffffff !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    padding: 1em 0 !important;
+    color: #1a1a1a !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Code blocks: light background for readability */
+  #write pre.md-fences,
+  #write pre[mdtype="fences"],
+  #write .md-fences,
+  #write [mdtype="html-block"] {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+    color: #333 !important;
+  }
+
+  #write pre.md-fences code,
+  #write .md-fences code {
+    color: #333 !important;
+  }
+
+  /* Hide Mac window dots — irrelevant in print */
+  #write pre.md-fences::before,
+  #write pre[mdtype="fences"]::before,
+  #write .md-fences::before,
+  #write [mdtype="html-block"]::before {
+    display: none !important;
+  }
+
+  #write table {
+    box-shadow: none !important;
+    border-color: #ccc !important;
+  }
+
+  #write th { background: #f0f0f0 !important; color: #1a1a1a !important; }
+  #write td { color: #1a1a1a !important; }
+
+  #write blockquote {
+    background: #f9f9f9 !important;
+    border-left-color: #999 !important;
+    box-shadow: none !important;
+    color: #333 !important;
+  }
+
+  #write img {
+    box-shadow: none !important;
+  }
 }

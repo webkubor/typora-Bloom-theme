@@ -320,9 +320,15 @@ content,
   margin: 2em 0;
   border: 1px solid var(--border);
   border-radius: 14px;
-  overflow: hidden;
+  /* overflow:hidden removed — it clips Typora's column-resize drag UI (#13) */
   box-shadow: 0 4px 12px rgba(var(--black-rgb), 0.02);
 }
+
+/* Corner cells carry the border-radius instead of the table container */
+#write th:first-child { border-radius: 13px 0 0 0; }
+#write th:last-child  { border-radius: 0 13px 0 0; }
+#write tr:last-child td:first-child { border-radius: 0 0 0 13px; }
+#write tr:last-child td:last-child  { border-radius: 0 0 13px 0; }
 
 #write th,
 #write td {
@@ -935,4 +941,46 @@ header,
 
 #write a:hover {
   transform: translateY(-0.5px);
+}
+
+/* === PDF / Print export fix (#7) ===
+   Light themes: preserve colors and strip decorative shadows/gradients. */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+  }
+
+  #write {
+    background: #ffffff !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    padding: 1em 0 !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #write pre.md-fences::before,
+  #write pre[mdtype="fences"]::before,
+  #write .md-fences::before,
+  #write [mdtype="html-block"]::before {
+    display: none !important;
+  }
+
+  #write pre.md-fences,
+  #write .md-fences {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+
+  #write table { box-shadow: none !important; }
+  #write blockquote { box-shadow: none !important; }
+  #write img { box-shadow: none !important; }
 }

@@ -1,0 +1,16 @@
+{
+  "release-type": "node",
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "changelog-sections": [
+        { "type": "feat",     "section": "✨ 新功能" },
+        { "type": "fix",      "section": "🐛 Bug 修复" },
+        { "type": "perf",     "section": "⚡ 性能优化" },
+        { "type": "refactor", "section": "♻️ 重构" },
+        { "type": "docs",     "section": "📝 文档" },
+        { "type": "chore",    "section": "🔧 其他", "hidden": true }
+      ]
+    }
+  }
+}
