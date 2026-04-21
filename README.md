@@ -1,4 +1,4 @@
-# 🌸 Bloom · 文字的绽放与成长
+# Bloom for Typora
 
 <p align="center">
   <img src="website/assets/banner.png" alt="Bloom Banner" width="100%" />
@@ -12,80 +12,96 @@
   <a href="README.en.md"><img src="https://img.shields.io/badge/Document-English-A873C4?style=flat-square" alt="English Document" /></a>
 </p>
 
----
+<p align="center">
+  为长期写作准备的 Typora 主题。
+  <br />
+  更安静的页面，更稳定的层级，更统一的代码与文档视觉。
+</p>
 
-**Bloom（绽放）** 是一套专为**长期写作**设计的 Premium Typora 主题。
+<p align="center">
+  <a href="https://typora-bloom-theme.webkubor.online"><strong>预览官网</strong></a> ·
+  <a href="https://typora-bloom-theme.webkubor.online/showcase.html"><strong>在线演示</strong></a> ·
+  <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>下载最新版本</strong></a>
+</p>
 
-在信息喧嚣的时代，我们回归文字本身。Bloom 追求安静、克制与温柔的表达。它不过度装饰，不喧宾夺主，只是在那层薄薄的数字纸张背后，为你的思考铺就一方温润的土壤。
+## Bloom 是什么
 
-> *“所有伟大的文字，都值得在最适宜的光线里，慢慢呼吸。”*
+Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目标打磨：
 
-[官网预览](https://typora-bloom-theme.webkubor.online) | [实时演示](https://typora-bloom-theme.webkubor.online/showcase.html)
+- 让正文更耐看，减少连续写作时的视觉疲劳。
+- 让代码块、引用、表格、YAML Frontmatter 等高频模块风格统一。
+- 让浅色和深色主题切换时，亮度与层次依然稳定。
 
----
+当前版本为 `v1.3.4`。
 
-## ✨ 灵魂特性
+## 为什么用 Bloom
 
-### 🎨 莫兰迪的呼吸：16 套色系矩阵
-Bloom 内置 **8 浅 8 深** 共 16 套莫兰迪配色方案。从晨曦般的“花瓣粉”到静谧如深海的“涟漪暗夜”，每一款颜色都经过色彩感知实验，确保在长时间写作中，眼睛与心灵都能得到妥帖的安放。
+| 特性 | 说明 |
+| :-- | :-- |
+| 16 套主题矩阵 | 8 套浅色和 8 套深色主题，覆盖温润、克制、自然、夜间等写作场景。 |
+| OKLCH 调色 | 采用更接近人眼感知的色彩空间，减少主题切换时的亮度跳变。 |
+| 统一模块语言 | 代码块、HTML Block、YAML Frontmatter、Alert 等模块共享同一套层级与圆角逻辑。 |
+| 为 Typora 优化 | 针对 Markdown 编辑、预览阅读和深色模式对比度做过专门调整。 |
 
-### 🌈 OKLCH：感知的科学美学
-我们全量采用了 **OKLCH 色彩模型** 进行调色。不同于传统的 RGB 调色，OKLCH 严格遵循人类视觉感知的亮度规律，这使得 Bloom 在切换不同配色方案时，视觉的轻重感始终如一。
+## 主题一览
 
-### 🧊 磨砂质感：Glassmorphism 提示框
-在 v1.3.1 中，我们将 Alert 提示框进化为一种**“磨砂玻璃”**质感。利用 `color-mix` 技术动态生成的半透明色块，拥有 12px 的圆角与微妙的呼吸感边框。信息不再是生硬的打断，而是文字流中的优雅注脚。
+| 浅色主题 | 深色主题 |
+| :-- | :-- |
+| `petal` 花瓣 | `petal-dark` 花瓣·暗夜 |
+| `mist` 雾蓝 | `mist-dark` 雾蓝·暗夜 |
+| `verdant` 草木 | `verdant-dark` 草木·暗夜 |
+| `stone` 暖石 | `stone-dark` 暖石·暗夜 |
+| `ripple` 涟漪 | `ripple-dark` 涟漪·暗夜 |
+| `cinnabar` 丹红 | `cinnabar-dark` 丹红·暗夜 |
+| `sage` 鼠尾草 | `sage-dark` 鼠尾草·暗夜 |
+| `spring` 紫语 | `spring-dark` 紫语·暗夜 |
 
-### 📐 8px 律动：原子间距系统
-严谨的 **8px 原子间距系统** 赋予了文档一种“空气感”。标题的克制、段落的留白、代码块的呼吸，都在微妙的比例中达成了视觉上的动态平衡。
+## 快速安装
 
----
+1. 在 [Releases](https://github.com/webkubor/typora-Bloom-theme/releases/latest) 下载 `Bloom-theme.zip`。
+2. 在 Typora 中打开 `偏好设置 -> 外观 -> 打开主题文件夹`。
+3. 将压缩包中的所有 `bloom-*.css` 文件和 `bloom/` 文件夹复制到主题目录。
+4. 重启 Typora，或从 `主题` 菜单切换到 Bloom。
 
-## 🎨 主题画廊
+## 本次版本更新
 
-| 🌤 浅色系 · 晨曦 | 🌙 深色系 · 沉思 |
-| :--- | :--- |
-| **花瓣 (Petal)** - 暖粉白，温润如瓷 | **花瓣暗夜 (Petal Dark)** - 深玫瑰黑 |
-| **雾蓝 (Mist)** - 清冷高级的北欧灰调 | **雾蓝暗夜 (Mist Dark)** - 深邃护眼 |
-| **草木 (Verdant)** - 治愈系豆沙绿 | **草木暗夜 (Verdant Dark)** - 暗夜森林 |
-| **水墨 (Ink)** - 东方极简，丹红点缀 | **水墨暗夜 (Ink Dark)** - 漆器质感 |
-| ... *更多：暖石, 琥珀, 紫语, 涟漪* | ... *以及对应的暗色版* |
+`v1.3.4` 主要包括：
 
----
+- 统一代码块、 HTML Block、YAML Frontmatter 的视觉语言。
+- 增加对原生 GitHub Alert 语法的样式支持。
+- 修复深色主题下 Mermaid 可读性和局部对比度问题。
 
-## 🚀 安装与启程
+<details>
+<summary>开发与构建</summary>
 
-1.  **获取源码**：前往 [Releases](https://github.com/webkubor/typora-Bloom-theme/releases/latest) 下载 `Bloom-theme.zip` 并解压。
-2.  **寻踪路径**：在 Typora 中通过 `偏好设置` -> `外观` -> `打开主题文件夹`。
-3.  **安置灵魂**：将解压后的所有 `bloom-*.css` 文件以及 `bloom/` 文件夹整体复制。
-4.  **开启创作**：在 Typora 菜单栏 `主题` 中挑选你此时此刻的心境。
-
----
-
-## 🛠 开发者指南
-
-若你愿参与这方土地的耕耘：
-
-- **`theme-src/`**: 源码之根。
-- **`scripts/`**: 自动化构建工具。
+### 本地开发
 
 ```bash
-# 播种 (安装依赖)
 pnpm install
-
-# 育苗 (实时开发预览)
 npm run dev
-
-# 结果 (构建发布包)
-npm run build
 ```
 
----
+### 常用命令
 
-## 💖 关于初心
+- `npm run build`: 重新生成 `dist/` 主题文件和站点主题数据。
+- `npm run package`: 生成发布包 `Bloom-theme.zip`。
+- `npm run release`: 执行打包、提交、推送和打 Tag 的发布流程。
 
-这个主题诞生于我成为父亲之后。我开始更加在意时间、陪伴，以及那些会被反复翻阅的文字。
+### 仓库结构
 
-如果这个主题能让你在喧嚣的世界中，在一个清晨或深夜，愿意安静地多写几行文字，那它的意义就已经成立了。
+- `theme-src/`: 主题源码，包含基础样式和各主题变量。
+- `dist/`: 构建产物，Typora 实际使用的 CSS 文件。
+- `bloom/`: 字体等静态资源。
+- `scripts/`: 构建、打包、发布和站点数据脚本。
+- `website/`、`_pages/`: 展示站资源。
+- `demo/`: 预览辅助资源。
 
-**License**: [MIT](LICENSE)  
-**Author**: [webkubor](https://github.com/webkubor)
+</details>
+
+## License
+
+[MIT](LICENSE)
+
+## Author
+
+[webkubor](https://github.com/webkubor)
