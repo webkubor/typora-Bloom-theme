@@ -24,20 +24,23 @@
 
 html,
 body {
+  background-color: var(--bg-color);
   background: radial-gradient(1400px circle at 16% 10%, rgba(var(--accent-rgb), 0.08), transparent 36%),
     linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
     linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
-    var(--bg);
+    var(--bg-color);
   color: var(--text);
+  color-scheme: light;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 content,
 .typora-node {
+  background-color: var(--bg-color);
   background: radial-gradient(900px circle at 0% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
     radial-gradient(900px circle at 100% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
-    var(--bg);
+    var(--bg-color);
 }
 
 ::selection {
@@ -788,7 +791,7 @@ sup.md-footnote {
   margin: 0 0.2em;
 }
 
-/* Typora chrome */
+/* Typora UI */
 #typora-sidebar .file-node-icon {
   width: 18px;
   height: 18px;
@@ -827,16 +830,6 @@ sup.md-footnote {
   background: var(--surface);
   border-radius: 12px;
   overflow-x: auto;
-}
-
-/* Fix: macOS Title Bar / Header Visibility */
-body.mac-seamless-mode titlebar,
-body.mac-seamless-mode header,
-titlebar,
-header,
-.title-bar {
-  color: var(--text) !important;
-  opacity: 0.9;
 }
 
 /* Sidebar Title Visibility */

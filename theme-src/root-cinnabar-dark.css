@@ -13,30 +13,31 @@
     --space-2xl: calc(var(--space-unit) * 6);
     --space-3xl: calc(var(--space-unit) * 8);
 
-    /* --- Morandi Cinnabar Dark (Lacquer Red) --- */
-    --accent: oklch(65% 0.18 25);
-    --accent-rgb: 220, 80, 80;
+    /* --- Morandi Cinnabar Dark (Muted Lacquer Red) --- */
+    --accent: oklch(72% 0.12 25);
+    --accent-rgb: 215, 145, 135;
 
     /* Dynamic States */
     --accent-hover: color-mix(in oklch, var(--accent), white 8%);
     --accent-active: color-mix(in oklch, var(--accent), white 15%);
-    --accent-soft: color-mix(in oklch, var(--accent), transparent 82%);
+    --accent-soft: color-mix(in oklch, var(--accent), transparent 85%);
 
-    /* Semantic Colors - Muted for Morandi */
-    --success: oklch(70% 0.1 150);
-    --warning: oklch(75% 0.1 75);
-    --error: oklch(60% 0.12 25);
-    --info: oklch(62% 0.1 250);
-    --important: oklch(65% 0.16 280);
+    /* Semantic Colors - Muted for Dark Morandi */
+    --success: oklch(72% 0.12 150);
+    --warning: oklch(78% 0.12 75);
+    --error: oklch(62% 0.15 25);
+    --info: oklch(65% 0.12 250);
+    --important: oklch(75% 0.14 280);
 
-    /* Neutrals - Cinnabar Dark Base (Warm Lacquer Tint) */
-    --bg: oklch(20% 0.02 25);
+    /* Neutrals - Cinnabar Dark Base (Warm lacquer tint) */
+    /* Page Depth Gradient */
+    --page-depth-1: oklch(30% 0.02 25);
+    --page-depth-2: oklch(28% 0.02 25);
+
+    --bg: oklch(28% 0.02 25);
     
-    --surface: oklch(28% 0.02 25);
-    --title-bar-bg: var(--bg);
-    --title-bar-text: var(--text);
-  --title-bar-bg: var(--bg);
-  --title-bar-text: var(--text);    --surface-2: oklch(34% 0.03 25);
+    --surface: oklch(34% 0.02 25);
+    --surface-2: oklch(40% 0.02 25);
 
     --text: oklch(96% 0.01 25);
     --text-rgb: 250, 240, 240;
@@ -47,41 +48,45 @@
     --border-semi: color-mix(in oklch, var(--text), transparent 78%);
 
     /* Effects */
-    --shadow: 0 16px 48px color-mix(in oklch, var(--bg), black 50%);
-    --shadow-lg: 0 30px 80px color-mix(in oklch, var(--bg), black 60%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.6);
 
     /* Typography */
     --font-sans: "MiSans", "PingFang SC", "Microsoft YaHei", sans-serif;
     --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
     /* Selection */
-    --selection: color-mix(in oklch, var(--accent), transparent 65%);
+    --selection: color-mix(in oklch, var(--accent), transparent 75%);
 
     /* Code Layer */
-    --code-bg: oklch(14% 0.02 25);
+    --code-bg: oklch(24% 0.02 25);
     --code-text: var(--text-semi);
     --code-ink: var(--text);
     --code-dot-red: oklch(65% 0.15 25);
     --code-dot-yellow: oklch(78% 0.15 85);
     --code-dot-green: oklch(72% 0.15 145);
 
-    /* Code Token Colors */
-    --code-token-keyword: oklch(78% 0.15 25);
-    --code-token-string: oklch(75% 0.12 145);
-    --code-token-number: oklch(78% 0.12 75);
+    /* Code Token Colors - Cinnabar optimized */
+    --code-token-keyword: oklch(78% 0.12 25);
+    --code-token-string: oklch(75% 0.1 145);
+    --code-token-number: oklch(78% 0.1 75);
     --code-token-blue: oklch(72% 0.12 250);
-    --code-muted-rgb: 145, 135, 135;
-    --ink-rgb: 240, 220, 220;
+    --code-muted-rgb: 140, 130, 130;
 
-    /* Typora chrome */
+    /* Typora variables */
     --bg-color: var(--bg);
-    --side-bar-bg-color: color-mix(in oklch, var(--bg), black 5%);
+    --side-bar-bg-color: var(--surface);
     --item-hover-bg-color: var(--accent-soft);
     --item-hover-text-color: var(--text);
+    --window-border: 1px solid var(--border);
     --primary-color: var(--accent);
     --text-color: var(--text);
     --select-text-bg-color: var(--selection);
-    --window-border: 1px solid var(--border);
+
+    /* RGB Helpers */
+    --white-rgb: 255, 255, 255;
+    --black-rgb: 0, 0, 0;
 
     /* Icons */
     --icon-document: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%0A%3Cpath%20d%3D%22M7.5%207C7.22386%207%207%207.22386%207%207.5C7%207.77614%207.22386%208%207.5%208H12.5C12.7761%208%2013%207.77614%2013%207.5C13%207.22386%2012.7761%207%2012.5%207H7.5Z%22%20fill%3D%22%23636566%22/%3E%0A%3Cpath%20d%3D%22M7%2010.5C7%2010.2239%207.22386%2010%207.5%2010H12.5C12.7761%2010%2013%2010.2239%2013%2010.5C13%2010.7761%2012.7761%2011%2012.5%2011H7.5C7.22386%2011%207%2010.7761%207%2010.5Z%22%20fill%3D%22%23636566%22/%3E%0A%3Cpath%20d%3D%22M7.5%2013C7.22386%2013%207%2013.2239%207%2013.5C7%2013.7761%207.22386%2014%207.5%2014H9.5C9.77614%2014%2010%2013.7761%2010%2013.5C10%2013.2239%209.77614%2013%209.5%2013H7.5Z%22%20fill%3D%22%23636566%22/%3E%0A%3Cpath%20d%3D%22M6.5%202C6.22386%202%206%202.22386%206%202.5V3H5.5C4.67157%203%204%203.67157%204%204.5V16.5C4%2017.3284%204.67157%2018%205.5%2018H11.5C11.6326%2018%2011.7598%2017.9473%2011.8536%2017.8536L15.8536%2013.8536C15.9473%2013.7598%2016%2013.6326%2016%2013.5V4.5C16%203.67157%2015.3284%203%2014.5%203H14V2.5C14%202.22386%2013.7761%202%2013.5%202C13.2239%202%2013%202.22386%2013%202.5V3H10.5V2.5C10.5%202.22386%2010.2761%202%2010%202C9.72386%202%209.5%202.22386%209.5%202.5V3H7V2.5C7%202.22386%206.77614%202%206.5%202ZM14.5%204C14.7761%204%2015%204.22386%2015%204.5V13H12.5C11.6716%2013%2011%2013.6716%2011%2014.5V17H5.5C5.22386%2017%205%2016.7761%205%2016.5V4.5C5%204.22386%205.22386%204%205.5%204H14.5ZM14.2929%2014L12%2016.2929V14.5C12%2014.2239%2012.2239%2014%2012.5%2014H14.2929Z%22%20fill%3D%22%23636566%22/%3E%0A%3C/svg%3E%0A");

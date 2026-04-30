@@ -1,4 +1,5 @@
 dist/
+.cache/
 .codex/
 node_modules/
 .github

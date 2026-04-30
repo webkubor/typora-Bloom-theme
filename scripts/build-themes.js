@@ -6,6 +6,7 @@ const srcDir = path.join(root, "theme-src");
 const distDir = path.join(root, "dist");
 
 const themes = require("./theme-list");
+const { buildGeneratedVars, withTyporaRootVars } = require("./theme-vars");
 
 function readSrc(file) {
   const filePath = path.join(srcDir, file);
@@ -23,7 +24,8 @@ function writeIfChanged(filePath, content) {
 let updated = 0;
 
 themes.forEach((theme) => {
-  const vars = readSrc(theme.vars).trimEnd();
+  const isDark = theme.base.includes("dark");
+  const vars = withTyporaRootVars(buildGeneratedVars(theme, srcDir) || readSrc(theme.vars), isDark).trimEnd();
   const base = readSrc(theme.base).trimStart();
   const output = `${vars}\n\n${base}\n`;
   const outPath = path.join(distDir, `bloom-${theme.name}.css`);

@@ -69,7 +69,7 @@
     --code-token-blue: oklch(48% 0.22 260);
     --code-muted-rgb: 120, 125, 130;
 
-    /* Typora chrome */
+    /* Typora variables */
     --bg-color: var(--bg);
     --side-bar-bg-color: var(--surface);
     --item-hover-bg-color: var(--accent-soft);

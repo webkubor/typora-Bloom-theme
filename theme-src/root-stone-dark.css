@@ -33,10 +33,7 @@
     --bg: oklch(20% 0.02 30);
     
     --surface: oklch(28% 0.02 30);
-    --title-bar-bg: var(--bg);
-    --title-bar-text: var(--text);
-  --title-bar-bg: var(--bg);
-  --title-bar-text: var(--text);    --surface-2: oklch(34% 0.03 30);
+    --surface-2: oklch(34% 0.03 30);
 
     --text: oklch(96% 0.01 30);
     --text-rgb: 245, 242, 238;
@@ -73,7 +70,7 @@
     --code-token-blue: oklch(72% 0.12 240);
     --code-muted-rgb: 135, 130, 125;
 
-    /* Typora chrome */
+    /* Typora variables */
     --bg-color: var(--bg);
     --side-bar-bg-color: var(--surface);
     --item-hover-bg-color: var(--accent-soft);

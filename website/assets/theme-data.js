@@ -2,104 +2,117 @@
 window.THEME_CONFIG = {
   "petal": {
     "name": "🌸 花瓣",
-    "accent": "#e8859b",
-    "bg": "#fdf9fa",
-    "text": "#333333"
+    "accent": "#e63f9f",
+    "bg": "#fef6f9",
+    "text": "#2a1e22"
   },
   "petal-dark": {
     "name": "🌸 花瓣·暗夜",
-    "accent": "#ffaac8",
-    "bg": "#332c32",
-    "text": "#eeeeee",
+    "accent": "#ff78be",
+    "bg": "#31252a",
+    "text": "#fef6f9",
     "hue": 350
   },
   "mist": {
     "name": "☁️ 雾蓝",
-    "accent": "#92A8B3",
-    "bg": "#F2F4F5",
-    "text": "#333333"
+    "accent": "#34698c",
+    "bg": "#ecf3f8",
+    "text": "#19232a"
   },
   "mist-dark": {
     "name": "💠 雾蓝·暗夜",
-    "accent": "#9bb9d7",
-    "bg": "#333840",
-    "text": "#eeeeee",
+    "accent": "#55aee8",
+    "bg": "#202a32",
+    "text": "#ecf3f8",
     "hue": 240
   },
   "verdant": {
     "name": "🍃 草木",
-    "accent": "#A0B0A7",
-    "bg": "#F2F5F3",
-    "text": "#333333"
+    "accent": "#3d7055",
+    "bg": "#ecf4ef",
+    "text": "#19251e"
   },
   "verdant-dark": {
     "name": "🌲 草木·暗夜",
-    "accent": "#99b3a3",
-    "bg": "#202522",
-    "text": "#eeeeee",
+    "accent": "#57bc8a",
+    "bg": "#202c25",
+    "text": "#ecf4ef",
     "hue": 160
   },
   "stone": {
     "name": "🧱 暖石",
-    "accent": "#B1A49E",
-    "bg": "#F5F3F1",
-    "text": "#333333"
+    "accent": "#82564f",
+    "bg": "#f8efee",
+    "text": "#2b1e1c"
   },
   "stone-dark": {
     "name": "🪨 暖石·暗夜",
-    "accent": "#dab39b",
-    "bg": "#33302e",
-    "text": "#eeeeee"
+    "accent": "#f09080",
+    "bg": "#1e1311",
+    "text": "#f8efee"
+  },
+  "wheat": {
+    "name": "🌾 麦穗",
+    "accent": "#947d53",
+    "bg": "#f7f5f1",
+    "text": "#262118"
+  },
+  "wheat-dark": {
+    "name": "🌾 麦穗·暗夜",
+    "accent": "#c3a774",
+    "bg": "#1f1a11",
+    "text": "#f5f1ea",
+    "hue": 82
   },
   "ripple": {
     "name": "🌊 涟漪",
-    "accent": "#5fa8b2",
-    "bg": "#fcfdfe",
-    "text": "#333333"
+    "accent": "#009c9c",
+    "bg": "#ebf4f4",
+    "text": "#162525"
   },
   "ripple-dark": {
     "name": "🌊 涟漪·暗夜",
-    "accent": "#9bd7da",
-    "bg": "#262d2e",
-    "text": "#eeeeee"
+    "accent": "#2cc5c5",
+    "bg": "#0a1919",
+    "text": "#ebf4f4"
   },
   "cinnabar": {
     "name": "🧧 丹红",
-    "accent": "#d74b4b",
-    "bg": "#fbf2f2",
-    "text": "#333333"
+    "accent": "#c53637",
+    "bg": "#f8f4f3",
+    "text": "#2b1e1d"
   },
   "cinnabar-dark": {
     "name": "🏮 丹红·暗夜",
-    "accent": "#dc5050",
-    "bg": "#2b2525",
-    "text": "#eeeeee",
+    "accent": "#e6857e",
+    "bg": "#322524",
+    "text": "#f8efee",
     "hue": 25
   },
   "sage": {
     "name": "🌿 鼠尾草",
-    "accent": "#8a9a5b",
-    "bg": "#fcfef8",
-    "text": "#333333"
+    "accent": "#848e38",
+    "bg": "#f5f6ee",
+    "text": "#212318"
   },
   "sage-dark": {
     "name": "🌿 鼠尾草·暗夜",
-    "accent": "#b0b98c",
-    "bg": "#2b2f28",
-    "text": "#eeeeee",
+    "accent": "#a2ad4f",
+    "bg": "#16170d",
+    "text": "#f1f3eb",
     "hue": 115
   },
   "spring": {
     "name": "🪻 紫语",
-    "accent": "#A873C4",
-    "bg": "#fcf9fd",
-    "text": "#333333"
+    "accent": "#877deb",
+    "bg": "#f5f5f8",
+    "text": "#20202b"
   },
   "spring-dark": {
     "name": "🔮 紫语·暗夜",
-    "accent": "#bfa9f5",
-    "bg": "#3B3640",
-    "text": "#eeeeee"
+    "accent": "#a59dff",
+    "bg": "#1e1d2d",
+    "text": "#f1f1f8"
   }
 };
 window.THEME_DEFAULT = "petal-dark";

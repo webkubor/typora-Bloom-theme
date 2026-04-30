@@ -50,9 +50,8 @@ function setTheme(themeName) {
   updateThemeUI(themeName);
 
   // 设置系统的 color-scheme
-  const config = window.THEME_CONFIG || {};
   // 简单的启发式：名字包含 'dark' 的就是深色主题
-  const isDark = activeTheme.includes('dark');
+  const isDark = themeName.includes('dark');
   document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
 
   currentTheme = themeName;
@@ -256,15 +255,6 @@ function enhanceCodeBlocks() {
   });
 }
 
-function enhanceTaskLists() {
-  const items = document.querySelectorAll('#write li');
-  items.forEach(item => {
-    if (item.querySelector('input[type="checkbox"]')) {
-      item.classList.add('task-list-item');
-    }
-  });
-}
-
 enhanceCodeBlocks();
 
 // --- Advanced Interactions ---
@@ -354,121 +344,4 @@ if (hero) {
       badge.style.transform = `translateY(${scrolled * 0.1}px)`;
     }
   });
-}
-
-// --- Dynamic Markdown Loading ---
-
-/**
- * Process GitHub Alerts syntax
- * Converts [!NOTE], [!TIP], etc. to blockquotes with data-type attributes
- */
-function processGitHubAlerts(html) {
-  return html.replace(
-    /<blockquote>\s*<p>\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/gi,
-    (match, type) => {
-      // Remove the [!TYPE] text from the content
-      const processed = match.replace(/\[!.*?\]\s*/i, '');
-      return `<blockquote data-type="alert-${type.toLowerCase()}">${processed.replace('<blockquote>', '')}`;
-    }
-  );
-}
-
-/**
- * Load and render Markdown from typora.md
- */
-async function loadMarkdown() {
-  const writeContainer = document.querySelector('#write');
-  if (!writeContainer) return;
-
-  try {
-    // Load typora.md
-    const response = await fetch('typora.md');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const markdown = await response.text();
-
-    // Configure marked options
-    if (typeof marked !== 'undefined') {
-      marked.setOptions({
-        gfm: true,
-        breaks: true,
-        headerIds: true,
-        mangle: false
-      });
-
-      // Render Markdown to HTML
-      let html = marked.parse(markdown);
-
-      // Process GitHub Alerts
-      html = processGitHubAlerts(html);
-
-      // Insert into DOM
-      writeContainer.innerHTML = html;
-
-      // Re-enhance code blocks after content loads
-      enhanceCodeBlocks();
-      enhanceTaskLists();
-
-      // Initialize Mermaid
-      // Initialize Mermaid
-      if (window.mermaid) {
-        // Determine isDark based on global config or fallback
-        const currentRef = window.THEME_DEFAULT || 'petal';
-        const isDark = currentRef.includes('dark');
-
-        mermaid.initialize({
-          startOnLoad: false,
-          theme: isDark ? 'dark' : 'base',
-          themeVariables: isDark ? {
-            darkMode: true,
-            background: '#25201d',
-            primaryColor: '#e8859b',
-            lineColor: '#eeeeee',
-          } : {
-            darkMode: false
-          }
-        });
-
-        const mermaidBlocks = writeContainer.querySelectorAll('pre code.language-mermaid');
-        if (mermaidBlocks.length > 0) {
-          // Transform <pre><code> to <div class="mermaid">
-          const runQueue = [];
-          mermaidBlocks.forEach(block => {
-            const pre = block.parentElement;
-            const source = block.textContent;
-            const div = document.createElement('div');
-            div.className = 'mermaid';
-            div.textContent = source;
-            pre.replaceWith(div);
-            runQueue.push(div);
-          });
-
-          // Run render
-          await mermaid.run({ nodes: runQueue });
-        }
-      }
-
-      console.log('✅ Markdown loaded successfully from typora.md');
-    } else {
-      throw new Error('marked.js library not loaded');
-    }
-  } catch (error) {
-    console.error('❌ Failed to load Markdown:', error);
-    writeContainer.innerHTML = `
-      <div style="text-align: center; padding: 3rem 0; color: var(--text-semi);">
-        <h3>加载失败</h3>
-        <p>无法加载 typora.md 文件</p>
-        <p style="font-size: 0.9em; opacity: 0.7;">${error.message}</p>
-      </div>
-    `;
-  }
-}
-
-// Load Markdown when page is ready
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadMarkdown);
-} else {
-  loadMarkdown();
 }

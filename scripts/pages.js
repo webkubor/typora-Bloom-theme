@@ -55,7 +55,6 @@ const copyAndProcessHtml = (src, dest) => {
 };
 
 copyAndProcessHtml(path.join(websiteDir, "index.html"), path.join(outDir, "index.html"));
-copyAndProcessHtml(path.join(websiteDir, "showcase.html"), path.join(outDir, "showcase.html"));
 copy(path.join(websiteDir, "site.css"), path.join(outDir, "site.css"));
 copy(path.join(websiteDir, "site.js"), path.join(outDir, "site.js"));
 copy(path.join(root, "netlify.toml"), path.join(outDir, "netlify.toml")); // netlify.toml stays in root
@@ -74,12 +73,6 @@ if (fs.existsSync(assetsDir)) {
 const staticAssetsDir = path.join(websiteDir, "assets");
 if (fs.existsSync(staticAssetsDir)) {
   copyDir(staticAssetsDir, path.join(outDir, "assets"));
-}
-
-// Fix: Copy typora.md for showcase preview
-const typoraMd = path.join(websiteDir, "typora.md");
-if (fs.existsSync(typoraMd)) {
-  copy(typoraMd, path.join(outDir, "typora.md"));
 }
 
 const screenshotsDir = path.join(root, "screenshots");

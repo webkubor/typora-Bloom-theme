@@ -24,20 +24,29 @@
 
 html,
 body {
+  background-color: var(--bg-color);
   background: radial-gradient(1200px circle at 18% 8%, rgba(var(--accent-rgb), 0.06), transparent 36%),
     linear-gradient(180deg, rgba(var(--white-rgb), 0.02), transparent 300px),
     linear-gradient(180deg, var(--page-depth-1) 0%, var(--page-depth-2) 100%),
-    var(--bg);
+    var(--bg-color);
   color: var(--text);
+  color-scheme: dark;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
 content,
 .typora-node {
+  background-color: var(--bg-color);
   background: radial-gradient(900px circle at 0% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
     radial-gradient(900px circle at 100% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
-    var(--bg);
+    var(--bg-color);
+}
+
+#top-titlebar,
+#top-titlebar * {
+  background: var(--bg-color) !important;
+  color: var(--text-color) !important;
 }
 
 ::selection {
@@ -913,17 +922,6 @@ a:hover {
   overflow-x: auto;
 }
 
-/* Fix: macOS Title Bar / Header "White Strip" Issue */
-body.mac-seamless-mode titlebar,
-body.mac-seamless-mode header,
-titlebar,
-header,
-.title-bar {
-  background: var(--bg) !important;
-  color: var(--text) !important;
-  opacity: 0.9;
-}
-
 /* Ensure Sidebar fits the theme */
 #typora-sidebar {
   color: var(--text);
@@ -960,7 +958,7 @@ header,
   background: rgba(var(--accent-rgb), 0.5);
 }
 
-/* Typora chrome */
+/* Typora UI */
 #typora-sidebar {
   background: var(--side-bar-bg-color);
   border-right: 1px solid var(--border);

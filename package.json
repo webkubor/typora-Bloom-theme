@@ -5,7 +5,11 @@
   "homepage": "https://typora-bloom-theme.webkubor.online",
   "scripts": {
     "build": "node scripts/gen-site-data.js && node scripts/build-themes.js",
-    "dev": "npm run build && node scripts/preview.js",
+    "dev": "node scripts/dev-toolkit.js",
+    "dev:site": "npm run build && node scripts/preview.js",
+    "sync:typora": "node scripts/dev-typora.js --once",
+    "dev:typora": "node scripts/dev-typora.js",
+    "validate:themes": "npm run build && node scripts/validate-theme-standard.js",
     "package": "node scripts/package.js",
     "release": "node scripts/release.js"
   }
