@@ -1,79 +1,94 @@
 @font-face {
-  font-family: "MiSans";
-  src: url("./bloom/fonts/MiSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MiSans";
+    src: url("./bloom/fonts/MiSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "MiSans";
-  src: url("./bloom/fonts/MiSans-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MiSans";
+    src: url("./bloom/fonts/MiSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: "MiSans";
-  src: url("./bloom/fonts/MiSans-Semibold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "MiSans";
+    src: url("./bloom/fonts/MiSans-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 html,
 body {
-  background-color: var(--bg-color);
-  background: radial-gradient(1400px circle at 16% 10%, rgba(var(--accent-rgb), 0.08), transparent 36%),
-    linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
-    linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
-    var(--bg-color);
-  color: var(--text);
-  color-scheme: light;
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
+    background-color: var(--bg-color);
+    background:
+        radial-gradient(
+            1400px circle at 16% 10%,
+            rgba(var(--accent-rgb), 0.08),
+            transparent 36%
+        ),
+        linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
+        linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
+        var(--bg-color);
+    color: var(--text);
+    color-scheme: light;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
 }
 
 content,
 .typora-node {
-  background-color: var(--bg-color);
-  background: radial-gradient(900px circle at 0% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
-    radial-gradient(900px circle at 100% 18%, rgba(var(--accent-rgb), 0.05), transparent 60%),
-    var(--bg-color);
+    background-color: var(--bg-color);
+    background:
+        radial-gradient(
+            900px circle at 0% 18%,
+            rgba(var(--accent-rgb), 0.05),
+            transparent 60%
+        ),
+        radial-gradient(
+            900px circle at 100% 18%,
+            rgba(var(--accent-rgb), 0.05),
+            transparent 60%
+        ),
+        var(--bg-color);
 }
 
 ::selection {
-  background: var(--selection);
+    background: var(--selection);
 }
 
 #write {
-  max-width: 860px;
-  line-height: 1.8;
-  font-size: 16px;
-  color: var(--text);
-  margin: 0 auto;
-  padding: var(--space-2xl) var(--space-xl) var(--space-3xl);
-  background: linear-gradient(180deg, var(--accent-soft), transparent 460px),
-    linear-gradient(120deg, oklch(100% 0 0 / 70%), transparent 70%);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  box-shadow: var(--shadow-lg);
+    max-width: 860px;
+    line-height: 1.8;
+    font-size: 16px;
+    color: var(--text);
+    margin: 0 auto;
+    padding: var(--space-2xl) var(--space-xl) var(--space-3xl);
+    background:
+        linear-gradient(180deg, var(--accent-soft), transparent 460px),
+        linear-gradient(120deg, oklch(100% 0 0 / 70%), transparent 70%);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
 }
 
 #write p {
-  margin: 1.1em 0;
+    margin: 1.1em 0;
 }
 
 #write a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  border-bottom: 1px solid transparent;
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    border-bottom: 1px solid transparent;
 }
 
 #write a:hover {
-  border-bottom-color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 /* Headings */
@@ -83,275 +98,340 @@ content,
 #write h4,
 #write h5,
 #write h6 {
-  color: var(--text);
-  font-weight: 800;
-  line-height: 1.25;
-  margin: var(--space-2xl) 0 var(--space-md);
-  letter-spacing: -0.015em;
-  position: relative;
+    color: var(--text);
+    font-weight: 800;
+    line-height: 1.25;
+    margin: var(--space-2xl) 0 var(--space-md);
+    letter-spacing: -0.015em;
+    position: relative;
 }
 
 #write h1 {
-  font-size: 2.25em;
-  letter-spacing: -0.02em;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
-  padding-bottom: 0.3em;
+    font-size: 2.25em;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+    padding-bottom: 0.3em;
 }
 
 #write h2 {
-  font-size: 1.68em;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
-  padding-bottom: 0.24em;
-  color: rgba(var(--text-rgb), 0.9);
+    font-size: 1.68em;
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.22);
+    padding-bottom: 0.24em;
+    color: rgba(var(--text-rgb), 0.9);
 }
 
 #write h3 {
-  font-size: 1.32em;
-  color: rgba(var(--text-rgb), 0.86);
+    font-size: 1.32em;
+    color: rgba(var(--text-rgb), 0.86);
 }
 
 #write h4 {
-  font-size: 1.15em;
-  color: rgba(var(--text-rgb), 0.8);
+    font-size: 1.15em;
+    color: rgba(var(--text-rgb), 0.8);
 }
 
 #write h1::after,
 #write h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.5em;
-  width: 76px;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.45), transparent);
-  border-radius: 999px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5em;
+    width: 76px;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        rgba(var(--accent-rgb), 0.45),
+        transparent
+    );
+    border-radius: 999px;
 }
 
 #write h3::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.38em;
-  width: 44px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.32), transparent);
-  border-radius: 999px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.38em;
+    width: 44px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(var(--accent-rgb), 0.32),
+        transparent
+    );
+    border-radius: 999px;
 }
 
 #write h4::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -0.34em;
-  width: 32px;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.22), transparent);
-  border-radius: 999px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.34em;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(var(--accent-rgb), 0.22),
+        transparent
+    );
+    border-radius: 999px;
 }
 
 #write hr {
-  border: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--border-semi), transparent);
-  margin: var(--space-3xl) 0;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--border-semi),
+        transparent
+    );
+    margin: var(--space-3xl) 0;
 }
 
 /* Blockquote - Enhanced GitHub Alerts */
 #write blockquote {
-  margin: var(--space-xl) 0;
-  padding: var(--space-lg) var(--space-xl);
-  background: rgba(var(--accent-rgb), 0.08);
-  border-left: 4px solid var(--accent);
-  border-radius: 14px;
-  color: var(--text);
-  position: relative;
-  box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.08);
-  overflow: hidden;
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg) var(--space-xl);
+    background: rgba(var(--accent-rgb), 0.08);
+    border-left: 4px solid var(--accent);
+    border-radius: 14px;
+    color: var(--text);
+    position: relative;
+    box-shadow: 0 2px 8px rgba(var(--accent-rgb), 0.08);
+    overflow: hidden;
 }
 
 /* Decorative background icon */
 #write blockquote::before {
-  content: "";
-  position: absolute;
-  right: 16px;
-  bottom: 12px;
-  width: 48px;
-  height: 48px;
-  opacity: 0.06;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    right: 16px;
+    bottom: 12px;
+    width: 48px;
+    height: 48px;
+    opacity: 0.06;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
 }
 
 #write blockquote p:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 #write blockquote p:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* GitHub Alerts Support */
 /* Typora adds data-type attributes to blockquotes starting with [!NOTE], [!TIP], etc. */
 
 #write blockquote[data-type^="alert-"] {
-  padding: var(--space-md) var(--space-lg);
-  border-radius: 12px;
-  box-shadow: none;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 12px;
+    box-shadow: none;
 }
 
 #write blockquote[data-type^="alert-"]::before {
-  content: none;
+    content: none;
 }
 
-#write blockquote[data-type^="alert-"]>p:first-child,
-#write blockquote[data-type^="alert-"]>p.md-alert-title {
-  margin: 0 0 var(--space-xs);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--alert-color);
-  opacity: 0.85;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+#write blockquote[data-type^="alert-"] > p:first-child,
+#write blockquote[data-type^="alert-"] > p.md-alert-title {
+    margin: 0 0 var(--space-xs);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--alert-color);
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 #write blockquote[data-type^="alert-"] .md-alert-icon,
 #write blockquote[data-type^="alert-"] .md-alert-title-icon {
-  display: inline-block;
-  margin-right: 0.5em;
-  transform: translateY(1px);
+    display: inline-block;
+    margin-right: 0.5em;
+    transform: translateY(1px);
 }
 
 /* --- ALERTS & CALLOUTS (GitHub Style Support) --- */
 #write blockquote[data-type],
 #write .md-alert {
-  border-radius: 12px;
-  padding: 1.1em 1.25em;
-  margin: 1.8em 0;
-  border: 1px solid transparent;
-  position: relative;
-  transition: all 0.2s ease;
-  border-left: 4.5px solid var(--alert-color);
+    border-radius: 12px;
+    padding: 1.1em 1.25em;
+    margin: 1.8em 0;
+    border: 1px solid transparent;
+    position: relative;
+    transition: all 0.2s ease;
+    border-left: 4.5px solid var(--alert-color);
 }
 
 /* NOTE (Blue) */
 #write blockquote[data-type="alert-note"],
 #write .md-alert-note {
-  --alert-color: var(--info);
-  background: color-mix(in srgb, var(--alert-color), var(--bg) 88%) !important;
-  border-color: color-mix(in srgb, var(--alert-color), var(--bg) 70%) !important;
+    --alert-color: var(--info);
+    background: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 88%
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 70%
+    ) !important;
 }
 
 /* TIP (Green) */
 #write blockquote[data-type="alert-tip"],
 #write .md-alert-tip {
-  --alert-color: var(--success);
-  background: color-mix(in srgb, var(--alert-color), var(--bg) 88%) !important;
-  border-color: color-mix(in srgb, var(--alert-color), var(--bg) 70%) !important;
+    --alert-color: var(--success);
+    background: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 88%
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 70%
+    ) !important;
 }
 
 /* WARNING (Orange) */
 #write blockquote[data-type="alert-warning"],
 #write .md-alert-warning {
-  --alert-color: var(--warning);
-  background: color-mix(in srgb, var(--alert-color), var(--bg) 85%) !important;
-  border-color: color-mix(in srgb, var(--alert-color), var(--bg) 65%) !important;
+    --alert-color: var(--warning);
+    background: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 85%
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 65%
+    ) !important;
 }
 
 /* IMPORTANT (Purple) */
 #write blockquote[data-type="alert-important"],
 #write .md-alert-important {
-  --alert-color: var(--important);
-  background: color-mix(in srgb, var(--alert-color), var(--bg) 88%) !important;
-  border-color: color-mix(in srgb, var(--alert-color), var(--bg) 70%) !important;
+    --alert-color: var(--important);
+    background: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 88%
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 70%
+    ) !important;
 }
 
 /* CAUTION (Red) */
 #write blockquote[data-type="alert-caution"],
 #write .md-alert-caution {
-  --alert-color: var(--error);
-  background: color-mix(in srgb, var(--alert-color), var(--bg) 85%) !important;
-  border-color: color-mix(in srgb, var(--alert-color), var(--bg) 65%) !important;
+    --alert-color: var(--error);
+    background: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 85%
+    ) !important;
+    border-color: color-mix(
+        in srgb,
+        var(--alert-color),
+        var(--bg) 65%
+    ) !important;
 }
 
 /* Lists */
 #write ul,
 #write ol {
-  padding-left: 1.5em;
-  margin: 1em 0;
+    padding-left: 1.5em;
+    margin: 1em 0;
 }
 
 #write li {
-  margin: 0.5em 0;
+    margin: 0.5em 0;
 }
 
-#write li>ul,
-#write li>ol {
-  margin: 0.4em 0;
+#write li > ul,
+#write li > ol {
+    margin: 0.4em 0;
 }
 
 #write ul li::marker {
-  color: rgba(var(--accent-rgb), 0.72);
-  font-size: 0.98em;
-  font-weight: 700;
+    color: rgba(var(--accent-rgb), 0.72);
+    font-size: 0.98em;
+    font-weight: 700;
 }
 
 #write ol li::marker {
-  color: rgba(var(--accent-rgb), 0.72);
-  font-weight: 800;
-  font-variant-numeric: tabular-nums;
+    color: rgba(var(--accent-rgb), 0.72);
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
 }
 
 /* Task Lists */
 .task-list-item {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .task-list-item input {
-  margin-right: 0.6em;
-  accent-color: var(--accent);
-  transform: translateY(1px);
+    margin-right: 0.6em;
+    accent-color: var(--accent);
+    transform: translateY(1px);
 }
 
 /* Tables */
 #write table {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  margin: 2em 0;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  /* overflow:hidden removed — it clips Typora's column-resize drag UI (#13) */
-  box-shadow: 0 4px 12px rgba(var(--black-rgb), 0.02);
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 2em 0;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    /* overflow:hidden removed — it clips Typora's column-resize drag UI (#13) */
+    box-shadow: 0 4px 12px rgba(var(--black-rgb), 0.02);
 }
 
 /* Corner cells carry the border-radius instead of the table container */
-#write th:first-child { border-radius: 13px 0 0 0; }
-#write th:last-child  { border-radius: 0 13px 0 0; }
-#write tr:last-child td:first-child { border-radius: 0 0 0 13px; }
-#write tr:last-child td:last-child  { border-radius: 0 0 13px 0; }
+#write th:first-child {
+    border-radius: 13px 0 0 0;
+}
+#write th:last-child {
+    border-radius: 0 13px 0 0;
+}
+#write tr:last-child td:first-child {
+    border-radius: 0 0 0 13px;
+}
+#write tr:last-child td:last-child {
+    border-radius: 0 0 13px 0;
+}
 
 #write th,
 #write td {
-  padding: 0.75em 1em;
-  border-bottom: 1px solid var(--border);
+    padding: 0.75em 1em;
+    border-bottom: 1px solid var(--border);
 }
 
 #write th {
-  text-align: left;
-  background: var(--surface);
-  font-weight: 600;
-  color: var(--text);
+    text-align: left;
+    background: var(--surface);
+    font-weight: 600;
+    color: var(--text);
 }
 
 #write tr:last-child td {
-  border-bottom: 0;
+    border-bottom: 0;
 }
 
 #write tr:nth-child(even) td {
-  background: rgba(var(--accent-rgb), 0.02);
+    background: rgba(var(--accent-rgb), 0.02);
 }
 
 /* ==========================================================================
@@ -359,14 +439,14 @@ content,
    ========================================================================== */
 
 #write code {
-  font-family: var(--font-mono);
-  font-size: 0.88em;
-  padding: 0.2em 0.45em;
-  border-radius: 7px;
-  background: rgba(var(--accent-rgb), 0.14);
-  color: var(--accent);
-  font-weight: 600;
-  border: 1px solid rgba(var(--accent-rgb), 0.32);
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    padding: 0.2em 0.45em;
+    border-radius: 7px;
+    background: rgba(var(--accent-rgb), 0.14);
+    color: var(--accent);
+    font-weight: 600;
+    border: 1px solid rgba(var(--accent-rgb), 0.32);
 }
 
 #write pre.md-fences,
@@ -374,28 +454,29 @@ content,
 #write .md-fences,
 #write [mdtype="html-block"],
 #typora-yaml-frontmatter {
-  background: var(--code-bg) !important;
-  color: var(--code-text);
-  border: 1px solid rgba(var(--accent-rgb), 0.18) !important;
-  border-radius: 16px !important;
-  padding: 3.2em 1.4em 1.4em !important;
-  margin: 2em 0;
-  overflow: auto;
-  box-shadow: 0 18px 50px rgba(var(--text-rgb), 0.12);
-  font-family: var(--font-mono);
-  font-size: 14.5px;
-  line-height: 1.6;
-  position: relative;
-  transition: all 0.2s ease;
+    background: var(--code-bg) !important;
+    color: var(--code-text);
+    border: 1px solid rgba(var(--accent-rgb), 0.18) !important;
+    border-radius: 16px !important;
+    padding: 3.2em 1.4em 1.4em !important;
+    margin: 2em 0;
+    max-height: 70vh;
+    overflow: auto;
+    box-shadow: 0 18px 50px rgba(var(--text-rgb), 0.12);
+    font-family: var(--font-mono);
+    font-size: 14.5px;
+    line-height: 1.6;
+    position: relative;
+    transition: all 0.2s ease;
 }
 
 /* Ensure consistent hover for all blocks */
 #write pre.md-fences:hover,
 #write [mdtype="html-block"]:hover,
 #typora-yaml-frontmatter:hover {
-  background: var(--code-bg) !important;
-  border-color: rgba(var(--accent-rgb), 0.32) !important;
-  box-shadow: 0 20px 60px rgba(var(--text-rgb), 0.15);
+    background: var(--code-bg) !important;
+    border-color: rgba(var(--accent-rgb), 0.32) !important;
+    box-shadow: 0 20px 60px rgba(var(--text-rgb), 0.15);
 }
 
 /* Mac-style Window Controls for all blocks */
@@ -404,36 +485,38 @@ content,
 #write .md-fences::before,
 #write [mdtype="html-block"]::before,
 #typora-yaml-frontmatter::before {
-  content: "";
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--code-dot-red);
-  box-shadow: 18px 0 0 var(--code-dot-yellow), 36px 0 0 var(--code-dot-green);
-  z-index: 2;
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--code-dot-red);
+    box-shadow:
+        18px 0 0 var(--code-dot-yellow),
+        36px 0 0 var(--code-dot-green);
+    z-index: 2;
 }
 
 #write [mdtype="html-block"],
 #typora-yaml-frontmatter {
-  padding-top: 3.2em !important;
+    padding-top: 3.2em !important;
 }
 
 /* YAML Specific tweaks */
 #typora-yaml-frontmatter {
-  border-left: 1px solid rgba(var(--accent-rgb), 0.18) !important;
-  margin-bottom: 3em;
+    border-left: 1px solid rgba(var(--accent-rgb), 0.18) !important;
+    margin-bottom: 3em;
 }
 
 #write pre.md-fences code,
 #write pre[mdtype="fences"] code,
 #write .md-fences code {
-  background: transparent;
-  padding: 0;
-  color: var(--code-ink);
-  font-weight: normal;
+    background: transparent;
+    padding: 0;
+    color: var(--code-ink);
+    font-weight: normal;
 }
 
 #write pre.md-fences .CodeMirror,
@@ -445,20 +528,20 @@ content,
 #write .md-fences .CodeMirror,
 #write .md-fences .CodeMirror-scroll,
 #write .md-fences .CodeMirror-gutters {
-  background: transparent;
-  color: var(--code-ink);
+    background: transparent;
+    color: var(--code-ink);
 }
 
 #write pre.md-fences .CodeMirror-linenumber,
 #write pre[mdtype="fences"] .CodeMirror-linenumber,
 #write .md-fences .CodeMirror-linenumber {
-  color: rgba(var(--text-rgb), 0.45);
+    color: rgba(var(--text-rgb), 0.45);
 }
 
 #write pre.md-fences .CodeMirror-cursor,
 #write pre[mdtype="fences"] .CodeMirror-cursor,
 #write .md-fences .CodeMirror-cursor {
-  border-left: 2px solid rgba(var(--accent-rgb), 0.7);
+    border-left: 2px solid rgba(var(--accent-rgb), 0.7);
 }
 
 /* 防止嵌套多层 pre/code 造成重复背景 */
@@ -471,122 +554,124 @@ content,
 #write .md-fences pre,
 #write .md-fences pre code,
 #write .md-fences .cm-s-inner .CodeMirror-lines {
-  background: transparent !important;
-  border: 0 !important;
-  box-shadow: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
 }
 
 #write pre.md-fences pre,
 #write pre[mdtype="fences"] pre,
 #write .md-fences pre {
-  padding: 0 !important;
-  margin: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 #write pre.md-fences .CodeMirror-scroll,
 #write pre[mdtype="fences"] .CodeMirror-scroll,
 #write .md-fences .CodeMirror-scroll {
-  overflow: visible !important;
+    overflow: visible !important;
 }
 
 /* Code Syntax Highlighting */
 #write pre.md-fences .cm-s-inner .cm-comment,
 #write pre[mdtype="fences"] .cm-s-inner .cm-comment,
 #write .md-fences .cm-s-inner .cm-comment {
-  color: rgba(var(--code-muted-rgb), 0.55);
+    color: rgba(var(--code-muted-rgb), 0.55);
 }
 
 #write pre.md-fences .cm-s-inner .cm-keyword,
 #write pre[mdtype="fences"] .cm-s-inner .cm-keyword,
 #write .md-fences .cm-s-inner .cm-keyword {
-  color: var(--code-token-keyword);
-  font-weight: 700;
+    color: var(--code-token-keyword);
+    font-weight: 700;
 }
 
 #write pre.md-fences .cm-s-inner .cm-string,
 #write pre[mdtype="fences"] .cm-s-inner .cm-string,
 #write .md-fences .cm-s-inner .cm-string {
-  color: var(--code-token-string);
+    color: var(--code-token-string);
 }
 
 #write pre.md-fences .cm-s-inner .cm-number,
 #write pre[mdtype="fences"] .cm-s-inner .cm-number,
 #write .md-fences .cm-s-inner .cm-number {
-  color: var(--code-token-number);
+    color: var(--code-token-number);
 }
 
 #write pre.md-fences .cm-s-inner .cm-def,
 #write pre[mdtype="fences"] .cm-s-inner .cm-def,
 #write .md-fences .cm-s-inner .cm-def {
-  color: var(--code-token-blue);
+    color: var(--code-token-blue);
 }
 
 #write pre.md-fences .cm-s-inner .cm-variable,
 #write pre[mdtype="fences"] .cm-s-inner .cm-variable,
 #write .md-fences .cm-s-inner .cm-variable {
-  color: var(--code-ink);
+    color: var(--code-ink);
 }
 
 #write pre.md-fences .cm-s-inner .cm-property,
 #write pre[mdtype="fences"] .cm-s-inner .cm-property,
 #write .md-fences .cm-s-inner .cm-property {
-  color: var(--code-token-blue);
+    color: var(--code-token-blue);
 }
 
 #write pre.md-fences .cm-s-inner .cm-operator,
 #write pre[mdtype="fences"] .cm-s-inner .cm-operator,
 #write .md-fences .cm-s-inner .cm-operator {
-  color: var(--code-ink);
+    color: var(--code-ink);
 }
 
-
 #write pre.has-toolbar .code-toolbar {
-  position: absolute;
-  top: 10px;
-  left: 84px;
-  right: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  z-index: 3;
-  pointer-events: none;
+    position: absolute;
+    top: 10px;
+    left: 84px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 3;
+    pointer-events: none;
 }
 
 #write pre.has-toolbar .code-lang {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: rgba(var(--white-rgb), 0.7);
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(var(--white-rgb), 0.12);
-  background: rgba(var(--white-rgb), 0.06);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: rgba(var(--white-rgb), 0.7);
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--white-rgb), 0.12);
+    background: rgba(var(--white-rgb), 0.06);
 }
 
 #write pre.has-toolbar .code-copy-btn {
-  pointer-events: auto;
-  appearance: none;
-  border: 1px solid rgba(var(--white-rgb), 0.12);
-  background: rgba(var(--white-rgb), 0.06);
-  color: rgba(var(--white-rgb), 0.86);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    pointer-events: auto;
+    appearance: none;
+    border: 1px solid rgba(var(--white-rgb), 0.12);
+    background: rgba(var(--white-rgb), 0.06);
+    color: rgba(var(--white-rgb), 0.86);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
 #write pre.has-toolbar .code-copy-btn:hover {
-  transform: translateY(-1px);
-  border-color: rgba(var(--white-rgb), 0.22);
-  background: rgba(var(--white-rgb), 0.1);
+    transform: translateY(-1px);
+    border-color: rgba(var(--white-rgb), 0.22);
+    background: rgba(var(--white-rgb), 0.1);
 }
 
 #write pre.has-toolbar .code-copy-btn[data-state="copied"] {
-  border-color: rgba(var(--accent-rgb), 0.55);
-  background: rgba(var(--accent-rgb), 0.25);
+    border-color: rgba(var(--accent-rgb), 0.55);
+    background: rgba(var(--accent-rgb), 0.25);
 }
 
 /* Typora built-in code toolbar (compat: .md-fences / pre.md-fences / #write pre.md-fences) */
@@ -594,25 +679,27 @@ content,
 #write pre[mdtype="fences"] .code-tooltip,
 #write .md-fences .code-tooltip,
 #write [mdtype="fences"] .code-tooltip {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  bottom: auto;
-  left: auto;
-  z-index: 4;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  transform: translateY(-2px);
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  pointer-events: none;
-  float: none !important;
-  padding: 0;
-  min-width: 0;
-  height: auto;
-  background: transparent;
-  box-shadow: none;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    bottom: auto;
+    left: auto;
+    z-index: 4;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+    pointer-events: none;
+    float: none !important;
+    padding: 0;
+    min-width: 0;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
 }
 
 #write pre.md-fences:hover .code-tooltip,
@@ -623,24 +710,24 @@ content,
 #write pre[mdtype="fences"]:focus-within .code-tooltip,
 #write .md-fences:focus-within .code-tooltip,
 #write [mdtype="fences"]:focus-within .code-tooltip {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 #write pre.md-fences .code-tooltip-content,
 #write pre[mdtype="fences"] .code-tooltip-content,
 #write .md-fences .code-tooltip-content,
 #write [mdtype="fences"] .code-tooltip-content {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(var(--accent-rgb), 0.2);
-  background: rgba(var(--white-rgb), 0.7);
-  color: rgba(var(--text-rgb), 0.8);
-  line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    background: rgba(var(--white-rgb), 0.7);
+    color: rgba(var(--text-rgb), 0.8);
+    line-height: 1;
 }
 
 #write pre.md-fences .code-tooltip a,
@@ -651,18 +738,21 @@ content,
 #write .md-fences .code-tooltip button,
 #write [mdtype="fences"] .code-tooltip a,
 #write [mdtype="fences"] .code-tooltip button {
-  pointer-events: auto;
-  appearance: none;
-  border: 1px solid rgba(var(--white-rgb), 0.12);
-  background: rgba(var(--white-rgb), 0.06);
-  color: rgba(var(--white-rgb), 0.86);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  line-height: 1;
-  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+    pointer-events: auto;
+    appearance: none;
+    border: 1px solid rgba(var(--white-rgb), 0.12);
+    background: rgba(var(--white-rgb), 0.06);
+    color: rgba(var(--white-rgb), 0.86);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    line-height: 1;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        border-color 0.15s ease;
 }
 
 #write pre.md-fences .code-tooltip a:hover,
@@ -673,180 +763,188 @@ content,
 #write .md-fences .code-tooltip button:hover,
 #write [mdtype="fences"] .code-tooltip a:hover,
 #write [mdtype="fences"] .code-tooltip button:hover {
-  transform: translateY(-1px);
-  border-color: rgba(var(--white-rgb), 0.22);
-  background: rgba(var(--white-rgb), 0.1);
+    transform: translateY(-1px);
+    border-color: rgba(var(--white-rgb), 0.22);
+    background: rgba(var(--white-rgb), 0.1);
 }
 
 /* YAML Frontmatter */
 #write .md-frontmatter {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1em;
-  margin-bottom: 2em;
-  font-size: 0.9em;
-  color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1em;
+    margin-bottom: 2em;
+    font-size: 0.9em;
+    color: var(--muted);
 }
 
 /* Footnotes */
 #write .md-footnote {
-  color: var(--accent);
+    color: var(--accent);
 }
 
 #write .md-footnotes {
-  border-top: 1px solid var(--border);
-  margin-top: 3em;
-  padding: 1.2em 1.4em;
-  font-size: 0.9em;
-  color: rgba(var(--text-rgb), 0.75);
-  background: rgba(var(--accent-rgb), 0.06);
-  border: 1px solid rgba(var(--accent-rgb), 0.18);
-  border-radius: 12px;
-  box-shadow: 0 14px 40px rgba(var(--text-rgb), 0.08);
+    border-top: 1px solid var(--border);
+    margin-top: 3em;
+    padding: 1.2em 1.4em;
+    font-size: 0.9em;
+    color: rgba(var(--text-rgb), 0.75);
+    background: rgba(var(--accent-rgb), 0.06);
+    border: 1px solid rgba(var(--accent-rgb), 0.18);
+    border-radius: 12px;
+    box-shadow: 0 14px 40px rgba(var(--text-rgb), 0.08);
 }
 
 #write .md-footnotes a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 
 #write .md-footnotes a:hover {
-  border-bottom-color: rgba(var(--accent-rgb), 0.6);
+    border-bottom-color: rgba(var(--accent-rgb), 0.6);
 }
 
 sup.md-footnote {
-  background: rgba(var(--accent-rgb), 0.16);
-  color: var(--accent);
-  border: 1px solid rgba(var(--accent-rgb), 0.28);
-  border-radius: 6px;
-  padding: 2px 6px;
+    background: rgba(var(--accent-rgb), 0.16);
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.28);
+    border-radius: 6px;
+    padding: 2px 6px;
 }
 
 #write .md-def-name {
-  color: var(--accent);
-  font-weight: 700;
+    color: var(--accent);
+    font-weight: 700;
 }
 
 #write .md-def-url {
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-color: rgba(var(--accent-rgb), 0.5);
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(var(--accent-rgb), 0.5);
 }
 
 #write .md-def-title,
 #write .md-def-content {
-  color: var(--text-semi);
+    color: var(--text-semi);
 }
 
 #write .md-def-url:empty:before,
 #write .md-def-title:empty:before,
 #write .md-def-content:empty:after {
-  color: var(--muted);
-  opacity: 0.85;
+    color: var(--muted);
+    opacity: 0.85;
 }
 
 /* Images */
 #write img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 14px;
-  box-shadow: var(--shadow);
-  display: block;
-  margin: 1.5em auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 1.5em auto;
 }
 
 /* Mark */
 #write mark {
-  background: linear-gradient(120deg, rgba(var(--accent-rgb), 0.25), rgba(var(--accent-rgb), 0.12));
-  color: inherit;
-  padding: 0.12em 0.26em;
-  border-radius: 9px;
-  border: 1px solid rgba(var(--accent-rgb), 0.32);
-  box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.18);
+    background: linear-gradient(
+        120deg,
+        rgba(var(--accent-rgb), 0.25),
+        rgba(var(--accent-rgb), 0.12)
+    );
+    color: inherit;
+    padding: 0.12em 0.26em;
+    border-radius: 9px;
+    border: 1px solid rgba(var(--accent-rgb), 0.32);
+    box-shadow: 0 10px 26px rgba(var(--accent-rgb), 0.18);
 }
 
 /* Underline */
 #write u {
-  text-decoration: none;
-  background-image: linear-gradient(120deg, rgba(var(--accent-rgb), 0.5), rgba(var(--accent-rgb), 0.18));
-  background-repeat: no-repeat;
-  background-size: 100% 0.16em;
-  background-position: 0 90%;
-  border-radius: 4px;
-  padding-bottom: 2px;
+    text-decoration: none;
+    background-image: linear-gradient(
+        120deg,
+        rgba(var(--accent-rgb), 0.5),
+        rgba(var(--accent-rgb), 0.18)
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 0.16em;
+    background-position: 0 90%;
+    border-radius: 4px;
+    padding-bottom: 2px;
 }
 
 /* KBD */
 #write kbd {
-  font-family: var(--font-mono);
-  font-size: 0.85em;
-  padding: 0.2em 0.5em;
-  border: 1px solid var(--border-semi);
-  border-bottom-width: 3px;
-  border-radius: 8px;
-  background: var(--bg);
-  color: var(--text);
-  margin: 0 0.2em;
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    padding: 0.2em 0.5em;
+    border: 1px solid var(--border-semi);
+    border-bottom-width: 3px;
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0 0.2em;
 }
 
 /* Typora UI */
 #typora-sidebar .file-node-icon {
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
-  display: inline-block;
-  flex: 0 0 18px;
-  background-color: currentColor;
-  background-image: none;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  -webkit-mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    display: inline-block;
+    flex: 0 0 18px;
+    background-color: currentColor;
+    background-image: none;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
 }
 
 #typora-sidebar .file-list-item .file-node-icon {
-  -webkit-mask-image: var(--icon-document);
-  mask-image: var(--icon-document);
+    -webkit-mask-image: var(--icon-document);
+    mask-image: var(--icon-document);
 }
 
-#typora-sidebar .file-library-node>.file-node-content .file-node-icon {
-  -webkit-mask-image: var(--icon-folder);
-  mask-image: var(--icon-folder);
+#typora-sidebar .file-library-node > .file-node-content .file-node-icon {
+    -webkit-mask-image: var(--icon-folder);
+    mask-image: var(--icon-folder);
 }
 
-#typora-sidebar .file-library-file-node>.file-node-content .file-node-icon {
-  -webkit-mask-image: var(--icon-document);
-  mask-image: var(--icon-document);
+#typora-sidebar .file-library-file-node > .file-node-content .file-node-icon {
+    -webkit-mask-image: var(--icon-document);
+    mask-image: var(--icon-document);
 }
 
 /* Math */
 .md-math-block {
-  margin: var(--space-xl) 0;
-  padding: var(--space-md);
-  background: var(--surface);
-  border-radius: 12px;
-  overflow-x: auto;
+    margin: var(--space-xl) 0;
+    padding: var(--space-md);
+    background: var(--surface);
+    border-radius: 12px;
+    overflow-x: auto;
 }
 
 /* Sidebar Title Visibility */
 #typora-sidebar {
-  color: var(--text);
+    color: var(--text);
 }
 
 /* --- Mermaid Diagram Support for Light Themes --- */
 #write .mermaid {
-  background: var(--surface) !important;
-  border-radius: 12px;
-  padding: 10px;
+    background: var(--surface) !important;
+    border-radius: 12px;
+    padding: 10px;
 }
 
 #write .mermaid text {
-  fill: var(--text) !important;
-  font-family: var(--font-sans) !important;
+    fill: var(--text) !important;
+    font-family: var(--font-sans) !important;
 }
 
 /* Flowchart & Sequence Nodes */
@@ -858,13 +956,13 @@ sup.md-footnote {
 #write .mermaid .actor,
 #write .mermaid rect.actor,
 #write .mermaid g.actor rect {
-  fill: var(--bg) !important;
-  stroke: var(--accent) !important;
-  stroke-width: 1.5px !important;
+    fill: var(--bg) !important;
+    stroke: var(--accent) !important;
+    stroke-width: 1.5px !important;
 }
 
 #write .mermaid text.actor {
-  fill: var(--text) !important;
+    fill: var(--text) !important;
 }
 
 /* Sequence Diagram Specifics */
@@ -872,108 +970,116 @@ sup.md-footnote {
 #write .mermaid .actor-line,
 #write .mermaid .messageLine0,
 #write .mermaid .messageLine1 {
-  stroke: var(--accent) !important;
-  stroke-width: 1.5px !important;
-  fill: none;
+    stroke: var(--accent) !important;
+    stroke-width: 1.5px !important;
+    fill: none;
 }
 
 #write .mermaid .messageText {
-  fill: var(--text) !important;
-  stroke: none !important;
-  font-size: 14px !important;
+    fill: var(--text) !important;
+    stroke: none !important;
+    font-size: 14px !important;
 }
 
 #write .mermaid marker {
-  fill: var(--accent) !important;
-  stroke: var(--accent) !important;
+    fill: var(--accent) !important;
+    stroke: var(--accent) !important;
 }
 
 #write .mermaid marker path {
-  fill: var(--accent) !important;
-  stroke: var(--accent) !important;
+    fill: var(--accent) !important;
+    stroke: var(--accent) !important;
 }
 
 #write .mermaid .loopText,
 #write .mermaid .noteText {
-  fill: var(--text) !important;
-  stroke: none !important;
+    fill: var(--text) !important;
+    stroke: none !important;
 }
 
 #write .mermaid .note {
-  fill: rgba(var(--accent-rgb), 0.08) !important;
-  stroke: var(--accent) !important;
+    fill: rgba(var(--accent-rgb), 0.08) !important;
+    stroke: var(--accent) !important;
 }
 
 /* Edge Paths */
 #write .mermaid .edgePath .path {
-  stroke: var(--text-semi) !important;
-  stroke-width: 1.5px !important;
+    stroke: var(--text-semi) !important;
+    stroke-width: 1.5px !important;
 }
 
 /* --- Focus Mode & Submerged Experience --- */
-.on-focus-mode #write>* {
-  opacity: 0.15 !important;
-  filter: blur(1px);
-  transition: opacity 0.5s ease, filter 0.5s ease;
+.on-focus-mode #write > * {
+    opacity: 0.15 !important;
+    filter: blur(1px);
+    transition:
+        opacity 0.5s ease,
+        filter 0.5s ease;
 }
 
-.on-focus-mode #write>.md-focus-element {
-  opacity: 1 !important;
-  filter: blur(0);
+.on-focus-mode #write > .md-focus-element {
+    opacity: 1 !important;
+    filter: blur(0);
 }
 
 .on-focus-mode #write .md-focus-element h1,
 .on-focus-mode #write .md-focus-element h2 {
-  border-bottom-color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 /* --- Micro-interactions --- */
 * {
-  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #write a:hover {
-  transform: translateY(-0.5px);
+    transform: translateY(-0.5px);
 }
 
 /* === PDF / Print export fix (#7) ===
    Light themes: preserve colors and strip decorative shadows/gradients. */
 @media print {
-  html,
-  body {
-    background: #ffffff !important;
-    background-image: none !important;
-  }
+    html,
+    body {
+        background: #ffffff !important;
+        background-image: none !important;
+    }
 
-  #write {
-    background: #ffffff !important;
-    background-image: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    max-width: 100% !important;
-    padding: 1em 0 !important;
-  }
+    #write {
+        background: #ffffff !important;
+        background-image: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        padding: 1em 0 !important;
+    }
 
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
 
-  #write pre.md-fences::before,
-  #write pre[mdtype="fences"]::before,
-  #write .md-fences::before,
-  #write [mdtype="html-block"]::before {
-    display: none !important;
-  }
+    #write pre.md-fences::before,
+    #write pre[mdtype="fences"]::before,
+    #write .md-fences::before,
+    #write [mdtype="html-block"]::before {
+        display: none !important;
+    }
 
-  #write pre.md-fences,
-  #write .md-fences {
-    box-shadow: none !important;
-    border: 1px solid #ddd !important;
-  }
+    #write pre.md-fences,
+    #write .md-fences {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
 
-  #write table { box-shadow: none !important; }
-  #write blockquote { box-shadow: none !important; }
-  #write img { box-shadow: none !important; }
+    #write table {
+        box-shadow: none !important;
+    }
+    #write blockquote {
+        box-shadow: none !important;
+    }
+    #write img {
+        box-shadow: none !important;
+    }
 }

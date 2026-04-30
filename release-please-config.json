@@ -4,13 +4,15 @@
     ".": {
       "release-type": "node",
       "changelog-sections": [
-        { "type": "feat",     "section": "✨ 新功能" },
-        { "type": "fix",      "section": "🐛 Bug 修复" },
-        { "type": "perf",     "section": "⚡ 性能优化" },
+        { "type": "feat", "section": "✨ 新功能" },
+        { "type": "fix", "section": "🐛 Bug 修复" },
+        { "type": "perf", "section": "⚡ 性能优化" },
         { "type": "refactor", "section": "♻️ 重构" },
-        { "type": "docs",     "section": "📝 文档" },
-        { "type": "chore",    "section": "🔧 其他", "hidden": true }
+        { "type": "docs", "section": "📝 文档" },
+        { "type": "chore", "section": "🔧 其他", "hidden": true }
       ]
     }
-  }
+  },
+  "changelog-header": "",
+  "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }

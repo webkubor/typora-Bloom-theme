@@ -10,7 +10,6 @@
     "sync:typora": "node scripts/dev-typora.js --once",
     "dev:typora": "node scripts/dev-typora.js",
     "validate:themes": "npm run build && node scripts/validate-theme-standard.js",
-    "package": "node scripts/package.js",
-    "release": "node scripts/release.js"
+    "package": "node scripts/package.js"
   }
 }

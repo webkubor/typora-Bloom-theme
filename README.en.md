@@ -31,7 +31,7 @@ Bloom is a Typora theme set built around three goals:
 - keep code fences, quotes, tables, alerts, and YAML frontmatter visually consistent
 - preserve stable contrast and hierarchy across light and dark themes
 
-The current release is `v1.3.4`.
+The current release is `v1.3.5`.
 
 ## Why Bloom
 
@@ -65,11 +65,14 @@ The current release is `v1.3.4`.
 
 ## Latest Release Highlights
 
-`v1.3.4` includes:
+`v1.3.5` includes:
 
-- a unified visual language for code fences, HTML blocks, and YAML frontmatter
-- native support for GitHub-style alert syntax
-- fixes for Mermaid readability and local contrast issues in dark themes
+- New Wheat (light & dark) themes.
+- Fixed dark-mode title bar, Quick Open list, and Source Mode contrast.
+- Fixed table column resize UI glitch.
+- Enhanced dev toolchain and unified release workflow.
+
+See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 <details>
 <summary>Development and Build</summary>
@@ -96,7 +99,6 @@ npm run dev -- wheat-dark
 - `npm run dev:typora`: watch theme sources, rebuild, and sync to Typora's theme folder
 - `npm run validate:themes`: validate theme variables and generated color definitions against the `mist` / `wheat` standard
 - `npm run package`: create `Bloom-theme.zip`
-- `npm run release`: run the package, commit, push, and tag workflow
 
 ### Debug in Typora
 
@@ -131,7 +133,7 @@ Generated themes such as `wheat` / `wheat-dark` use `scripts/theme-list.js` as t
 - `theme-src/`: source styles, base layers, and theme-specific variables
 - `dist/`: generated CSS files used by Typora
 - `bloom/`: shared static assets such as bundled fonts
-- `scripts/`: build, packaging, release, and site-data scripts
+- `scripts/`: build, packaging, and site-data scripts
 - `website/` and `_pages/`: public website assets
 
 </details>

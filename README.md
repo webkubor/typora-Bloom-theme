@@ -31,7 +31,7 @@ Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目
 - 让代码块、引用、表格、YAML Frontmatter 等高频模块风格统一。
 - 让浅色和深色主题切换时，亮度与层次依然稳定。
 
-当前版本为 `v1.3.4`。
+当前版本为 `v1.3.5`。
 
 ## 为什么用 Bloom
 
@@ -65,11 +65,14 @@ Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目
 
 ## 本次版本更新
 
-`v1.3.4` 主要包括：
+`v1.3.5` 主要包括：
 
-- 统一代码块、 HTML Block、YAML Frontmatter 的视觉语言。
-- 增加对原生 GitHub Alert 语法的样式支持。
-- 修复深色主题下 Mermaid 可读性和局部对比度问题。
+- 新增麦穗 (Wheat) 浅色/深色主题。
+- 修复深色模式标题栏、快速打开列表、源码模式对比度问题。
+- 修复表格列宽拖拽 UI 错位。
+- 开发工具链增强，统一发版流程。
+
+完整更新日志见 [CHANGELOG.md](CHANGELOG.md)。
 
 <details>
 <summary>开发与构建</summary>
@@ -96,7 +99,6 @@ npm run dev -- wheat-dark
 - `npm run dev:typora`: 监听主题源码变化，自动构建并同步到 Typora 主题目录。
 - `npm run validate:themes`: 按 `mist` / `wheat` 标准校验主题变量与新增颜色定义。
 - `npm run package`: 生成发布包 `Bloom-theme.zip`。
-- `npm run release`: 执行打包、提交、推送和打 Tag 的发布流程。
 
 ### Typora 实机调试
 
@@ -131,7 +133,7 @@ npm run dev -- petal
 - `theme-src/`: 主题源码，包含基础样式和各主题变量。
 - `dist/`: 构建产物，Typora 实际使用的 CSS 文件。
 - `bloom/`: 字体等静态资源。
-- `scripts/`: 构建、打包、发布和站点数据脚本。
+- `scripts/`: 构建、打包和站点数据脚本。
 - `website/`、`_pages/`: 展示站资源。
 
 </details>
