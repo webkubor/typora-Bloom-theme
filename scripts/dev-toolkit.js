@@ -8,6 +8,7 @@ const repo = "https://github.com/typora/typora-theme-toolkit.git";
 const toolkitDir = process.env.TYPORA_TOOLKIT_DIR || path.join(root, ".cache", "typora-theme-toolkit");
 const host = "127.0.0.1";
 const port = Number(process.env.PORT || 5173);
+const previewPage = (process.env.PREVIEW_PAGE || "bloom-shot.html").replace(/^\/+/, "");
 
 const theme = (process.argv[2] || process.env.THEME || "petal").replace(/^bloom-/, "").replace(/\.css$/, "");
 
@@ -74,6 +75,15 @@ function syncTheme() {
   copyDir(path.join(root, "bloom"), path.join(themeDir, "bloom"));
 }
 
+function syncPreviewPage() {
+  const htmlDir = path.join(toolkitDir, "html-preview", "html");
+  const assetsDir = path.join(toolkitDir, "html-preview", "assets");
+  fs.mkdirSync(htmlDir, { recursive: true });
+  fs.mkdirSync(assetsDir, { recursive: true });
+  fs.copyFileSync(path.join(root, "scripts", "fixtures", "toolkit-shot.html"), path.join(htmlDir, "bloom-shot.html"));
+  fs.copyFileSync(path.join(root, "website", "assets", "banner.png"), path.join(assetsDir, "banner.png"));
+}
+
 function openBrowser(url) {
   const command = process.platform === "darwin" ? "open" : process.platform === "win32" ? "cmd" : "xdg-open";
   const args = process.platform === "win32" ? ["/c", "start", "", url] : [url];
@@ -102,7 +112,7 @@ function startServer() {
       return;
     }
 
-    let filePath = safePath(req.url === "/" ? "/html/lorem.html" : req.url);
+    let filePath = safePath(req.url === "/" ? `/html/${previewPage}` : req.url);
     if (!filePath) {
       res.writeHead(403, { "Content-Type": "text/plain; charset=utf-8" });
       res.end("Forbidden");
@@ -125,15 +135,18 @@ function startServer() {
   });
 
   server.listen(port, host, () => {
-    const url = `http://${host}:${port}/html/lorem.html`;
+    const url = `http://${host}:${port}/html/${previewPage}`;
     console.log(`Toolkit preview theme: bloom-${theme}.css`);
     console.log(`Toolkit test CSS: ${path.join(toolkitDir, "html-preview", "theme", "test.css")}`);
     console.log(`Preview URL: ${url}`);
-    openBrowser(url);
+    if (process.env.NO_OPEN !== "1") {
+      openBrowser(url);
+    }
   });
 }
 
 ensureToolkit();
 buildTheme();
 syncTheme();
+syncPreviewPage();
 startServer();

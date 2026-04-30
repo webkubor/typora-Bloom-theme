@@ -445,6 +445,59 @@ h6 {
   color: var(--text-semi);
 }
 
+.theme-shot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin: 32px 0 8px;
+}
+
+.theme-shot-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.theme-shot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: top center;
+  background: var(--bg);
+}
+
+.theme-shot-card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.theme-shot-card small {
+  flex-shrink: 0;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--accent) 16%, transparent);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.theme-shot-card:nth-child(9) {
+  grid-column: 1 / -1;
+}
+
 
 
 .sidebar {
@@ -1173,6 +1226,14 @@ html {
 
   .md-principle-grid {
     grid-template-columns: 1fr;
+  }
+
+  .theme-shot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-shot-card:nth-child(9) {
+    grid-column: auto;
   }
 }
 

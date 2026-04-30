@@ -1,4 +1,5 @@
 dist/
+output/
 .cache/
 .codex/
 node_modules/
@@ -9,3 +10,5 @@ Bloom-theme
 website/issues_test.md
 DEV_LOG.md
 demo/
+.vercel
+.env*.local
