@@ -2,7 +2,7 @@
   "name": "typora-bloom-theme",
   "private": true,
   "version": "1.3.4",
-  "homepage": "https://typora-bloom-theme.webkubor.online",
+  "homepage": "https://bloom.webkubor.online",
   "scripts": {
     "build": "node scripts/gen-site-data.js && node scripts/build-themes.js",
     "dev": "node scripts/dev-toolkit.js",

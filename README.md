@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="https://typora-bloom-theme.webkubor.online"><strong>预览官网</strong></a> ·
+  <a href="https://bloom.webkubor.online"><strong>预览官网</strong></a> ·
   <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>下载最新版本</strong></a>
 </p>
 
