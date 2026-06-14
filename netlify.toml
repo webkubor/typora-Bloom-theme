@@ -1,3 +1,0 @@
-[build]
-  command = "npm run build && node scripts/pages.js"
-  publish = "_pages"

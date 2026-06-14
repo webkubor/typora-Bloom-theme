@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npm run build && node scripts/pages.js",
-  "outputDirectory": "_pages",
-  "cleanUrls": true,
-  "framework": null
-}
