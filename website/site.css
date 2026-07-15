@@ -1420,3 +1420,116 @@ html {
 .recommend-card:hover .recommend-link-icon {
   opacity: 1;
 }
+
+/* ===== 色卡墙 + 投票（24 套主题的规模化陈列） ===== */
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 28px 0 12px;
+}
+
+.palette-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--surface);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s;
+}
+
+.palette-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.palette-swatches {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 64px;
+}
+
+.palette-swatches .swatch {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: filter 0.2s;
+}
+
+.palette-swatches .swatch:hover {
+  filter: brightness(1.06);
+}
+
+.palette-swatches .swatch i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.palette-swatches .swatch small {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.palette-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+}
+
+.palette-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.palette-vote {
+  font-size: 13px;
+  text-decoration: none;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.palette-vote:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.palette-vote b {
+  font-weight: 700;
+}
+
+.palette-vote-hint {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* 24 个主题项的下拉菜单改为双列，避免超长滚动 */
+.theme-menu {
+  width: 330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  max-height: 72vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+  .palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .palette-grid {
+    grid-template-columns: 1fr;
+  }
+}

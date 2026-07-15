@@ -37,7 +37,7 @@ Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目
 
 | 特性 | 说明 |
 | :-- | :-- |
-| 18 套主题矩阵 | 9 套浅色和 9 套深色主题，覆盖温润、克制、自然、夜间等写作场景。 |
+| 24 套主题矩阵 | 12 套浅色和 12 套深色主题，覆盖温润、克制、自然、夜间等写作场景。 |
 | OKLCH 调色 | 采用更接近人眼感知的色彩空间，减少主题切换时的亮度跳变。 |
 | 统一模块语言 | 代码块、HTML Block、YAML Frontmatter、Alert 等模块共享同一套层级与圆角逻辑。 |
 | 为 Typora 优化 | 针对 Markdown 编辑、预览阅读和深色模式对比度做过专门调整。 |
@@ -51,6 +51,9 @@ Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目
 | `verdant` 草木 | `verdant-dark` 草木·暗夜 |
 | `stone` 暖石 | `stone-dark` 暖石·暗夜 |
 | `wheat` 麦穗 | `wheat-dark` 麦穗·暗夜 |
+| `ink` 水墨 | `ink-dark` 水墨·暗夜 |
+| `amber` 琥珀 | `amber-dark` 琥珀·暗夜 |
+| `lapis` 青金 | `lapis-dark` 青金·暗夜 |
 | `ripple` 涟漪 | `ripple-dark` 涟漪·暗夜 |
 | `cinnabar` 丹红 | `cinnabar-dark` 丹红·暗夜 |
 | `sage` 鼠尾草 | `sage-dark` 鼠尾草·暗夜 |

@@ -345,3 +345,86 @@ if (hero) {
     }
   });
 }
+
+// ===== 色卡墙 + GitHub Reactions 投票 =====
+const PALETTE_VOTE_ISSUE = 22;
+
+(function initPaletteWall() {
+  const grid = document.getElementById('palette-grid');
+  if (!grid || !window.THEME_CONFIG) return;
+  const config = window.THEME_CONFIG;
+  const groups = Object.keys(config).filter((key) => !key.endsWith('-dark'));
+
+  grid.innerHTML = groups.map((key) => {
+    const light = config[key];
+    const dark = config[`${key}-dark`] || light;
+    return `<article class="palette-card" data-palette="${key}">
+      <div class="palette-swatches">
+        <button class="swatch" data-theme="${key}" title="预览 ${light.name}" style="background:${light.bg}">
+          <i style="background:${light.accent}"></i><small style="color:${light.text}">浅</small>
+        </button>
+        <button class="swatch" data-theme="${key}-dark" title="预览 ${dark.name}" style="background:${dark.bg}">
+          <i style="background:${dark.accent}"></i><small style="color:${dark.text}">暗</small>
+        </button>
+      </div>
+      <div class="palette-meta">
+        <span class="palette-name">${light.name}</span>
+        <a class="palette-vote" data-vote="${key}" target="_blank" rel="noopener"
+          href="https://github.com/webkubor/typora-Bloom-theme/issues/${PALETTE_VOTE_ISSUE}"
+          title="去 GitHub 为这组配色点赞">👍 <b>·</b></a>
+      </div>
+    </article>`;
+  }).join('');
+
+  grid.addEventListener('click', (event) => {
+    const swatch = event.target.closest('.swatch');
+    if (!swatch) return;
+    setTheme(swatch.dataset.theme);
+    const preview = document.querySelector('.preview-container');
+    if (preview) preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  loadPaletteVotes();
+})();
+
+async function loadPaletteVotes() {
+  const CACHE_KEY = 'bloom-palette-votes-v1';
+  const TTL = 10 * 60 * 1000;
+  let votes = null;
+
+  try {
+    const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+    if (cached && Date.now() - cached.t < TTL) votes = cached.votes;
+  } catch (_) { /* ignore broken cache */ }
+
+  if (!votes) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/webkubor/typora-Bloom-theme/issues/${PALETTE_VOTE_ISSUE}/comments?per_page=30`
+      );
+      if (!res.ok) return;
+      const comments = await res.json();
+      votes = {};
+      comments.forEach((comment) => {
+        const marker = (comment.body || '').match(/<!--\s*vote:([a-z-]+)\s*-->/);
+        if (marker) {
+          votes[marker[1]] = {
+            count: comment.reactions ? comment.reactions['+1'] || 0 : 0,
+            url: comment.html_url,
+          };
+        }
+      });
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), votes }));
+    } catch (_) {
+      return; // offline / rate limited — keep placeholder
+    }
+  }
+
+  Object.entries(votes).forEach(([key, vote]) => {
+    const el = document.querySelector(`[data-vote="${key}"]`);
+    if (el) {
+      el.href = vote.url;
+      el.querySelector('b').textContent = vote.count;
+    }
+  });
+}

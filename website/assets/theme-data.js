@@ -64,6 +64,45 @@ window.THEME_CONFIG = {
     "text": "#f5f1ea",
     "hue": 82
   },
+  "ink": {
+    "name": "🖋 水墨",
+    "accent": "#a74639",
+    "bg": "#f7f5f1",
+    "text": "#1a1813"
+  },
+  "ink-dark": {
+    "name": "🌑 水墨·暗夜",
+    "accent": "#da8375",
+    "bg": "#131416",
+    "text": "#efeeeb",
+    "hue": 270
+  },
+  "amber": {
+    "name": "🍯 琥珀",
+    "accent": "#b77b29",
+    "bg": "#faf6f1",
+    "text": "#251e15"
+  },
+  "amber-dark": {
+    "name": "🔥 琥珀·暗夜",
+    "accent": "#dea45f",
+    "bg": "#221811",
+    "text": "#f7f1e9",
+    "hue": 65
+  },
+  "lapis": {
+    "name": "🔷 青金",
+    "accent": "#2f62ac",
+    "bg": "#f3f7fa",
+    "text": "#161e26"
+  },
+  "lapis-dark": {
+    "name": "🌌 青金·暗夜",
+    "accent": "#7faee9",
+    "bg": "#161e26",
+    "text": "#edf3f7",
+    "hue": 250
+  },
   "ripple": {
     "name": "🌊 涟漪",
     "accent": "#009c9c",

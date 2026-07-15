@@ -37,7 +37,7 @@ The current release is `v1.3.5`.
 
 | Feature | Description |
 | :-- | :-- |
-| 18-theme matrix | 9 light themes and 9 dark themes for different moods and writing environments. |
+| 24-theme matrix | 12 light themes and 12 dark themes for different moods and writing environments. |
 | OKLCH palette system | Uses a perceptual color model to keep lightness more stable across theme switches. |
 | Unified module styling | Code fences, HTML blocks, YAML frontmatter, and alerts follow the same visual logic. |
 | Tuned for Typora | Adjusted specifically for Markdown editing, reading flow, and dark-mode contrast. |
@@ -51,6 +51,9 @@ The current release is `v1.3.5`.
 | `verdant` | `verdant-dark` |
 | `stone` | `stone-dark` |
 | `wheat` | `wheat-dark` |
+| `ink` | `ink-dark` |
+| `amber` | `amber-dark` |
+| `lapis` | `lapis-dark` |
 | `ripple` | `ripple-dark` |
 | `cinnabar` | `cinnabar-dark` |
 | `sage` | `sage-dark` |
