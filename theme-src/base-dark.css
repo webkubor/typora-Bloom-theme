@@ -76,7 +76,8 @@ content,
 }
 
 #write {
-    max-width: 880px;
+    /* CJK measure: ~40 chars/line at 16px (was 880px ≈ 51 chars) */
+    max-width: 740px;
     line-height: 1.85;
     /* 略微增加行高提升可读性 */
     letter-spacing: 0.015em;
@@ -125,7 +126,6 @@ content,
     font-weight: 800;
     line-height: 1.35;
     margin: var(--space-lg) 0 var(--space-md);
-    letter-spacing: -0.02em;
     position: relative;
 }
 

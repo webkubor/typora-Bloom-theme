@@ -198,10 +198,93 @@ function validateDist(errors) {
   });
 }
 
+/* --- WCAG contrast enforcement ---
+   Every ink-vs-paper pair must stay above these floors (all 24 themes
+   currently clear them with margin — this locks the floor in CI so the
+   ink-rgb/mermaid/export class of low-contrast regressions can't return). */
+const CONTRAST_FLOORS = [
+  { fg: "text", bgVar: "bg", min: 7 },        // AAA body text
+  { fg: "text-semi", bgVar: "bg", min: 4.5 }, // AA secondary text
+  { fg: "muted", bgVar: "bg", min: 3 },       // AA large/tertiary
+  { fg: "code-text", bgVar: "code-bg", min: 4.5 },
+];
+
+function parseColorForContrast(value, backdrop) {
+  if (!value) return null;
+  const str = value.trim();
+  let m = str.match(/^#([0-9a-f]{6})$/i);
+  if (m) return [1, 3, 5].map((i) => parseInt(m[1].slice(i - 1, i + 1), 16));
+  m = str.match(/^rgba?\(([\d\s,.]+)\)$/);
+  if (m) {
+    const [r, g, b, a] = m[1].split(",").map(Number);
+    if (a != null && a < 1 && backdrop) {
+      return [r, g, b].map((v, i) => Math.round(v * a + backdrop[i] * (1 - a)));
+    }
+    return [r, g, b];
+  }
+  return null;
+}
+
+function contrastRatio(a, b) {
+  const luminance = ([r, g, bl]) => {
+    const f = (v) => {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4;
+    };
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(bl);
+  };
+  const [hi, lo] = [luminance(a), luminance(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+}
+
+function validateContrast(errors) {
+  themes.forEach((theme) => {
+    const distPath = path.join(distDir, `bloom-${theme.name}.css`);
+    if (!fs.existsSync(distPath)) return;
+    const content = fs.readFileSync(distPath, "utf8");
+    // only the main :root block — print overrides redeclare vars later
+    const mediaIndex = content.indexOf("@media");
+    const head = mediaIndex > 0 ? content.slice(0, mediaIndex) : content;
+
+    const resolveVar = (name, backdrop, depth = 0) => {
+      if (depth > 4) return null;
+      const raw = readCssVar(head, name);
+      if (!raw) return null;
+      const alias = raw.match(/^var\(--([\w-]+)\)$/);
+      if (alias) return resolveVar(alias[1], backdrop, depth + 1);
+      return parseColorForContrast(raw, backdrop);
+    };
+
+    const bg = resolveVar("bg");
+    if (!bg) {
+      report(errors, `dist/bloom-${theme.name}.css`, "cannot parse --bg for contrast check");
+      return;
+    }
+
+    CONTRAST_FLOORS.forEach(({ fg, bgVar, min }) => {
+      const backdrop = bgVar === "bg" ? bg : resolveVar(bgVar, bg) || bg;
+      const ink = resolveVar(fg, backdrop);
+      if (!ink) {
+        report(errors, `dist/bloom-${theme.name}.css`, `cannot parse --${fg} for contrast check`);
+        return;
+      }
+      const ratio = contrastRatio(ink, backdrop);
+      if (ratio < min) {
+        report(
+          errors,
+          `dist/bloom-${theme.name}.css`,
+          `contrast --${fg} vs --${bgVar} is ${ratio.toFixed(2)}, below WCAG floor ${min}`
+        );
+      }
+    });
+  });
+}
+
 const errors = [];
 validateThemeList(errors);
 validateSources(errors);
 validateDist(errors);
+validateContrast(errors);
 
 if (errors.length > 0) {
   console.error("Theme standard validation failed:");

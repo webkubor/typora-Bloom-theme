@@ -62,7 +62,8 @@ content,
 }
 
 #write {
-    max-width: 860px;
+    /* CJK measure: ~40 chars/line at 16px (was 860px ≈ 50 chars) */
+    max-width: 740px;
     line-height: 1.8;
     font-size: 16px;
     color: var(--text);
@@ -102,13 +103,11 @@ content,
     font-weight: 800;
     line-height: 1.25;
     margin: var(--space-2xl) 0 var(--space-md);
-    letter-spacing: -0.015em;
     position: relative;
 }
 
 #write h1 {
     font-size: 2.25em;
-    letter-spacing: -0.02em;
     border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
     padding-bottom: 0.3em;
 }
@@ -1083,8 +1082,13 @@ sup.md-footnote {
     border-bottom-color: var(--accent);
 }
 
-/* --- Micro-interactions --- */
-* {
+/* --- Micro-interactions ---
+   Scoped to interactive elements only: a universal * rule makes every
+   property change transition-eligible and taxes typing latency. */
+#write a,
+#write .md-alert,
+#write blockquote[data-type],
+.theme-item {
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
