@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.6.0...v1.6.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* **theme:** theme app chrome — search panel, menus, dialogs, TOC, checkboxes ([c76bcef](https://github.com/webkubor/typora-Bloom-theme/commit/c76bcefcf226f8a0037e4d99e361a904e77a0f2b))
+
 ## [1.6.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.5.1...v1.6.0) (2026-07-15)
 
 
