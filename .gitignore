@@ -1,6 +1,7 @@
 dist/
 output/
 .cache/
+.playwright-mcp/
 .codex/
 node_modules/
 .github
