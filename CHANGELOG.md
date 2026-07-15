@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.5.0...v1.5.1) (2026-07-15)
+
+
+### Bug Fixes
+
+* **theme:** paint page backgrounds with theme-owned --bg, not --bg-color ([aab9061](https://github.com/webkubor/typora-Bloom-theme/commit/aab906105762908896ae4a586822e840808bac8d))
+
 ## [1.5.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.4.0...v1.5.0) (2026-07-15)
 
 
