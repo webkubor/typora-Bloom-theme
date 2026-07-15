@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.6.1...v1.7.0) (2026-07-15)
+
+
+### Features
+
+* **theme:** fluent-inspired sidebar file tree refinement ([dfe55d3](https://github.com/webkubor/typora-Bloom-theme/commit/dfe55d3a578b0ade019a44dd0ce88fdb73454c82))
+
 ## [1.6.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.6.0...v1.6.1) (2026-07-15)
 
 
