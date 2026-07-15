@@ -1570,3 +1570,55 @@ a:hover {
     border-radius: 6px;
     padding: 2px 6px;
 }
+
+/* === Sidebar file tree refinement (fluent-inspired) ===
+   Custom caret (Typora swaps fa-caret icons, which cannot animate) with a
+   smooth rotation, indent guide lines per nesting level, and steadier row
+   rhythm. All var-driven. */
+.file-node-content {
+    transition: background 0.15s ease;
+}
+
+/* directory caret: draw our own triangle and rotate on expand */
+.file-library-node:not(.file-library-file-node) > .file-node-content .file-node-open-state {
+    min-width: 14px;
+}
+
+.file-library-node:not(.file-library-file-node) > .file-node-content .file-node-open-state .fa {
+    display: none !important;
+}
+
+.file-library-node:not(.file-library-file-node) > .file-node-content .file-node-open-state::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid var(--muted);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transform: rotate(0deg);
+    transform-origin: 2px 4px;
+    transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+        border-left-color 0.18s ease;
+}
+
+.file-library-node.file-node-expanded:not(.file-library-file-node) > .file-node-content .file-node-open-state::before {
+    transform: rotate(90deg);
+    border-left-color: var(--accent);
+}
+
+.file-library-node:not(.file-library-file-node) > .file-node-content:hover .file-node-open-state::before {
+    border-left-color: var(--accent);
+}
+
+/* indent guide line: indent the children container itself so nested
+   levels each get an aligned guide (Typora indents rows via per-node
+   padding; the container border gives the visual rail) */
+.file-node-children {
+    margin-left: 13px;
+    border-left: 1px solid var(--border);
+}
+
+.file-library-node:hover > .file-node-children {
+    border-left-color: var(--border-semi);
+}
