@@ -20,7 +20,8 @@
 
 <p align="center">
   <a href="https://bloom.webkubor.online"><strong>预览官网</strong></a> ·
-  <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>下载最新版本</strong></a>
+  <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>下载最新版本</strong></a> ·
+  <a href="https://github.com/webkubor/typora-Bloom-theme/issues/22"><strong>🗳️ 配色投票</strong></a>
 </p>
 
 ## Bloom 是什么

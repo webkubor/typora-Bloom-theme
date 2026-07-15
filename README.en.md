@@ -20,7 +20,8 @@
 
 <p align="center">
   <a href="https://bloom.webkubor.online"><strong>Preview Site</strong></a> ·
-  <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>Download Latest</strong></a>
+  <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest"><strong>Download Latest</strong></a> ·
+  <a href="https://github.com/webkubor/typora-Bloom-theme/issues/22"><strong>🗳️ Vote for palettes</strong></a>
 </p>
 
 ## What Bloom Is
