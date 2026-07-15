@@ -156,6 +156,7 @@ if (themeTrigger && themeMenu) {
     item.addEventListener('click', () => {
       const theme = item.dataset.theme;
       setTheme(theme);
+      if (typeof umami !== 'undefined') umami.track('switch-theme', { theme });
     });
   });
 }
@@ -377,9 +378,14 @@ const PALETTE_VOTE_ISSUE = 22;
   }).join('');
 
   grid.addEventListener('click', (event) => {
+    const voteLink = event.target.closest('.palette-vote');
+    if (voteLink && typeof umami !== 'undefined') {
+      umami.track('vote-click', { palette: voteLink.dataset.vote });
+    }
     const swatch = event.target.closest('.swatch');
     if (!swatch) return;
     setTheme(swatch.dataset.theme);
+    if (typeof umami !== 'undefined') umami.track('preview-theme', { theme: swatch.dataset.theme });
     const preview = document.querySelector('.preview-container');
     if (preview) preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });

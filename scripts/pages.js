@@ -44,6 +44,12 @@ const processHtml = (html) => {
     /<span id="current-theme-name">[^<]+<\/span>/,
     `<span id="current-theme-name">${defaultTheme.label}</span>`
   );
+  // Keep structured-data version in sync with package.json
+  const { version } = require(path.join(root, "package.json"));
+  processed = processed.replace(
+    /"softwareVersion":\s*"[^"]+"/,
+    `"softwareVersion": "${version}"`
+  );
   return processed;
 };
 
