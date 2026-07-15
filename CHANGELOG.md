@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.5.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.4.0...v1.5.0) (2026-07-15)
+
+
+### Features
+
+* **theme:** add Ink, Amber, Lapis palettes (24 themes) + palette wall with GitHub voting ([eae97fc](https://github.com/webkubor/typora-Bloom-theme/commit/eae97fc3e8319d3380b0ad4f3b05ce5f7e3a6c4f))
+
+
+### Bug Fixes
+
+* **site:** refresh stale banner, remove dead netlify.toml copy in pages build ([692ca87](https://github.com/webkubor/typora-Bloom-theme/commit/692ca87ef585eb2f1b1be5e428ac35d24953f91b))
+
 ## [1.4.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.3.5...v1.4.0) (2026-07-15)
 
 
