@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.5.1...v1.6.0) (2026-07-15)
+
+
+### Features
+
+* **typography:** CJK reading measure, tracking, scoped transitions, WCAG CI ([ce6d8c2](https://github.com/webkubor/typora-Bloom-theme/commit/ce6d8c2463d0869b04ca49d478ec7752f73e167e))
+
 ## [1.5.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.5.0...v1.5.1) (2026-07-15)
 
 
