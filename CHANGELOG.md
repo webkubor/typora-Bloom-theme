@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.4.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.3.5...v1.4.0) (2026-07-15)
+
+
+### Features
+
+* **build:** compile oklch/color-mix to static sRGB for legacy Typora compatibility ([16eb07f](https://github.com/webkubor/typora-Bloom-theme/commit/16eb07fced37c6972d1e85117ab3660f19ea34d9))
+* 代码块滚动、发版流程统一、更新日志补全 ([80f6ab2](https://github.com/webkubor/typora-Bloom-theme/commit/80f6ab2b8e2e3c5ee6d8304813ed19d01dfca77d))
+
+
+### Bug Fixes
+
+* **ci:** attach Bloom-theme.zip to release-please releases ([46ace46](https://github.com/webkubor/typora-Bloom-theme/commit/46ace4694a21234b927b644d28160b287e0306c9))
+* **theme:** GitHub Alerts real DOM, mermaid sequence contrast, print cleanup ([64bee48](https://github.com/webkubor/typora-Bloom-theme/commit/64bee48c4a2e22c067fa27196fa4236244a7c9ff))
+
 ## v1.3.5 · 2026-04-30
 - **[Feat] 新增麦穗 (Wheat) 主题**：新增浅色 `wheat` 和深色 `wheat-dark` 两套莫兰迪麦穗色主题，采用 OKLCH 色彩空间自动生成。
 - **[Feat] 开发工具链增强**：新增 `dev-toolkit.js`（浏览器预览）、`dev-typora.js`（实机热重载）、`theme-vars.js`（变量提取）、`validate-theme-standard.js`（主题校验）等开发脚本。
