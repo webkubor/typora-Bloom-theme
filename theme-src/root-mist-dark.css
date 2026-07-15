@@ -41,6 +41,7 @@
 
     --text: oklch(96% 0.01 240);
     --text-rgb: 240, 245, 248;
+    --ink-rgb: 224, 230, 235;
     --text-semi: oklch(82% 0.02 240);
     --muted: color-mix(in oklch, var(--text), transparent 30%);
 

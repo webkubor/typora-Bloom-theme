@@ -67,7 +67,8 @@ const outputVars = [
 
 const darkOutputVars = [
   "page-depth-1",
-  "page-depth-2"
+  "page-depth-2",
+  "ink-rgb"
 ];
 
 const generatedLightColorKeys = [
