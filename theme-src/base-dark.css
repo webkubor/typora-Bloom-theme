@@ -270,6 +270,24 @@ content,
     transform: translateY(1px);
 }
 
+/* Typora ≥1.9 real DOM: <div class="md-alert md-alert-note"> with a
+   .md-alert-text title row (svg icon + ::after label). Overrides Typora's
+   hardcoded GitHub palette so the title follows Bloom's semantic colors. */
+#write .md-alert::before {
+    content: none;
+}
+
+#write .md-alert .md-alert-text {
+    color: var(--alert-color);
+    font-weight: 600;
+    font-size: 0.92em;
+    letter-spacing: 0.04em;
+}
+
+#write .md-alert > p {
+    margin: 0.5em 0;
+}
+
 /* --- ALERTS & CALLOUTS (GitHub Style Support) --- */
 #write blockquote[data-type],
 #write .md-alert {
@@ -379,11 +397,9 @@ content,
     background-color: inherit !important;
 }
 
-/* --- MERMAID DARK MODE FIX --- */
-:root {
-    --mermaid-theme: dark;
-}
-
+/* --- MERMAID DARK MODE FIX ---
+   --mermaid-theme itself is declared once in the dedicated Mermaid section
+   below (night). */
 .mermaid svg {
     color: var(--text) !important;
 }
@@ -1239,21 +1255,79 @@ a:hover {
 #write .mermaid .node rect,
 #write .mermaid .node circle,
 #write .mermaid .node polygon,
-#write .mermaid .node path {
+#write .mermaid .node path,
+#write .mermaid .actor,
+#write .mermaid rect.actor,
+#write .mermaid g.actor rect {
     fill: var(--bg) !important;
     stroke: var(--accent) !important;
     stroke-width: 1.5px !important;
 }
 
-/* Ensure text is always readable */
-#write .mermaid text.actor {
+#write .mermaid line,
+#write .mermaid .actor-line {
+    stroke: rgba(var(--accent-rgb), 0.55) !important;
+}
+
+/* Ensure text is always readable; mermaid's embedded SVG style colors
+   tspans directly, so target them too */
+#write .mermaid text.actor,
+#write .mermaid text.actor tspan,
+#write .mermaid .actor tspan {
     fill: var(--text) !important;
+}
+
+#write .mermaid .note {
+    fill: rgba(var(--accent-rgb), 0.12) !important;
+    stroke: var(--accent) !important;
 }
 
 /* Edge Paths */
 #write .mermaid .edgePath .path {
     stroke: var(--text-semi) !important;
     stroke-width: 1.5px !important;
+}
+
+/* === Sequence diagram contrast (#14) === */
+
+/* Halo behind labels so they stay readable even over user-authored
+   `rect rgb(...)` highlight regions whose color the theme cannot know. */
+#write .mermaid .messageText,
+#write .mermaid .loopText,
+#write .mermaid .loopText tspan,
+#write .mermaid .noteText,
+#write .mermaid .labelText,
+#write .mermaid .labelText tspan {
+    fill: var(--text) !important;
+    paint-order: stroke;
+    stroke: var(--bg) !important;
+    stroke-width: 3px !important;
+    stroke-linejoin: round;
+}
+
+/* loop / alt / opt corner chips */
+#write .mermaid .labelBox {
+    fill: var(--surface-2) !important;
+    stroke: var(--accent) !important;
+}
+
+/* activation bars on lifelines */
+#write .mermaid .activation0,
+#write .mermaid .activation1,
+#write .mermaid .activation2 {
+    fill: var(--surface-2) !important;
+    stroke: var(--text-semi) !important;
+}
+
+/* user-authored `rect rgb(...)` background regions assume a light canvas;
+   fade them so dark-theme text keeps contrast while the hue stays visible */
+#write .mermaid rect.rect {
+    fill-opacity: 0.16 !important;
+}
+
+/* alt/opt dividers and region borders */
+#write .mermaid .loopLine {
+    stroke: var(--text-semi) !important;
 }
 
 /* === Source Mode (Markdown raw editing) contrast fix (#9) ===
@@ -1303,25 +1377,25 @@ a:hover {
     border-left-color: var(--accent) !important;
 }
 
-/* === PDF / Print export fix (#7) ===
-   Dark theme gradients bleed into PDF pages because Typora renders via WebKit.
-   Reset to a clean white page layout for print output. */
+/* === PDF / Print export fix (#7 / #20) ===
+   Colors come from the light sibling palette injected at build time
+   (@media print :root override in each bloom-*-dark.css). This block only
+   strips decorations that bleed across PDF pages. */
 @media print {
     html,
     body {
-        background: #ffffff !important;
+        background: var(--bg) !important;
         background-image: none !important;
     }
 
     #write {
-        background: #ffffff !important;
+        background: var(--bg) !important;
         background-image: none !important;
         border: none !important;
         border-radius: 0 !important;
         box-shadow: none !important;
         max-width: 100% !important;
         padding: 1em 0 !important;
-        color: #1a1a1a !important;
     }
 
     * {
@@ -1329,20 +1403,8 @@ a:hover {
         print-color-adjust: exact !important;
     }
 
-    /* Code blocks: light background for readability */
-    #write pre.md-fences,
-    #write pre[mdtype="fences"],
-    #write .md-fences,
-    #write [mdtype="html-block"] {
-        background: #f5f5f5 !important;
-        border: 1px solid #ddd !important;
-        box-shadow: none !important;
-        color: #333 !important;
-    }
-
-    #write pre.md-fences code,
-    #write .md-fences code {
-        color: #333 !important;
+    #write h1 {
+        text-shadow: none !important;
     }
 
     /* Hide Mac window dots — irrelevant in print */
@@ -1353,27 +1415,17 @@ a:hover {
         display: none !important;
     }
 
-    #write table {
-        box-shadow: none !important;
-        border-color: #ccc !important;
-    }
-
-    #write th {
-        background: #f0f0f0 !important;
-        color: #1a1a1a !important;
-    }
-    #write td {
-        color: #1a1a1a !important;
-    }
-
-    #write blockquote {
-        background: #f9f9f9 !important;
-        border-left-color: #999 !important;
-        box-shadow: none !important;
-        color: #333 !important;
-    }
-
+    #write pre.md-fences,
+    #write .md-fences,
+    #write [mdtype="html-block"],
+    #write table,
+    #write blockquote,
     #write img {
         box-shadow: none !important;
+    }
+
+    #write pre.md-fences,
+    #write .md-fences {
+        border: 1px solid var(--border-semi) !important;
     }
 }

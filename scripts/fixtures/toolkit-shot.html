@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="../theme/default/base.css">
   <link rel="stylesheet" href="../theme/default/base-control.css">
   <link rel="stylesheet" href="../theme/test.css">
+  <style>
+    /* replicate Typora's built-in md-alert rules missing from the toolkit base */
+    .md-alert { padding: 0 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid #000; }
+    .md-alert-text { font-size: 0.9rem; font-weight: 700; }
+    .md-alert-text svg { fill: currentColor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+    .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+  </style>
 </head>
 <body>
 <content>
@@ -72,7 +79,68 @@ mode: light and dark</pre>
         </tr>
       </tbody>
     </table>
+
+    <h2 mdtype="heading" class="md-end-block md-heading"><span md-inline="plain">GitHub Alerts（Typora ≥1.9 实际 DOM）</span></h2>
+
+    <div class="md-alert md-alert-note">
+      <p class="md-alert-text md-alert-text-note"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg><span class="md-alert-text-container" data-text="Note"></span></p>
+      <p mdtype="paragraph"><span md-inline="plain">这是一条 Note 提示，验证真实 DOM 下的标题行与背景。</span></p>
+    </div>
+
+    <div class="md-alert md-alert-tip">
+      <p class="md-alert-text md-alert-text-tip"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5Z"></path></svg><span class="md-alert-text-container" data-text="Tip"></span></p>
+      <p mdtype="paragraph"><span md-inline="plain">这是一条 Tip 提示。</span></p>
+    </div>
+
+    <div class="md-alert md-alert-important">
+      <p class="md-alert-text md-alert-text-important"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm8 3.5a.75.75 0 0 0-1.5 0v2.5a.75.75 0 0 0 1.5 0ZM8 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"></path></svg><span class="md-alert-text-container" data-text="Important"></span></p>
+      <p mdtype="paragraph"><span md-inline="plain">这是一条 Important 提示。</span></p>
+    </div>
+
+    <div class="md-alert md-alert-warning">
+      <p class="md-alert-text md-alert-text-warning"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg><span class="md-alert-text-container" data-text="Warning"></span></p>
+      <p mdtype="paragraph"><span md-inline="plain">这是一条 Warning 提示。</span></p>
+    </div>
+
+    <div class="md-alert md-alert-caution">
+      <p class="md-alert-text md-alert-text-caution"><svg width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M4.47.22A.749.749 0 0 1 5 0h6c.199 0 .389.079.53.22l4.25 4.25c.141.14.22.331.22.53v6a.749.749 0 0 1-.22.53l-4.25 4.25a.749.749 0 0 1-.53.22H5a.749.749 0 0 1-.53-.22L.22 11.53A.749.749 0 0 1 0 11V5c0-.199.079-.389.22-.53Zm.84 1.28L1.53 5.31v5.38l3.78 3.78h5.38l3.78-3.78V5.31l-3.78-3.78ZM8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg><span class="md-alert-text-container" data-text="Caution"></span></p>
+      <p mdtype="paragraph"><span md-inline="plain">这是一条 Caution 提示。</span></p>
+    </div>
+
+    <h2 mdtype="heading" class="md-end-block md-heading"><span md-inline="plain">Mermaid 时序图（loop / alt / rect 对比度）</span></h2>
+
+    <p mdtype="paragraph"><span class="md-diagram-panel md-fences-adv-panel"><span class="md-diagram-panel-preview"><div class="mermaid" id="mermaid-seq"></div></span></span></p>
   </div>
 </content>
+<script type="module">
+  // dev fixture only: render a real mermaid sequence diagram so theme overrides
+  // (labelBox, activation bars, text halo, authored rect regions) can be verified
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  const declared = getComputedStyle(document.documentElement).getPropertyValue("--mermaid-theme").trim();
+  const dark = declared === "night" || declared === "dark";
+  mermaid.initialize({ startOnLoad: false, theme: dark ? "dark" : "default", fontFamily: "sans-serif" });
+  const source = `sequenceDiagram
+    participant 云端
+    participant 上位机
+    participant 下位机
+    opt 同步参数
+        云端->>上位机: TCP/IP 同步
+    end
+    alt 有测试配置
+        上位机->>下位机: 可以测试
+    else 无测试配置
+        上位机->>+下位机: 写入配置 0x0A01
+        下位机-->>-上位机: 应答
+    end
+    rect rgb(200, 220, 230)
+        loop 正常工作
+            上位机->>下位机: 查询状态 0x0800
+            Note right of 上位机: 时刻对每个下位机查询
+            下位机-->>上位机: 应答
+        end
+    end`;
+  const { svg } = await mermaid.render("seq-render", source);
+  document.getElementById("mermaid-seq").innerHTML = svg;
+</script>
 </body>
 </html>

@@ -255,6 +255,24 @@ content,
     transform: translateY(1px);
 }
 
+/* Typora ≥1.9 real DOM: <div class="md-alert md-alert-note"> with a
+   .md-alert-text title row (svg icon + ::after label). Overrides Typora's
+   hardcoded GitHub palette so the title follows Bloom's semantic colors. */
+#write .md-alert::before {
+    content: none;
+}
+
+#write .md-alert .md-alert-text {
+    color: var(--alert-color);
+    font-weight: 600;
+    font-size: 0.92em;
+    letter-spacing: 0.04em;
+}
+
+#write .md-alert > p {
+    margin: 0.5em 0;
+}
+
 /* --- ALERTS & CALLOUTS (GitHub Style Support) --- */
 #write blockquote[data-type],
 #write .md-alert {
@@ -961,7 +979,9 @@ sup.md-footnote {
     stroke-width: 1.5px !important;
 }
 
-#write .mermaid text.actor {
+#write .mermaid text.actor,
+#write .mermaid text.actor tspan,
+#write .mermaid .actor tspan {
     fill: var(--text) !important;
 }
 
@@ -1006,6 +1026,42 @@ sup.md-footnote {
 #write .mermaid .edgePath .path {
     stroke: var(--text-semi) !important;
     stroke-width: 1.5px !important;
+}
+
+/* === Sequence diagram contrast (#14) === */
+
+/* Halo behind labels so they stay readable even over user-authored
+   `rect rgb(...)` highlight regions whose color the theme cannot know. */
+#write .mermaid .messageText,
+#write .mermaid .loopText,
+#write .mermaid .loopText tspan,
+#write .mermaid .noteText,
+#write .mermaid .labelText,
+#write .mermaid .labelText tspan {
+    fill: var(--text) !important;
+    paint-order: stroke;
+    stroke: var(--bg) !important;
+    stroke-width: 3px !important;
+    stroke-linejoin: round;
+}
+
+/* loop / alt / opt corner chips */
+#write .mermaid .labelBox {
+    fill: var(--surface-2) !important;
+    stroke: var(--accent) !important;
+}
+
+/* activation bars on lifelines */
+#write .mermaid .activation0,
+#write .mermaid .activation1,
+#write .mermaid .activation2 {
+    fill: var(--surface-2) !important;
+    stroke: var(--text-semi) !important;
+}
+
+/* alt/opt dividers and region borders */
+#write .mermaid .loopLine {
+    stroke: var(--text-semi) !important;
 }
 
 /* --- Focus Mode & Submerged Experience --- */
