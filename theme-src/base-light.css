@@ -1143,3 +1143,144 @@ sup.md-footnote {
         box-shadow: none !important;
     }
 }
+
+/* === App chrome (search / menus / dialogs / checkboxes) ===
+   Coverage learned from auditing night & fluent: these surfaces are
+   hardcoded light in Typora's bootstrap layer and must be themed
+   explicitly. All rules are var-driven so every palette adapts. */
+
+/* Cmd+F search panel */
+#md-searchpanel {
+    border-bottom: 1px solid var(--border);
+}
+
+#md-searchpanel input,
+#md-searchpanel .form-control {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+    border-radius: 8px;
+    box-shadow: none !important;
+}
+
+#md-searchpanel .input-group-addon {
+    background: var(--surface-2);
+    color: var(--text-semi);
+    border-color: var(--border);
+}
+
+#md-searchpanel .btn {
+    color: var(--text);
+}
+
+/* context menus, dropdowns, spell panel, word-count footer */
+.dropdown-menu,
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background: var(--surface) !important;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+}
+
+.dropdown-menu .divider {
+    background-color: var(--border-semi);
+    opacity: 1;
+}
+
+.dropdown-menu > li > a {
+    color: var(--text);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background: var(--item-hover-bg-color);
+    color: var(--text);
+}
+
+/* [TOC] — follow the palette instead of Typora's hardcoded #4183c4 */
+.md-toc-item {
+    color: var(--accent);
+}
+
+.md-toc-inner:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* dialogs (insert table, etc.) */
+.modal-content {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-content input,
+.modal-content .form-control {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.modal-content .input-group-addon {
+    background: var(--surface-2);
+    color: var(--text-semi);
+    border-color: var(--border);
+}
+
+.modal-content .btn-default {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border-semi);
+}
+
+.modal-content .btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+/* task-list checkboxes — bloom-styled instead of system default */
+#write .md-task-list-item > input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 5px;
+    border: 1.5px solid var(--border-semi);
+    background: var(--surface);
+    margin-top: calc(1em - 12px);
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+#write .md-task-list-item > input:hover {
+    border-color: var(--accent);
+}
+
+#write .md-task-list-item > input:checked {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+#write .md-task-list-item > input:checked:before {
+    content: "";
+    display: block;
+    width: 0.32rem;
+    height: 0.6rem;
+    margin: 0.06rem auto 0;
+    border: solid rgba(255, 255, 255, 0.95);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* inline image meta / src hint */
+#write .md-image > .md-meta {
+    background: var(--surface-2);
+    color: var(--text-semi);
+    border-radius: 6px;
+    padding: 2px 6px;
+}
