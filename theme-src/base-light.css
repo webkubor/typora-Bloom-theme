@@ -24,7 +24,7 @@
 
 html,
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg);
     background:
         radial-gradient(
             1400px circle at 16% 10%,
@@ -33,7 +33,7 @@ body {
         ),
         linear-gradient(150deg, rgba(var(--accent-rgb), 0.05), transparent 48%),
         linear-gradient(180deg, rgba(var(--white-rgb), 0.7), transparent 340px),
-        var(--bg-color);
+        var(--bg);
     color: var(--text);
     color-scheme: light;
     font-family: var(--font-sans);
@@ -42,7 +42,7 @@ body {
 
 content,
 .typora-node {
-    background-color: var(--bg-color);
+    background-color: var(--bg);
     background:
         radial-gradient(
             900px circle at 0% 18%,
@@ -54,7 +54,7 @@ content,
             rgba(var(--accent-rgb), 0.05),
             transparent 60%
         ),
-        var(--bg-color);
+        var(--bg);
 }
 
 ::selection {

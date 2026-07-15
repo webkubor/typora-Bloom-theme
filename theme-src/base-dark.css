@@ -24,7 +24,7 @@
 
 html,
 body {
-    background-color: var(--bg-color);
+    background-color: var(--bg);
     background:
         radial-gradient(
             1200px circle at 18% 8%,
@@ -41,7 +41,7 @@ body {
             var(--page-depth-1) 0%,
             var(--page-depth-2) 100%
         ),
-        var(--bg-color);
+        var(--bg);
     color: var(--text);
     color-scheme: dark;
     font-family: var(--font-sans);
@@ -50,7 +50,7 @@ body {
 
 content,
 .typora-node {
-    background-color: var(--bg-color);
+    background-color: var(--bg);
     background:
         radial-gradient(
             900px circle at 0% 18%,
@@ -62,12 +62,12 @@ content,
             rgba(var(--accent-rgb), 0.05),
             transparent 60%
         ),
-        var(--bg-color);
+        var(--bg);
 }
 
 #top-titlebar,
 #top-titlebar * {
-    background: var(--bg-color) !important;
+    background: var(--bg) !important;
     color: var(--text-color) !important;
 }
 
