@@ -1,5 +1,7 @@
 ![logo](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme/cs-token4ai-1784193577164862000.png)
 
+![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme-banner/cs-token4ai-1784197429494387000.png)
+
 # Bloom for Typora
 
 <p align="center">
