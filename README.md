@@ -5,10 +5,6 @@
 # Bloom for Typora
 
 <p align="center">
-  <img src="website/assets/banner.png" alt="Bloom Banner" width="100%" />
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/github/v/release/webkubor/typora-Bloom-theme?style=flat-square&color=A873C4" alt="Release" />
   <img src="https://img.shields.io/github/license/webkubor/typora-Bloom-theme?style=flat-square&color=92a8b3" alt="License" />
   <img src="https://img.shields.io/github/stars/webkubor/typora-Bloom-theme?style=flat-square&color=cc584d" alt="Stars" />
