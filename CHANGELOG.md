@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.0...v1.7.1) (2026-08-03)
+
+
+### Bug Fixes
+
+* **license:** 清理 choosealicense 模板元数据并填入版权信息 ([f50ed75](https://github.com/webkubor/typora-Bloom-theme/commit/f50ed7584a4492fb2d5b258db83ef4849665be0f))
+* **theme:** 浅色主题补齐 .md-meta-block 样式，重制全部主题截图 ([43c7274](https://github.com/webkubor/typora-Bloom-theme/commit/43c72741a7e3067fd15c87ff216b58e3f1179ca0))
+* 恢复 README（之前的 sed 命令损坏了内容） ([7e3d9cb](https://github.com/webkubor/typora-Bloom-theme/commit/7e3d9cb17beac6d9361ab0a38e1dd03ca98ca06e))
+
 ## [1.7.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.6.1...v1.7.0) (2026-07-15)
 
 
