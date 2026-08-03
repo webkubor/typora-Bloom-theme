@@ -43,20 +43,70 @@ Bloom 是一套面向长文写作的 Typora 主题集合，围绕三个核心目
 
 ## 主题一览
 
-| 浅色主题 | 深色主题 |
-| :-- | :-- |
-| `petal` 花瓣 | `petal-dark` 花瓣·暗夜 |
-| `mist` 雾蓝 | `mist-dark` 雾蓝·暗夜 |
-| `verdant` 草木 | `verdant-dark` 草木·暗夜 |
-| `stone` 暖石 | `stone-dark` 暖石·暗夜 |
-| `wheat` 麦穗 | `wheat-dark` 麦穗·暗夜 |
-| `ink` 水墨 | `ink-dark` 水墨·暗夜 |
-| `amber` 琥珀 | `amber-dark` 琥珀·暗夜 |
-| `lapis` 青金 | `lapis-dark` 青金·暗夜 |
-| `ripple` 涟漪 | `ripple-dark` 涟漪·暗夜 |
-| `cinnabar` 丹红 | `cinnabar-dark` 丹红·暗夜 |
-| `sage` 鼠尾草 | `sage-dark` 鼠尾草·暗夜 |
-| `spring` 紫语 | `spring-dark` 紫语·暗夜 |
+12 套配色，每套都有浅色和深色（`-dark`）两个版本，共 24 个主题。
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/petal.png" alt="petal 花瓣" />
+      <sub><code>petal</code> 花瓣 · <code>petal-dark</code> 花瓣·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/mist-dark.png" alt="mist-dark 雾蓝·暗夜" />
+      <sub><code>mist</code> 雾蓝 · <code>mist-dark</code> 雾蓝·暗夜</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/verdant.png" alt="verdant 草木" />
+      <sub><code>verdant</code> 草木 · <code>verdant-dark</code> 草木·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/stone-dark.png" alt="stone-dark 暖石·暗夜" />
+      <sub><code>stone</code> 暖石 · <code>stone-dark</code> 暖石·暗夜</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/wheat.png" alt="wheat 麦穗" />
+      <sub><code>wheat</code> 麦穗 · <code>wheat-dark</code> 麦穗·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/ink.png" alt="ink 水墨" />
+      <sub><code>ink</code> 水墨 · <code>ink-dark</code> 水墨·暗夜</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/amber-dark.png" alt="amber-dark 琥珀·暗夜" />
+      <sub><code>amber</code> 琥珀 · <code>amber-dark</code> 琥珀·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/lapis.png" alt="lapis 青金" />
+      <sub><code>lapis</code> 青金 · <code>lapis-dark</code> 青金·暗夜</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/ripple-dark.png" alt="ripple-dark 涟漪·暗夜" />
+      <sub><code>ripple</code> 涟漪 · <code>ripple-dark</code> 涟漪·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/cinnabar.png" alt="cinnabar 丹红" />
+      <sub><code>cinnabar</code> 丹红 · <code>cinnabar-dark</code> 丹红·暗夜</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/sage-dark.png" alt="sage-dark 鼠尾草·暗夜" />
+      <sub><code>sage</code> 鼠尾草 · <code>sage-dark</code> 鼠尾草·暗夜</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/spring.png" alt="spring 紫语" />
+      <sub><code>spring</code> 紫语 · <code>spring-dark</code> 紫语·暗夜</sub>
+    </td>
+  </tr>
+</table>
 
 ## 快速安装
 

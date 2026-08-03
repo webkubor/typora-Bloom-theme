@@ -43,20 +43,70 @@ The current release is `v1.3.5`.
 
 ## Theme Matrix
 
-| Light Themes | Dark Themes |
-| :-- | :-- |
-| `petal` | `petal-dark` |
-| `mist` | `mist-dark` |
-| `verdant` | `verdant-dark` |
-| `stone` | `stone-dark` |
-| `wheat` | `wheat-dark` |
-| `ink` | `ink-dark` |
-| `amber` | `amber-dark` |
-| `lapis` | `lapis-dark` |
-| `ripple` | `ripple-dark` |
-| `cinnabar` | `cinnabar-dark` |
-| `sage` | `sage-dark` |
-| `spring` | `spring-dark` |
+12 palettes, each with a light and a dark (`-dark`) variant — 24 themes in total.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/petal.png" alt="petal" />
+      <sub><code>petal</code> · <code>petal-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/mist-dark.png" alt="mist-dark" />
+      <sub><code>mist</code> · <code>mist-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/verdant.png" alt="verdant" />
+      <sub><code>verdant</code> · <code>verdant-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/stone-dark.png" alt="stone-dark" />
+      <sub><code>stone</code> · <code>stone-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/wheat.png" alt="wheat" />
+      <sub><code>wheat</code> · <code>wheat-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/ink.png" alt="ink" />
+      <sub><code>ink</code> · <code>ink-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/amber-dark.png" alt="amber-dark" />
+      <sub><code>amber</code> · <code>amber-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/lapis.png" alt="lapis" />
+      <sub><code>lapis</code> · <code>lapis-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/ripple-dark.png" alt="ripple-dark" />
+      <sub><code>ripple</code> · <code>ripple-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/cinnabar.png" alt="cinnabar" />
+      <sub><code>cinnabar</code> · <code>cinnabar-dark</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/sage-dark.png" alt="sage-dark" />
+      <sub><code>sage</code> · <code>sage-dark</code></sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="website/assets/screenshots/spring.png" alt="spring" />
+      <sub><code>spring</code> · <code>spring-dark</code></sub>
+    </td>
+  </tr>
+</table>
 
 ## Quick Install
 
