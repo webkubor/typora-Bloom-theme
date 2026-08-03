@@ -470,7 +470,8 @@ content,
 #write pre[mdtype="fences"],
 #write .md-fences,
 #write [mdtype="html-block"],
-#typora-yaml-frontmatter {
+#typora-yaml-frontmatter,
+.md-meta-block {
     background: var(--code-bg) !important;
     color: var(--code-text);
     border: 1px solid rgba(var(--accent-rgb), 0.18) !important;
@@ -490,7 +491,8 @@ content,
 /* Ensure consistent hover for all blocks */
 #write pre.md-fences:hover,
 #write [mdtype="html-block"]:hover,
-#typora-yaml-frontmatter:hover {
+#typora-yaml-frontmatter:hover,
+.md-meta-block:hover {
     background: var(--code-bg) !important;
     border-color: rgba(var(--accent-rgb), 0.32) !important;
     box-shadow: 0 20px 60px rgba(var(--text-rgb), 0.15);
@@ -501,7 +503,8 @@ content,
 #write pre[mdtype="fences"]::before,
 #write .md-fences::before,
 #write [mdtype="html-block"]::before,
-#typora-yaml-frontmatter::before {
+#typora-yaml-frontmatter::before,
+.md-meta-block::before {
     content: "";
     position: absolute;
     top: 14px;
@@ -517,14 +520,17 @@ content,
 }
 
 #write [mdtype="html-block"],
-#typora-yaml-frontmatter {
+#typora-yaml-frontmatter,
+.md-meta-block {
     padding-top: 3.2em !important;
 }
 
 /* YAML Specific tweaks */
-#typora-yaml-frontmatter {
+#typora-yaml-frontmatter,
+.md-meta-block {
     border-left: 1px solid rgba(var(--accent-rgb), 0.18) !important;
     margin-bottom: 3em;
+    display: block !important;
 }
 
 #write pre.md-fences code,
