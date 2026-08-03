@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme/cs-token4ai-1784193577164862000.png" alt="Bloom logo" width="180" />
-</p>
-
 ![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme-banner/cs-token4ai-1784197429494387000.png)
 
 # Bloom for Typora

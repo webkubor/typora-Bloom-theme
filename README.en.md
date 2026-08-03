@@ -1,8 +1,6 @@
-# Bloom for Typora
+![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme-banner/cs-token4ai-1784197429494387000.png)
 
-<p align="center">
-  <img src="website/assets/banner.png" alt="Bloom Banner" width="100%" />
-</p>
+# Bloom for Typora
 
 <p align="center">
   <img src="https://img.shields.io/github/v/release/webkubor/typora-Bloom-theme?style=flat-square&color=A873C4" alt="Release" />
