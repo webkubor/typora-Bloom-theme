@@ -12,5 +12,8 @@
     "validate:themes": "npm run build && node scripts/validate-theme-standard.js",
     "package": "node scripts/package.js",
     "deploy": "npm run build && node scripts/pages.js && npx wrangler pages deploy _pages --project-name=typora-bloom-theme"
+  },
+  "engines": {
+    "node": ">=20.19"
   }
 }
