@@ -1,5 +1,21 @@
 ![banner](https://cdn.jsdelivr.net/gh/webkubor/picx-images-hosting@master/blog/projects/typora-bloom-theme-banner/cs-token4ai-1784197429494387000.png)
 
+<!-- bloom-series-nav -->
+
+<table align="center">
+<tr>
+<td align="center" width="33%"><b>🌸 Bloom for Typora</b><br/><sub>24 套主题 · 当前</sub></td>
+<td align="center" width="33%"><a href="https://github.com/webkubor/dsh-bloom-theme">🌊 Bloom for DSH</a><br/><sub>4 套配色</sub></td>
+<td align="center" width="33%"><a href="https://github.com/webkubor/contrast-guard">🛡️ contrast-guard</a><br/><sub>配色护栏</sub></td>
+</tr>
+</table>
+
+<p align="center">
+  <sub>同一套莫兰迪设计语言：两个宿主的主题，加一个守住它们配色的工具。<br/>
+  <i>One Morandi design language — two themes, and the tool that keeps their colors honest.</i></sub>
+</p>
+
+
 <h1 align="center">Bloom for Typora</h1>
 
 <p align="center">
