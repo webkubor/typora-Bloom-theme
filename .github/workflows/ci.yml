@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # 主题规范 + WCAG 对比度门槛。
+      # 校验跑在 dist 成品上，所以必须先 build —— validate:themes 已包含这一步。
+      #
+      # 为什么需要这个 workflow（2026-08-19）：此前仓库只有 release-please.yml，
+      # 它只负责发版与打包，从不执行 validate:themes。于是 scripts/validate-theme-standard.js
+      # 里的对比度门槛虽然写着「locks the floor in CI」，实际从未在 CI 里跑过 ——
+      # 6 套浅色主题的链接色低于 AA 就是在这个缺口下长期存活的。
+      - name: 主题规范与对比度校验
+        run: npm run validate:themes
+
+      # 构建产物完整性：24 套主题必须全部生成，缺一套就是构建链路出了问题
+      - name: 校验构建产物
+        run: |
+          count=$(ls dist/*.css 2>/dev/null | grep -v print | wc -l | tr -d ' ')
+          echo "生成主题数: $count"
+          if [ "$count" -lt 24 ]; then
+            echo "::error::预期 24 套主题，实际只生成了 $count 套"
+            exit 1
+          fi

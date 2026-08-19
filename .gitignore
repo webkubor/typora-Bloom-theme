@@ -4,7 +4,11 @@ output/
 .playwright-mcp/
 .codex/
 node_modules/
-.github
+# .github 曾被整目录忽略（2026-08-19 修）——导致 release-please.yml 之后新增的任何
+# workflow / issue 模板都被静默吞掉：git add 不报错，文件就是提交不上去。
+# CI 校验缺失、6 套主题链接色低于 AA 长期没人发现，都与此有关。
+# 只忽略本地产物，配置必须入库。
+.github/instructions/
 .specify/
 _pages/
 Bloom-theme
