@@ -14,7 +14,7 @@
     --space-3xl: calc(var(--space-unit) * 8);
 
     /* --- Morandi Petal (Original Vibrant Rose) --- */
-    --accent: oklch(64% 0.22 350);
+    --accent: oklch(58% 0.22 350);
     --accent-rgb: 232, 133, 155;
 
     /* Dynamic States */

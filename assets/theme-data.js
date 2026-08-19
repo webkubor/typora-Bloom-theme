@@ -2,7 +2,7 @@
 window.THEME_CONFIG = {
   "petal": {
     "name": "🌸 花瓣",
-    "accent": "#e63f9f",
+    "accent": "#d0268c",
     "bg": "#fef6f9",
     "text": "#2a1e22"
   },
@@ -53,7 +53,7 @@ window.THEME_CONFIG = {
   },
   "wheat": {
     "name": "🌾 麦穗",
-    "accent": "#947d53",
+    "accent": "#836d43",
     "bg": "#f7f5f1",
     "text": "#262118"
   },
@@ -79,7 +79,7 @@ window.THEME_CONFIG = {
   },
   "amber": {
     "name": "🍯 琥珀",
-    "accent": "#b77b29",
+    "accent": "#9f6401",
     "bg": "#faf6f1",
     "text": "#251e15"
   },
@@ -105,7 +105,7 @@ window.THEME_CONFIG = {
   },
   "ripple": {
     "name": "🌊 涟漪",
-    "accent": "#009c9c",
+    "accent": "#007b7d",
     "bg": "#ebf4f4",
     "text": "#162525"
   },
@@ -130,7 +130,7 @@ window.THEME_CONFIG = {
   },
   "sage": {
     "name": "🌿 鼠尾草",
-    "accent": "#848e38",
+    "accent": "#6d761c",
     "bg": "#f5f6ee",
     "text": "#212318"
   },
@@ -143,7 +143,7 @@ window.THEME_CONFIG = {
   },
   "spring": {
     "name": "🪻 紫语",
-    "accent": "#877deb",
+    "accent": "#6c60cb",
     "bg": "#f5f5f8",
     "text": "#20202b"
   },

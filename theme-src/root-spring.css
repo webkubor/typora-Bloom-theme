@@ -14,7 +14,7 @@
     --space-3xl: calc(var(--space-unit) * 8);
 
     /* --- Morandi Spring (Silky Lavender) --- */
-    --accent: oklch(65% 0.16 285);
+    --accent: oklch(55.5% 0.16 285);
     --accent-rgb: 160, 115, 215;
 
     /* Dynamic States */

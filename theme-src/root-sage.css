@@ -14,7 +14,7 @@
     --space-3xl: calc(var(--space-unit) * 8);
 
     /* --- Morandi Sage (Olive Green) --- */
-    --accent: oklch(62% 0.11 115);
+    --accent: oklch(54% 0.11 115);
     --accent-rgb: 138, 154, 91;
 
     /* Dynamic States */

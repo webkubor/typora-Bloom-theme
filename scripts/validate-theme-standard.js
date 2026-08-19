@@ -207,6 +207,11 @@ const CONTRAST_FLOORS = [
   { fg: "text-semi", bgVar: "bg", min: 4.5 }, // AA secondary text
   { fg: "muted", bgVar: "bg", min: 3 },       // AA large/tertiary
   { fg: "code-text", bgVar: "code-bg", min: 4.5 },
+  // accent 是链接色（`#write a { color: var(--accent) }`）——正文里唯一会被点击的东西，
+  // 却一直不在这份清单里。2026-08-19 审计发现 16 套浅色主题中有 4 套低于 AA
+  // （petal 3.55 / sage 3.27 / spring 3.11 / ripple 3.02），而上面几项文字对比度
+  // 全部宽裕达标。缺口恰好落在护栏没覆盖的那一格。
+  { fg: "accent", bgVar: "bg", min: 4.5 },
 ];
 
 function parseColorForContrast(value, backdrop) {

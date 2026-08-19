@@ -14,7 +14,7 @@
     --space-3xl: calc(var(--space-unit) * 8);
 
     /* --- Morandi Ripple (Teal/Cyan) --- */
-    --accent: oklch(62% 0.12 195);
+    --accent: oklch(51.5% 0.12 195);
     --accent-rgb: 95, 168, 178;
 
     /* Dynamic States */

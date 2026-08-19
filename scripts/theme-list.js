@@ -82,7 +82,7 @@ module.exports = [
     label: "🌾 麦穗",
     description: "Morandi Wheat (Muted Straw)",
     colors: {
-      accent: "oklch(60% 0.065 82)",
+      accent: "oklch(54.5% 0.065 82)",
       bg: "oklch(97% 0.006 82)",
       surface: "oklch(95% 0.008 82)",
       "surface-2": "oklch(92% 0.012 82)",
@@ -167,7 +167,7 @@ module.exports = [
     label: "🍯 琥珀",
     description: "Morandi Amber (Warm Caramel)",
     colors: {
-      accent: "oklch(63% 0.12 70)",
+      accent: "oklch(55.5% 0.12 70)",
       bg: "oklch(97.5% 0.008 80)",
       surface: "oklch(95.5% 0.01 80)",
       "surface-2": "oklch(93% 0.014 78)",
