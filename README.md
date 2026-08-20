@@ -22,7 +22,7 @@
   <img src="https://img.shields.io/github/v/release/webkubor/typora-Bloom-theme?style=flat-square&color=A873C4" alt="Release" />
   <img src="https://img.shields.io/github/license/webkubor/typora-Bloom-theme?style=flat-square&color=92a8b3" alt="License" />
   <img src="https://img.shields.io/github/stars/webkubor/typora-Bloom-theme?style=flat-square&color=cc584d" alt="Stars" />
-  <img src="https://img.shields.io/badge/Typora-Compatible-5fa8b2?style=flat-square" alt="Typora" />
+  <a href="https://theme.typora.io/theme/Bloom/"><img src="https://img.shields.io/badge/Typora-Official%20Theme-5fa8b2?style=flat-square" alt="Listed on Typora official theme gallery" /></a>
   <a href="README.en.md"><img src="https://img.shields.io/badge/Document-English-A873C4?style=flat-square" alt="English Document" /></a>
 </p>
 
