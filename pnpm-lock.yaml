@@ -6,4 +6,19 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      contrast-guard:
+        specifier: ^0.1.1
+        version: 0.1.1
+
+packages:
+
+  contrast-guard@0.1.1:
+    resolution: {integrity: sha512-k0T66xV0JLWRmqS2LkIMpxl//OAVir5vYF5U9B4wbH+SPwDl79/Z6shqfTtGYTG8HKOS3p7NbU/4XYqTmkI+/w==}
+    engines: {node: '>=18'}
+    hasBin: true
+
+snapshots:
+
+  contrast-guard@0.1.1: {}

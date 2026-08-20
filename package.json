@@ -11,9 +11,13 @@
     "dev:typora": "node scripts/dev-typora.js",
     "validate:themes": "npm run build && node scripts/validate-theme-standard.js",
     "package": "node scripts/package.js",
-    "deploy": "npm run build && node scripts/pages.js && npx wrangler pages deploy _pages --project-name=typora-bloom-theme"
+    "deploy": "npm run build && node scripts/pages.js && npx wrangler pages deploy _pages --project-name=typora-bloom-theme",
+    "check:contrast": "npm run build --silent && contrast-guard"
   },
   "engines": {
     "node": ">=20.19"
+  },
+  "devDependencies": {
+    "contrast-guard": "^0.1.1"
   }
 }

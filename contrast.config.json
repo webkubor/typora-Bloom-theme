@@ -1,0 +1,10 @@
+{
+  "files": ["dist/bloom-*.css"],
+  "pairs": [
+    { "fg": "text",      "bg": "bg",      "min": 7,   "label": "正文（AAA）" },
+    { "fg": "text-semi", "bg": "bg",      "min": 4.5, "label": "次要文字" },
+    { "fg": "muted",     "bg": "bg",      "min": 3,   "label": "三级文字" },
+    { "fg": "code-text", "bg": "code-bg", "min": 4.5, "label": "代码" },
+    { "fg": "accent",    "bg": "bg",      "min": 4.5, "label": "链接/主色" }
+  ]
+}
