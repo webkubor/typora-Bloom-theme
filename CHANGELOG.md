@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.7.2](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.1...v1.7.2) (2026-08-20)
+
+
+### Bug Fixes
+
+* **ci:** 改用 pnpm —— 首版 workflow 照搬 npm 写法导致失败 ([5b06ffa](https://github.com/webkubor/typora-Bloom-theme/commit/5b06ffa50d42cfbcfb689b1f12917d3b351cd073))
+* **themes:** 6 套浅色主题的链接色补足 WCAG AA，并把 accent 纳入 CI 护栏 ([20ec47a](https://github.com/webkubor/typora-Bloom-theme/commit/20ec47a9aeadd4058906367bbdd420556f3ed2b8))
+
 ## [1.7.1](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.0...v1.7.1) (2026-08-03)
 
 
