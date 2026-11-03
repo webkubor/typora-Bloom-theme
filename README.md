@@ -215,6 +215,16 @@ npm run dev -- petal
 
 Bloom 管**写字的环境**。内容本身怎么写 —— 结论先行、SCQA、MECE、语气姿态 —— 见 [writing-standard-skills](https://github.com/webkubor/writing-standard-skills)；写完要出 PDF 或长图，见 [facet](https://github.com/webkubor/facet)。三者互不重复定义：环境 / 方法 / 渲染。
 
+## Star History
+
+<a href="https://www.star-history.com/#webkubor/typora-Bloom-theme&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=light" />
+    <img alt="Star History Chart for webkubor/typora-Bloom-theme" src="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=light" width="100%" />
+  </picture>
+</a>
+
 ## License
 
 [MIT](LICENSE)

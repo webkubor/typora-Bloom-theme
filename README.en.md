@@ -195,6 +195,16 @@ Generated themes such as `wheat` / `wheat-dark` use `scripts/theme-list.js` as t
 
 </details>
 
+## Star History
+
+<a href="https://www.star-history.com/#webkubor/typora-Bloom-theme&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=light" />
+    <img alt="Star History Chart for webkubor/typora-Bloom-theme" src="https://api.star-history.com/svg?repos=webkubor/typora-Bloom-theme&amp;type=Date&amp;theme=light" width="100%" />
+  </picture>
+</a>
+
 ## License
 
 [MIT](LICENSE)
