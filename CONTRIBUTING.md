@@ -13,7 +13,7 @@ Thanks for your interest in contributing!
 ## Development Setup
 
 ```bash
-git clone https://github.com/webkubor/typora-Bloom-theme.git
+git clone git@github.com:webkubor/typora-Bloom-theme.git
 cd typora-Bloom-theme
 # Follow the Quick Start in README
 ```
