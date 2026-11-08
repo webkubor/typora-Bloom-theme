@@ -36,6 +36,9 @@ jobs:
       - name: 主题规范与对比度校验
         run: pnpm run validate:themes
 
+      - name: 校验网站发现文件
+        run: pnpm run test:site-discovery
+
       # 构建产物完整性：24 套主题必须全部生成，缺一套就是构建链路出了问题
       - name: 校验构建产物
         run: |
