@@ -29,6 +29,18 @@ class SiteDiscoveryTest(unittest.TestCase):
         self.assertEqual(root.tag, ns + "urlset")
         self.assertEqual([element.text for element in root.findall(f"{ns}url/{ns}loc")], [HOME])
 
+    def test_theme_stylesheets_resolve_font_files(self):
+        stylesheets = sorted((OUT / "dist").glob("bloom-*.css"))
+        self.assertEqual(len(stylesheets), 24)
+        for stylesheet in stylesheets:
+            content = stylesheet.read_text(encoding="utf-8")
+            fonts = re.findall(r'url\(["\']([^"\']*bloom/fonts/[^"\']+)["\']\)', content)
+            self.assertTrue(fonts, f"no fonts found in {stylesheet.name}")
+            for font in fonts:
+                self.assertTrue((stylesheet.parent / font).is_file(), f"missing {font} in {stylesheet.name}")
+        # Website rewriting must not change the package's original CSS.
+        self.assertIn('url("./bloom/fonts/', (ROOT / "dist/bloom-petal.css").read_text(encoding="utf-8"))
+
     def test_llms(self):
         content = self.read_output("llms.txt")
         self.assertRegex(content, r"(?m)^# Bloom for Typora\s*$")
