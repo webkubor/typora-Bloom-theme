@@ -12,6 +12,7 @@
     "validate:themes": "npm run build && node scripts/validate-theme-standard.js",
     "package": "node scripts/package.js",
     "deploy": "npm run build && node scripts/pages.js && npx wrangler pages deploy _pages --project-name=typora-bloom-theme",
+    "test:site-discovery": "npm run build && node scripts/pages.js && python3 scripts/test-site-discovery.py",
     "check:contrast": "npm run build --silent && contrast-guard"
   },
   "engines": {
