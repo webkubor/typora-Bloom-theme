@@ -12,7 +12,7 @@ jobs:
   maturity:
     runs-on: ubuntu-latest
     steps:
-      - uses: supercli-site/scorecard@574fce721970ea5c5a8d5781fe9e8dcae7457241
+      - uses: supercli-site/scorecard@6909e3c0d50953627ba09ffcd5f8fee0eb9a0efd
         with:
           github-token: ${{ github.token }}
           comment: 'true'
