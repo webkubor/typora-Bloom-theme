@@ -1,0 +1,18 @@
+name: Scorecard PR maturity
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+  pull-requests: write
+concurrency:
+  group: scorecard-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  maturity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: supercli-site/scorecard@32a7f01e920d0086d68ade6ee2d09ec842f83de0
+        with:
+          github-token: ${{ github.token }}
+          comment: 'true'
