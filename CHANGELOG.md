@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.3](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.2...v1.7.3) (2026-11-08)
+
+
+### Bug Fixes
+
+* **website:** 输出网站发现文件 ([#33](https://github.com/webkubor/typora-Bloom-theme/issues/33)) ([2d2df2f](https://github.com/webkubor/typora-Bloom-theme/commit/2d2df2fdf45d43bb037534235f95e4812d5194a2))
+
 ## [1.7.2](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.1...v1.7.2) (2026-09-10)
 
 
