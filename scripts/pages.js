@@ -63,6 +63,9 @@ const copyAndProcessHtml = (src, dest) => {
 copyAndProcessHtml(path.join(websiteDir, "index.html"), path.join(outDir, "index.html"));
 copy(path.join(websiteDir, "site.css"), path.join(outDir, "site.css"));
 copy(path.join(websiteDir, "site.js"), path.join(outDir, "site.js"));
+for (const file of ["robots.txt", "sitemap.xml", "llms.txt"]) {
+  copy(path.join(websiteDir, file), path.join(outDir, file));
+}
 
 const distDir = path.join(root, "dist");
 if (fs.existsSync(distDir)) {
