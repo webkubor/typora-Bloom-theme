@@ -5,7 +5,7 @@
 <table align="center">
 <tr>
 <td align="center" width="33%"><b>🌸 Bloom for Typora</b><br/><sub>24 套主题 · 当前</sub></td>
-<td align="center" width="33%"><a href="https://github.com/webkubor/dsh-bloom-theme">🌊 Bloom for DSH</a><br/><sub>4 套配色</sub></td>
+<td align="center" width="33%"><a href="https://github.com/webkubor/dsh-bloom-theme">🌊 Bloom for DSH</a><br/><sub>15 套配色</sub></td>
 <td align="center" width="33%"><a href="https://github.com/webkubor/contrast-guard">🛡️ contrast-guard</a><br/><sub>配色护栏</sub></td>
 </tr>
 </table>
