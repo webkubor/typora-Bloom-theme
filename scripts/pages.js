@@ -69,7 +69,16 @@ for (const file of ["robots.txt", "sitemap.xml", "llms.txt"]) {
 
 const distDir = path.join(root, "dist");
 if (fs.existsSync(distDir)) {
-  copyDir(distDir, path.join(outDir, "dist"));
+  const siteDist = path.join(outDir, "dist");
+  copyDir(distDir, siteDist);
+  // Site CSS lives in /dist/, while its resources live in /bloom/.
+  // Rewrite only the website copy; release CSS keeps its original relative paths.
+  for (const name of fs.readdirSync(siteDist)) {
+    if (!/^bloom-.*\.css$/.test(name)) continue;
+    const file = path.join(siteDist, name);
+    const css = fs.readFileSync(file, "utf8");
+    fs.writeFileSync(file, css.replace(/url\((["'])\.\/bloom\//g, "url($1../bloom/"));
+  }
 }
 
 const assetsDir = path.join(root, "bloom");
