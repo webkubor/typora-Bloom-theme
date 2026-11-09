@@ -115,6 +115,13 @@ The current release is `v1.7.2` (badge is auto-synced from `github/v/release`).
 3. Copy all `bloom-*.css` files and the `bloom/` directory into the Typora theme folder.
 4. Restart Typora, or switch to a Bloom theme from the `Themes` menu.
 
+**Bloom does not appear in the `Themes` menu?**
+
+- Typora lists `.css` files placed directly in the theme folder. Many unzip tools create an extra `Bloom-theme/` folder; if the `bloom-*.css` files ended up inside it, move them up one level so they sit next to the other themes.
+- Keep the `bloom/` folder beside the `.css` files; it holds the fonts the themes load.
+- Quit Typora completely and reopen it after copying.
+- Each palette has a light and a dark file (for example `bloom-ink.css` and `bloom-ink-dark.css`); pick the one you want from the `Themes` menu.
+
 ## Latest Release Highlights
 
 `v1.7.2` (2026-09-10):
