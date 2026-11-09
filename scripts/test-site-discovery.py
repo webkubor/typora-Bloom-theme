@@ -41,7 +41,7 @@ class SiteDiscoveryTest(unittest.TestCase):
         # 用户搜到具体问题时也落不到对应页面。
         self.assertEqual(
             [element.text for element in root.findall(f"{ns}url/{ns}loc")],
-            [HOME, f"{HOME}install.html", f"{HOME}palettes.html"],
+            [HOME, f"{HOME}install", f"{HOME}palettes"],
         )
 
     def test_content_pages_are_indexable(self):
@@ -50,9 +50,12 @@ class SiteDiscoveryTest(unittest.TestCase):
         少了 canonical，站内多个 URL 会被当成同一页；少了 description，
         搜索引擎只能自己猜这段内容是关于什么的。
         """
-        for page in ("install.html", "palettes.html"):
-            content = (OUT / page).read_text(encoding="utf-8")
+        # 文件仍是 .html，但 Pages 会把 .html 308 到无扩展名地址，
+        # canonical 必须指向最终地址，不能指向一个会跳转的 URL。
+        for page in ("install", "palettes"):
+            content = (OUT / f"{page}.html").read_text(encoding="utf-8")
             self.assertIn(f'<link rel="canonical" href="{HOME}{page}" />', content)
+            self.assertNotIn(f"{HOME}{page}.html", content)
             self.assertRegex(content, r'(?i)<meta name="description"')
             self.assertRegex(content, r'(?i)<h1[^>]*>')
             self.assertIn("github.com/webkubor/typora-Bloom-theme", content)
@@ -108,7 +111,7 @@ class SiteDiscoveryTest(unittest.TestCase):
         self.assertIn("bloom-petal.css", content)
         self.assertIn("bloom-petal-dark.css", content)
         self.assertIn("Bloom-theme.zip", content)
-        self.assertIn(f"{HOME}install.html", content)
+        self.assertIn(f"{HOME}install", content)
         self.assertIn("https://github.com/webkubor/typora-Bloom-theme/releases/latest", content)
 
 
