@@ -48,6 +48,14 @@ class SiteDiscoveryTest(unittest.TestCase):
         self.assertIn("https://github.com/webkubor/typora-Bloom-theme", content)
         self.assertTrue(re.search(r"(?im)^> .+typora", content))
 
+    def test_llms_lists_install_path(self):
+        content = self.read_output("llms.txt")
+        self.assertIn("bloom-petal.css", content)
+        self.assertIn("bloom-petal-dark.css", content)
+        self.assertIn("Bloom-theme.zip", content)
+        self.assertIn(f"{HOME}#install", content)
+        self.assertIn("https://github.com/webkubor/typora-Bloom-theme/releases/latest", content)
+
 
 if __name__ == "__main__":
     unittest.main()
