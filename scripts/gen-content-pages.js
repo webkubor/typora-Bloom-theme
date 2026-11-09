@@ -1,5 +1,5 @@
 /**
- * 生成官网的可索引内容页：install.html 与 palettes.html。
+ * 生成官网的可索引内容页：install 与 palettes。
  *
  * 为什么要单独生成而不是手写：手写的安装说明和配色数会跟发布包脱节。
  * 2026-11-09 实测：官网把浅色文件名写成 `bloom-*-light.css`，而 v1.7.2
@@ -154,7 +154,7 @@ ${sheets.map((name) => `        <li><code>${esc(name)}</code></li>`).join('\n')}
 
       <h2>还想了解</h2>
       <ul>
-        <li><a href="${esc(SITE)}palettes.html">24 套配色分别是什么样 →</a></li>
+        <li><a href="${esc(SITE)}palettes">24 套配色分别是什么样 →</a></li>
         <li><a href="https://github.com/webkubor/typora-Bloom-theme">源码、主题定制与问题反馈 →</a></li>
         <li><a href="${esc(SITE)}">返回 Bloom 首页 →</a></li>
       </ul>`;
@@ -163,7 +163,7 @@ ${sheets.map((name) => `        <li><code>${esc(name)}</code></li>`).join('\n')}
     title: '如何安装 Bloom Typora 主题（完整步骤）· Bloom for Typora',
     description: `Bloom Typora 主题安装指南：Windows、macOS、Linux 三步装好，含主题文件夹路径、Releases 下载方式、常见问题排查（装了不生效、找不到主题菜单）。`,
     keywords: 'Bloom 安装, Typora 主题安装, Typora 主题文件夹路径, Typora 主题不生效, bloom-petal.css',
-    canonical: `${SITE}install.html`,
+    canonical: `${SITE}install`,
     body,
   });
 }
@@ -212,7 +212,7 @@ ${cards}
       </p>
       <h2>还想了解</h2>
       <ul>
-        <li><a href="${esc(SITE)}install.html">安装步骤与主题文件夹位置 →</a></li>
+        <li><a href="${esc(SITE)}install">安装步骤与主题文件夹位置 →</a></li>
         <li><a href="https://github.com/webkubor/typora-Bloom-theme">源码、主题定制与问题反馈 →</a></li>
         <li><a href="${esc(SITE)}">返回 Bloom 首页 →</a></li>
       </ul>`;
@@ -221,7 +221,7 @@ ${cards}
     title: `Bloom 的 ${groups.length} 组配色（${groups.length * 2} 套主题）· Bloom for Typora`,
     description: `Bloom Typora 主题的全部 ${groups.length * 2} 套莫兰迪配色一览，每组含浅色与深色两套，颜色取自实际构建出的主题变量。`,
     keywords: 'Bloom 配色, Typora 主题配色, 莫兰迪配色, Typora 深色主题, bloom-petal',
-    canonical: `${SITE}palettes.html`,
+    canonical: `${SITE}palettes`,
     body,
   });
 }

@@ -13,8 +13,8 @@
 ## 入口
 
 - [主题预览](https://bloom.webkubor.online/): 在线查看 Bloom 的配色与排版，含安装步骤概览。
-- [安装指南](https://bloom.webkubor.online/install.html): 完整安装步骤、各系统主题文件夹路径与常见问题排查。
-- [配色一览](https://bloom.webkubor.online/palettes.html): 全部色系的浅色与深色两套主题一览。
+- [安装指南](https://bloom.webkubor.online/install): 完整安装步骤、各系统主题文件夹路径与常见问题排查。
+- [配色一览](https://bloom.webkubor.online/palettes): 全部色系的浅色与深色两套主题一览。
 - [GitHub 仓库](https://github.com/webkubor/typora-Bloom-theme): 源码、安装说明和版本发布。
 - [Releases 下载](https://github.com/webkubor/typora-Bloom-theme/releases/latest): 最新的 `Bloom-theme.zip`。
 - [Typora 官方主题画廊](https://theme.typora.io/theme/Bloom/): Bloom 主题介绍与下载。
