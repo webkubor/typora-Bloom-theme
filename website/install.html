@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>如何安装 Bloom Typora 主题（完整步骤）· Bloom for Typora</title>
+  <meta name="description" content="Bloom Typora 主题安装指南：Windows、macOS、Linux 三步装好，含主题文件夹路径、Releases 下载方式、常见问题排查（装了不生效、找不到主题菜单）。" />
+  <meta name="keywords" content="Bloom 安装, Typora 主题安装, Typora 主题文件夹路径, Typora 主题不生效, bloom-petal.css" />
+  <meta name="author" content="webkubor" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://bloom.webkubor.online/install.html" />
+  <meta property="og:title" content="如何安装 Bloom Typora 主题（完整步骤）· Bloom for Typora" />
+  <meta property="og:description" content="Bloom Typora 主题安装指南：Windows、macOS、Linux 三步装好，含主题文件夹路径、Releases 下载方式、常见问题排查（装了不生效、找不到主题菜单）。" />
+  <meta property="og:image" content="https://bloom.webkubor.online/assets/banner.png" />
+
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="如何安装 Bloom Typora 主题（完整步骤）· Bloom for Typora" />
+  <meta property="twitter:description" content="Bloom Typora 主题安装指南：Windows、macOS、Linux 三步装好，含主题文件夹路径、Releases 下载方式、常见问题排查（装了不生效、找不到主题菜单）。" />
+  <meta property="twitter:image" content="https://bloom.webkubor.online/assets/banner.png" />
+
+  <link rel="canonical" href="https://bloom.webkubor.online/install.html" />
+  <link rel="stylesheet" href="site.css" />
+</head>
+
+<body>
+  <main class="doc-main">
+    <article class="doc-article">
+      <nav class="doc-breadcrumb"><a href="https://bloom.webkubor.online/">Bloom</a> / 安装指南</nav>
+      <h1>如何安装 Bloom Typora 主题</h1>
+      <p class="doc-lead">
+        Bloom 是给 Typora 的 12 浅色 + 12 深色莫兰迪主题。把主题文件放进
+        Typora 的主题文件夹，重启后就能在「主题」菜单里切换。下面是完整步骤和各系统的文件夹位置。
+      </p>
+
+      <h2>方式一：从 GitHub Releases 下载（推荐）</h2>
+      <ol>
+        <li>打开 <a href="https://github.com/webkubor/typora-Bloom-theme/releases/latest" target="_blank" rel="noopener">Releases 页面</a>，下载最新的 <code>Bloom-theme.zip</code>。</li>
+        <li>解压后你会看到 24 个 <code>bloom-*.css</code> 文件和一个 <code>bloom/</code> 文件夹（字体等资源）。</li>
+        <li>把 <strong>这些文件和文件夹一起</strong>复制进 Typora 的主题文件夹。</li>
+        <li>重启 Typora，在「主题」菜单里选择 Bloom 系列，例如 <strong>花瓣·暗夜</strong>。</li>
+      </ol>
+      <p class="doc-note">
+        注意：字体在 <code>bloom/</code> 文件夹里。只复制 CSS 而不复制这个文件夹，字体不会生效。
+      </p>
+
+      <h2>方式二：从源码目录手动复制</h2>
+      <ol>
+        <li>打开 Typora，进入「偏好设置 → 外观 → 打开主题文件夹」。</li>
+        <li>把 <code>bloom-*.css</code>（例如 <code>bloom-amber.css</code>、<code>bloom-amber-dark.css</code>）和 <code>bloom/</code> 文件夹复制进该目录。</li>
+        <li>重启 Typora，在「主题」菜单中选择 Bloom 系列。</li>
+      </ol>
+
+      <h2>发布包里有哪些文件</h2>
+      <p>24 个主题 CSS，每个色系一个浅色和一个深色：</p>
+      <ul class="doc-filelist">
+        <li><code>bloom-amber-dark.css</code></li>
+        <li><code>bloom-amber.css</code></li>
+        <li><code>bloom-cinnabar-dark.css</code></li>
+        <li><code>bloom-cinnabar.css</code></li>
+        <li><code>bloom-ink-dark.css</code></li>
+        <li><code>bloom-ink.css</code></li>
+        <li><code>bloom-lapis-dark.css</code></li>
+        <li><code>bloom-lapis.css</code></li>
+        <li><code>bloom-mist-dark.css</code></li>
+        <li><code>bloom-mist.css</code></li>
+        <li><code>bloom-petal-dark.css</code></li>
+        <li><code>bloom-petal.css</code></li>
+        <li><code>bloom-ripple-dark.css</code></li>
+        <li><code>bloom-ripple.css</code></li>
+        <li><code>bloom-sage-dark.css</code></li>
+        <li><code>bloom-sage.css</code></li>
+        <li><code>bloom-spring-dark.css</code></li>
+        <li><code>bloom-spring.css</code></li>
+        <li><code>bloom-stone-dark.css</code></li>
+        <li><code>bloom-stone.css</code></li>
+        <li><code>bloom-verdant-dark.css</code></li>
+        <li><code>bloom-verdant.css</code></li>
+        <li><code>bloom-wheat-dark.css</code></li>
+        <li><code>bloom-wheat.css</code></li>
+      </ul>
+
+      <h2>主题文件夹在哪</h2>
+      <p>不同系统位置不同，但都可以通过上面的「打开主题文件夹」直达：</p>
+      <ul>
+        <li><strong>macOS</strong>：<code>~/Library/Application Support/Typora/themes/</code></li>
+        <li><strong>Windows</strong>：<code>%APPDATA%\Typora\themes\</code></li>
+        <li><strong>Linux</strong>：<code>~/.config/Typora/themes/</code></li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>装完了，主题菜单里还是看不到 Bloom？</h3>
+      <ul>
+        <li>确认复制的是 <code>.css</code> 文件本身，而不是多套了一层文件夹。主题文件夹里应当直接是 <code>bloom-amber.css</code> 这样的文件。</li>
+        <li>确认文件名没有被改过。有些系统解压后中文名会变成别的样子。</li>
+        <li>复制完成后<strong>重启 Typora</strong>，主题菜单不会自动刷新。</li>
+      </ul>
+      <h3>主题出现了，但字体没变？</h3>
+      <p>
+        字体文件在 <code>bloom/</code> 目录里，需要和 CSS 一起复制。确认主题文件夹下确实存在
+        <code>bloom/fonts/</code>。
+      </p>
+
+      <h2>还想了解</h2>
+      <ul>
+        <li><a href="https://bloom.webkubor.online/palettes.html">24 套配色分别是什么样 →</a></li>
+        <li><a href="https://github.com/webkubor/typora-Bloom-theme">源码、主题定制与问题反馈 →</a></li>
+        <li><a href="https://bloom.webkubor.online/">返回 Bloom 首页 →</a></li>
+      </ul>
+    </article>
+  </main>
+</body>
+
+</html>
