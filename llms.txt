@@ -9,8 +9,8 @@
 
 ## 安装（终端用户）
 1. 下载最新版：https://github.com/webkubor/typora-Bloom-theme/releases/latest
-2. 解压后把主题文件夹放进 Typora 的主题目录（偏好设置 → 外观 → 打开主题文件夹）。
-3. 重启 Typora，在「主题」菜单里选 Bloom 系列。
+2. 在 Typora 打开「偏好设置 → 外观 → 打开主题文件夹」，把压缩包里的所有 `bloom-*.css` 文件和 `bloom/` 文件夹直接复制进去（`.css` 必须直接位于主题目录，不能再套一层文件夹；`bloom/` 存放字体，要与 `.css` 同级）。
+3. 完全退出并重启 Typora，在「主题」菜单里选 Bloom 系列；每套配色分浅色、深色两个文件。菜单里看不到时，见 README「快速安装」下的排查。
 
 在线预览与全部配色：https://bloom.webkubor.online
 
