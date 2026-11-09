@@ -4,7 +4,7 @@
   "version": "1.7.2",
   "homepage": "https://bloom.webkubor.online",
   "scripts": {
-    "build": "node scripts/gen-site-data.js && node scripts/build-themes.js",
+    "build": "node scripts/gen-site-data.js && node scripts/build-themes.js && node scripts/gen-content-pages.js",
     "dev": "node scripts/dev-toolkit.js",
     "dev:site": "npm run build && node scripts/preview.js",
     "sync:typora": "node scripts/dev-typora.js --once",

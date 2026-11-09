@@ -61,6 +61,11 @@ const copyAndProcessHtml = (src, dest) => {
 };
 
 copyAndProcessHtml(path.join(websiteDir, "index.html"), path.join(outDir, "index.html"));
+// 可索引内容页：单页站只把内容塞进一个 URL，爬虫无法建立索引结构，
+// 用户搜到具体问题时也落不到对应页面。这些页各自是真实 URL，能被单独收录。
+for (const page of ["install.html", "palettes.html"]) {
+  copyAndProcessHtml(path.join(websiteDir, page), path.join(outDir, page));
+}
 copy(path.join(websiteDir, "site.css"), path.join(outDir, "site.css"));
 copy(path.join(websiteDir, "site.js"), path.join(outDir, "site.js"));
 for (const file of ["robots.txt", "sitemap.xml", "llms.txt"]) {
