@@ -68,7 +68,7 @@ for (const page of ["install.html", "palettes.html"]) {
 }
 copy(path.join(websiteDir, "site.css"), path.join(outDir, "site.css"));
 copy(path.join(websiteDir, "site.js"), path.join(outDir, "site.js"));
-for (const file of ["robots.txt", "sitemap.xml", "llms.txt"]) {
+for (const file of ["robots.txt", "sitemap.xml", "llms.txt", "humans.txt"]) {
   copy(path.join(websiteDir, file), path.join(outDir, file));
 }
 
