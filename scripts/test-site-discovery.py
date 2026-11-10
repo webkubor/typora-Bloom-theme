@@ -99,6 +99,17 @@ class SiteDiscoveryTest(unittest.TestCase):
         # Website rewriting must not change the package's original CSS.
         self.assertIn('url("./bloom/fonts/', (ROOT / "dist/bloom-petal.css").read_text(encoding="utf-8"))
 
+    def test_humans(self):
+        """站点人认领口必须真的进入 Pages 产物，而不是只躺在 website/ 里。
+
+        没进产物的话线上 /humans.txt 会回退成首页 HTML，
+        爬虫读到的是一整页 <!doctype html>，认领信息等于没上线。
+        """
+        content = self.read_output("humans.txt")
+        self.assertRegex(content, r"(?m)^/\* TEAM \*/\s*$")
+        self.assertIn("https://github.com/webkubor/typora-Bloom-theme", content)
+        self.assertIn("https://bloom.webkubor.online", content)
+
     def test_llms(self):
         content = self.read_output("llms.txt")
         self.assertRegex(content, r"(?m)^# Bloom for Typora\s*$")

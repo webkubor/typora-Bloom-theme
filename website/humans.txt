@@ -1,0 +1,17 @@
+/* TEAM */
+  Bloom for Typora
+  webkubor
+
+/* SITE */
+  Site: https://bloom.webkubor.online
+  Source: https://github.com/webkubor/typora-Bloom-theme
+  Docs: https://github.com/webkubor/typora-Bloom-theme#readme
+  Themes: https://github.com/webkubor/typora-Bloom-theme/releases/latest
+
+/* CONTACTS */
+  Issues: https://github.com/webkubor/typora-Bloom-theme/issues
+  Author: https://webkubor.online
+
+/* NOTE */
+  Bloom is a pure CSS theme for Typora. No tracking, no network requests,
+  no API keys, no runtime dependencies.
