@@ -13,12 +13,12 @@
     "package": "node scripts/package.js",
     "deploy": "npm run build && node scripts/pages.js && npx wrangler pages deploy _pages --project-name=typora-bloom-theme",
     "test:site-discovery": "npm run build && node scripts/pages.js && python3 scripts/test-site-discovery.py",
-    "check:contrast": "npm run build --silent && contrast-guard"
+    "check:contrast": "npm run build --silent && ui-craft"
   },
   "engines": {
     "node": ">=20.19"
   },
   "devDependencies": {
-    "contrast-guard": "^0.1.1"
+    "ui-craft": "github:webkubor/ui-craft#v1.0.1"
   }
 }
