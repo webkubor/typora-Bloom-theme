@@ -21,7 +21,7 @@ OKLCH 调色，已收录 Typora 官方主题画廊（theme.typora.io）。
 ```bash
 npm run build            # 生成站点数据 + 构建全部主题 CSS
 npm run validate:themes  # 主题标准校验（构建后再跑）
-npm run check:contrast   # contrast-guard 对比度护栏
+npm run check:contrast   # ui-craft 对比度护栏
 npm run package          # 打包发布用 zip
 npm run deploy           # 构建并部署预览官网（Cloudflare Pages）
 ```

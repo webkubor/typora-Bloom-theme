@@ -8,17 +8,18 @@ importers:
 
   .:
     devDependencies:
-      contrast-guard:
-        specifier: ^0.1.1
-        version: 0.1.1
+      ui-craft:
+        specifier: github:webkubor/ui-craft#v1.0.1
+        version: https://codeload.github.com/webkubor/ui-craft/tar.gz/fef7b65372260aaec16c770a415fad34e637ea41
 
 packages:
 
-  contrast-guard@0.1.1:
-    resolution: {integrity: sha512-k0T66xV0JLWRmqS2LkIMpxl//OAVir5vYF5U9B4wbH+SPwDl79/Z6shqfTtGYTG8HKOS3p7NbU/4XYqTmkI+/w==}
+  ui-craft@https://codeload.github.com/webkubor/ui-craft/tar.gz/fef7b65372260aaec16c770a415fad34e637ea41:
+    resolution: {gitHosted: true, tarball: https://codeload.github.com/webkubor/ui-craft/tar.gz/fef7b65372260aaec16c770a415fad34e637ea41}
+    version: 1.0.0
     engines: {node: '>=18'}
     hasBin: true
 
 snapshots:
 
-  contrast-guard@0.1.1: {}
+  ui-craft@https://codeload.github.com/webkubor/ui-craft/tar.gz/fef7b65372260aaec16c770a415fad34e637ea41: {}
