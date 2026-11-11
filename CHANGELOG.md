@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.8.0](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.2...v1.8.0) (2026-11-11)
+
+
+### Features
+
+* **site:** add indexable install and palette pages ([#45](https://github.com/webkubor/typora-Bloom-theme/issues/45)) ([117f0b1](https://github.com/webkubor/typora-Bloom-theme/commit/117f0b10b0f5a7cd99551620b91b24110f401e60))
+* **site:** 输出 humans.txt 到 Pages 产物 ([#49](https://github.com/webkubor/typora-Bloom-theme/issues/49)) ([5005c29](https://github.com/webkubor/typora-Bloom-theme/commit/5005c2924d7aaa63e4b62f67ca0005341f36b2ca))
+
+
+### Bug Fixes
+
+* **site:** point canonical and sitemap at final extensionless URLs ([#46](https://github.com/webkubor/typora-Bloom-theme/issues/46)) ([adfbb04](https://github.com/webkubor/typora-Bloom-theme/commit/adfbb04202c77885081932f421595d8c7c4cfe49))
+* **website:** 输出网站发现文件 ([#33](https://github.com/webkubor/typora-Bloom-theme/issues/33)) ([2d2df2f](https://github.com/webkubor/typora-Bloom-theme/commit/2d2df2fdf45d43bb037534235f95e4812d5194a2))
+* 修正官网安装说明、字体路径与 llms.txt ([#41](https://github.com/webkubor/typora-Bloom-theme/issues/41)) ([818443a](https://github.com/webkubor/typora-Bloom-theme/commit/818443ab32653773666ea99c865f257933a544ad))
+
 ## [1.7.2](https://github.com/webkubor/typora-Bloom-theme/compare/v1.7.1...v1.7.2) (2026-09-10)
 
 
