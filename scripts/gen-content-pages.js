@@ -79,6 +79,7 @@ function pageShell({ title, description, keywords, canonical, body }) {
 
   <link rel="canonical" href="${esc(canonical)}" />
   <link rel="stylesheet" href="site.css" />
+  <script defer src="assets/analytics.js"></script>
 </head>
 
 <body>
